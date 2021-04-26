@@ -342,9 +342,15 @@ box-shadow: inset 5px 5px 10px #b8b8b8,
 
 
   .twave{
-    background-image:linear-gradient(to right, #0c56c214  0%,  rgba(26, 98, 207, 0) 100%)
+    background-image:linear-gradient(to right, #0c56c214  0%,  rgba(26, 98, 207, 0) 60%)
   }
 
+  .far{
+      color:rgb(156, 133, 0);
+  }
+  .far:focus{
+      outline-color: transparent;
+  }
 
 
 
