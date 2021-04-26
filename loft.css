@@ -1,0 +1,388 @@
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding:15px 0;
+    z-index: 100000;
+}
+
+.banner{
+    position: relative;
+    background:#000029;
+    transition: 0.3s linear all;
+}
+
+
+header.sticky{
+    padding: 5px 0;
+    background-image:linear-gradient(180deg,  rgb(232, 239, 250) 0%, #eaf6ff 100%);
+    color:black;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+              
+}
+
+header.logo,
+header.sticky a li{
+    color:#000;
+}
+
+header.sticky a .newsticky{
+    color:#000;
+}
+
+header.sticky a .newsticky:hover{
+    color:#DAA520;
+    transition: all linear 0.3s;
+}
+
+
+
+/*********************************************** FONTS ***************************************************/
+.overpass{
+    font-family: 'Overpass', sans-serif;
+}
+.publicsans{
+    font-family: 'Public Sans', sans-serif
+}
+
+.ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.maven{
+    font-family: 'Maven Pro', sans-serif;
+}
+
+/* BUTTON GRAD */
+
+.burron{
+    background-image:linear-gradient(to right, #775704 25%,  #000029  50%, #bd8906 40%);
+    transition: all linear 0.4s;
+     background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.burron:hover{
+    transform: scale(0.96);    
+    background-position: left bottom;
+}
+
+.texto{
+    background: -webkit-linear-gradient(#775704, #000 #DAA520, );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.textohov{
+    color:#fff;
+    transition: 0.2s linear all;
+}
+
+ .textohov:hover{
+    color:#DAA520;
+    transition: all linear 0.2s;
+ }
+
+ 
+.gradient-text {
+    background-color: red;
+    background-image: linear-gradient(45deg, #ac8218,  #ffcc4b);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+
+
+  .topheroc{
+    background-image:radial-gradient(#081029 30%, #000029 70%)
+  } 
+
+  .shape{
+    /* border-radius:100% 0% 80% 20% / 22% 54% 46% 78% ; */
+    /* border-radius: 24px; */
+    /* background: #e0e0e0; */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 700px;
+    border-bottom-right-radius: 700px;
+    border-bottom-left-radius: 900px;
+    box-shadow:  5px 5px 10px #b8b8b8,
+             -5px -5px 10px #ffffff;
+  }
+
+ .showcase{
+    background-image:linear-gradient(180deg,  rgba(12, 86, 194, 0) 0%, #0c56c214 100%)
+
+ }
+  
+.thirdwave{
+    background-image:linear-gradient(180deg,  rgba(26, 98, 207, 0) 0%, #0c56c214 100%)
+}
+
+/* ***********************THIRD WAVE ************************88*/
+ /* hide content */
+ .content {
+    display: none;
+  }
+  .tab-btn.active {
+    background: rgb(255, 255, 255);
+    color:black;
+    cursor: none;
+    
+  }
+  .content.active {
+    display: block;
+  }
+
+  .btn-nav{
+      background:  #0c56c214;
+  }
+
+
+  /***************************** INVESTMENTS CARDS ******************************************/
+  .box{
+    padding-top: 10px;
+    padding-left: 10px;
+    position: relative;
+    height: 330px;
+    width: auto;
+    box-shadow: inset 5px 5px 5px  rgba(0,0,0,0.2),
+            inset -5px -5px 30px  rgba(255,255,255,0.1),
+            5px 5px 15px  rgba(0, 0, 0, 0.3),
+            -5px -5px 15px  rgba(0,0,0,0.1);
+}
+ .box::before{
+    z-index: -999999998;
+    position:absolute;
+    content: '';
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    background:#000029;
+    box-shadow: inset 5px 5px 5px  rgba(0,0,0,0.2),
+            inset -5px -5px 30px  rgba(255,255,255,0.1),
+            5px 5px 15px  rgba(0, 0, 0, 0.3),
+                -5px -5px 15px  rgba(0,0,0,0.1);
+    color:white;
+}
+.box::after{
+    z-index: -999999998;
+    position:absolute;
+    content: '';
+    top:0;
+    right:0;
+    width:50%;
+    height:100%;
+    background:#bcbcf3;
+    box-shadow: inset 5px 5px 5px  rgba(0,0,0,0.2),
+            inset -5px -5px 30px  rgba(255,255,255,0.1),
+            5px 5px 15px  rgba(0, 0, 0, 0.3),
+            -5px -5px 15px  rgba(0,0,0,0.1);
+}
+.card{
+
+    height: 320px;
+    width: auto;
+    background: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    box-shadow: inset 5px 5px 5px  rgba(0,0,0,0.2),
+            inset -5px -5px 30px  rgba(255,255,255,0.1),
+            5px 5px 15px  rgba(0, 0, 0, 0.3),
+            -5px -5px 15px  rgba(0,0,0,0.1);
+    transition: all linear 0.4s;
+    border-radius: 4px;
+}
+    .card:hover{
+    transform:translateY(-13px);
+    box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+    transition: all linear 0.2s;
+}
+
+
+
+
+.inv-button{
+    /* background-image:linear-gradient(to right, #06b906 25%,  #004411  50%, transparent 40%); */
+    background-image:linear-gradient(to right, transparent  25%,  #004411  50%, #089e08 40%);
+    border:2px solid rgb(68, 114, 0);
+    padding:7px 10px;
+    border-radius: 4px;
+    transition: all linear 0.4s;
+     background-size: 200% 100%;
+    background-position: right bottom;
+    color:white;
+}
+
+.inv-button:hover{
+    background-position: left bottom;
+    color:rgb(61, 228, 10);
+}
+
+
+.eth-inv-button{
+    /* background-image:linear-gradient(to right, #06b906 25%,  #004411  50%, transparent 40%); */
+    background-image:linear-gradient(to right, transparent  25%,  #030441  50%, #0205c5 40%);
+    border:2px solid rgb(17, 0, 114);
+    padding:7px 10px;
+    border-radius: 4px;
+    transition: all linear 0.4s;
+     background-size: 200% 100%;
+    background-position: right bottom;
+    color:white;
+}
+
+.eth-inv-button:hover{
+    background-position: left bottom;
+    color:rgb(0, 1, 85);
+}
+
+
+
+.bnb-inv-button{
+    /* background-image:linear-gradient(to right, #06b906 25%,  #004411  50%, transparent 40%); */
+    background-image:linear-gradient(to right, transparent  25%,  #866700  50%, #bd9a00 40%);
+    border:2px solid rgb(167, 128, 0);
+    padding:7px 10px;
+    border-radius: 4px;
+    transition: all linear 0.4s;
+     background-size: 200% 100%;
+    background-position: right bottom;
+    color:white;
+}
+
+.bnb-inv-button:hover{
+    background-position: left bottom;
+    color:rgb(117, 96, 0);
+}
+
+.Intermediate{
+    border-radius: 78% 22% 78% 22% / 0% 100% 0% 100%  ;
+}
+
+/* 
+.blink{
+    transition: 0.2 ease-out;
+    animation: fade 3s ease-in-out infinite;
+}
+
+
+@keyframes fade{
+    0%{
+        background:transparent;
+    }
+    25%{
+        background:white;
+
+    }
+    50%{
+        background:grey;
+    }
+    75%{
+        background:greenyellow;
+    }
+    100%{
+        background:transparent;
+    }
+  } */
+
+
+/* ***************************4TH WAVE **********************************************/
+#carry:hover .fa-check{
+    color:rgb(224, 12, 12);
+
+}
+
+.radiola{
+    border-radius: 24px;
+background: #e0e0e0;
+box-shadow: inset 5px 5px 10px #b8b8b8,
+            inset -5px -5px 10px #ffffff
+}
+
+
+ 
+.question-text {
+    display: none;
+  }
+  .show-text .question-text {
+    display: block;
+  }
+  .minus-icon {
+    display:none;
+  }
+  .show-text .minus-icon {
+    display:inline;
+  }
+  .show-text .plus-icon {
+    display: none;
+  }
+
+  .questi{
+      background: #302b630e;
+      padding: 8px 4px;
+  }
+
+  .show-text:focus{
+      outline: none;
+  }
+
+  .show-text:focus{
+      outline: none;
+  }
+
+
+  .twave{
+    background-image:linear-gradient(to right, #0c56c214  0%,  rgba(26, 98, 207, 0) 100%)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.products-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 1.9rem;
+
+  }
+
+/* RECAPTCHA */
+  .reca{
+    position: absolute;
+    bottom: 0;
+     right:0;
+      overflow: hidden;
+  }
+  
+
+  .tch{
+      transition: 0.3s all linear;
+      position: absolute;
+      bottom: 0;
+     right:-180px; 
+  }
+  .tch:hover{
+      right:0;
+  }

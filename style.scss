@@ -1,0 +1,39 @@
+.testimonial-carousel {
+	background:transparent;
+	overflow: hidden;
+	height: 200px;
+	position: relative;
+	display: flex;
+	color:white;
+		
+	}
+
+
+.testimonial-items {
+	position: relative;
+	flex: 1;
+	overflow: hidden;
+}
+
+.testimonial-item {
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	p.testimonial-author {
+		font-weight: bold;
+		text-align: right;
+	}
+	&.first {
+		left: 0;
+	}
+	&.second {
+		left: 100%;
+	}
+	&.third {
+		left: 200%;
+	}
+}
