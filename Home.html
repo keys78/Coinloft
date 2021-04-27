@@ -12,18 +12,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wdth@89.7&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loft.css">
+    <link rel="stylesheet" href="hambuger.css">
     <title>Document</title>
 </head>
 <body>
+    <!-----Loader--------->
+    <!-- <div id="loader" class="animate__animated animate__slideOutUp animate__delay-4s animate__slow out fixed top-0 h-screen w-full bg-black">
+        <img class="rosoh" src="/images/cryloader.gif">
+    </div> -->
 
     <div class="reca w-60 h-32">
         <a target="_blank" href="https://policies.google.com/privacy?hl=en"><img class="tch" src="/images/tryi.jpg"></a>
     </div>
-   
-   
-    <header class="md:block hidden">
+ 
+
+
+   <!------large screen-->
+
+    <header class="lg:block hidden">
         <div class="flex justify-between items-center w-full">
 
            <a href="Home.html"> <div class="flex justify-between items-center w-1/12 pl-20">
@@ -65,15 +76,51 @@
     
     </header>
 
+        <!-------MObile-------->
+    <section class=" lg:hidden block">
+        <div class="topper">
+            <a href="Home.html"> <div class=" -ml-14 mt-4 flex justify-between items-center w-1/12 pl-20">
+                <div class="">
+                   <p class="text-white text-2xl">LOGO</p>
+                 
+                </div>
+                <div class="text-2xl font-semibold text-white publicsans burron texto">Coinloft</div>
+            </div></a>
+          </div>
+        
+          <input type="checkbox" id="openSideMenu" class="openSideMenu">
+          <label for="openSideMenu" class="menuIconToggle">
+            <div class="hamb-line dia part-1"></div>
+            <div class="hamb-line hor"></div>
+            <div class="hamb-line dia part-2"></div>
+          </label>
+          <nav>
+            <ul>
+                <a href="Home.html"><div class="textohov newsticky"> Home</div></a>
+                <a href="How.html"><div class="textohov newsticky"> How it works</div></a>
+                <a href="Loan.html"><div class="textohov newsticky"> Loans</div></a>
+                <a href="About.html"><div class="textohov newsticky"> About</div></a>
+                <a href="Contact.html"><div class="textohov newsticky"> Contact</div></a>
+                <a href="Login.html"><button class="burron publicsans px-4 py-1 rounded">LOGIN</button></a>
+            </ul>
+          </nav>
+
+          <h1 class="text-4xl text-white">Responsive CSS Side Toggle Hamburger Menu</h1>
+          <div style="height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 0px; text-align: right; line-height:14px; block-size:36px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:0;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 0 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">powered</a>&nbsp;by Coinloft</div></div>
+    </section>
+
+
+    
+
+
+
    
 
-    <section class="banner w-full flex justify-between px-20 mx-auto gap-4">
+    <section class="banner w-full flex lg:flex-row flex-col justify-between lg:px-20 px-6  mx-auto gap-4">
 
-        <div class="pt-64 w-6/12">
+        <div class="lg:pt-64 pt-14 lg:w-6/12 w-full lg:text-left text-center">
             <div class="callout-text">
-                <h4>Testimonials</h4>
                 <div class="testimonial-carousel">
-                    <!-- Circled Left 2 icon by Icons8 -->
                     <div class="icon-container">
                         <span class="lnr lnr-arrow-left-circle"></span>
                     </div>
@@ -81,8 +128,8 @@
                         <div class="testimonial-item first">
                             <blockquote>
                                 <div class="testimonial-quote">
-                                    <h1 class="text-4xl text-white gradient-text maven font-bold">THE #1 PREMIUM <br> CRYPTO-CURRENCY COMMUNITY</h1>
-                                        <h2 class="text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
+                                    <h1 class="lg:text-4xl text-3xl w-full gradient-text cabino font-bold mb-4">THE #1 PREMIUM <br> CRYPTO-CURRENCY COMMUNITY</h1>
+                                        <h2 class="text-white lg:text-lg text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
                                             culpa voluptate. Reprehenderit ut excepturi est.
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
                                             culpa voluptate. Reprehenderit ut excepturi est.
@@ -93,8 +140,8 @@
                         <div class="testimonial-item second">
                             <blockquote>
                                 <div class="testimonial-quote">
-                                    <h1 class="text-4xl text-white gradient-text maven font-bold">THE #1 PREMIUM <br> CRYPTO-CURRENCY COMMUNITY</h1>
-                                        <h2 class="text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
+                                    <h1 class="lg:text-4xl text-3xl w-full gradient-text cabino font-bold mb-4">THE #1 PREMIUM <br> CRYPTO-CURRENCY COMMUNITY</h1>
+                                        <h2 class="text-white lg:text-lg text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
                                             culpa voluptate. Reprehenderit ut excepturi est.
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
                                             culpa voluptate. Reprehenderit ut excepturi est.
@@ -105,8 +152,8 @@
                         <div class="testimonial-item third">
                             <blockquote>
                                 <div class="testimonial-quote">
-                                    <h1 class="text-4xl text-white gradient-text maven font-bold">THE #1 PREMIUM <br> CRYPTO-CURRENCY COMMUNITY</h1>
-                                        <h2 class="text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
+                                    <h1 class="lg:text-4xl text-3xl w-full gradient-text cabino font-bold mb-4">THE #1 PREMIUM <br> CRYPTO-CURRENCY COMMUNITY</h1>
+                                        <h2 class="text-white lg:text-lg text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
                                             culpa voluptate. Reprehenderit ut excepturi est.
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, 
                                             culpa voluptate. Reprehenderit ut excepturi est.
@@ -121,11 +168,11 @@
                     </div>
                 </div>
             </div>
-            <a href="Signup.html"><button class="mt-8 burron publicsans px-4 py-4 text-white rounded">CREATE ACCOUNT</button></a>
+            <a href="Signup.html"><button class="burron publicsans px-4 py-4 text-white rounded">CREATE ACCOUNT</button></a>
         </div>
 
-        <div class="pt-40 w-6/12 topheroc">
-           <img class="rounded opacity-60" src="/images/tophero.gif" alt="btcpumper">
+        <div class="lg:pt-40 lg- lg:w-6/12 w-full topheroc">
+           <img class="rounded lg:opacity-60 opacity-90" src="/images/tophero.gif" alt="btcpumper">
         </div> 
 
     </section>
@@ -146,8 +193,8 @@
 
 
        <div class="w-10/12 flex justify-between items-center mx-auto gap-6 ">
-            <div class="shape w-full" style="background-image: url(https://media.istockphoto.com/vectors/reporting-data-monitoring-web-traffic-analytics-big-data-flat-vector-vector-id1041244364?k=6&m=1041244364&s=612x612&w=0&h=42h8kmtCjXSlgFhURSYBM5tWh93EMiej75R8Ybqjio4=); height:500px;">
-                <div class="bg-black shape w-full opacity-10" style="height: 500px;"> Lorem ipsum dolor sit amet.</div>
+            <div class="shape w-full" style="background-image: url(https://media.istockphoto.com/vectors/statistics-data-and-analytics-software-laptop-application-vector-id1175691444?k=6&m=1175691444&s=612x612&w=0&h=ZJAjEncY_Acdf1POfpQaEgGFSNPVO3IIsLezlqaLOJU=); height:500px;">
+                <!-- <div class="bg-black shape w-full opacity-10" style="height: 500px;"> Lorem ipsum dolor sit amet.</div> -->
             </div>
 
             <div class="">
@@ -177,7 +224,7 @@
                 <div class="about-content">
 
 <!---------------------------BITCOIN------------------------------------------>
-                    <div class="content active" id="history">
+                    <div class="content active animate__animated animate__zoomIn" id="history">
 
                         <div class="products-center">
                             <div class="box">
@@ -246,7 +293,7 @@
                     </div>
 
 <!--------------------------ETHEREUM------------------->
-                    <div class="content" id="vision">
+                    <div class="content animate__animated animate__zoomIn" id="vision">
                         <div class="products-center">
                             <div class="box">
                                 <div class="card ">
@@ -313,7 +360,7 @@
                     </div>
 
 <!--------------------------BINANCE------------------->
-                    <div class="content" id="goals">
+                    <div class="content animate__animated animate__zoomIn" id="goals">
                         <div class="products-center">
                             <div class="box">
                                 <div class="card ">
@@ -667,43 +714,183 @@
     </section>
 
 
-    <section class="">
+    <section class="thirdwave h-screen">
 
-        <div class="">
+        <div class="w-10/12 mx-auto pt-12">
 
-            <img src="https://image.freepik.com/free-vector/business-decisions-concept-illustration_114360-4096.jpg" alt="pngfile">
-
-        
-
-            <div class="">
-                <h1 class="text-base text-blue-700 mt-8 mb-2 ubuntu">Confused about a thing?</h1>
-                <h1 class="text-3xl mb-1 publicsans font-bold">Frequently Asked Questions</h1>
+            <div class="text-center">
+                <h1 class="text-base text-blue-700 mt-8 mb-2 ubuntu">Simple reasons for your decison</h1>
+                <h1 class="text-4xl mb-1 tracking-widest publicsans font-bold">Why Choose Us?</h1>
             </div>
 
+            <div class="flex justify-between items-center">
 
+                <div class="w-full text-center mx-auto mt-20">
+
+                    <div class="why1 h-48 w-48 mb-3 mx-auto">
+                        <img class="m-auto pt-8 h-40 w-40" src="/images/why3.png">
+                    </div>
+
+                    <h2 class="text-2xl text-blue-700 font-medium py-4">Secured</h2>
+
+                    <p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                         accusantium necessitatibus doloribus tempora magnam perferendis, quaerat voluptas.
+                    </p>
+                </div>
+                
+                <div class="w-full text-center mx-auto mt-20">
+
+                    <div class="why2 h-48 w-48 mb-3 mx-auto">
+                        <img class="m-auto pt-8" src="/images/why2.png">
+                    </div>
+
+                    <h2 class="text-2xl text-blue-700 font-medium py-4">Credibility</h2>
+
+                    <p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                         accusantium necessitatibus doloribus tempora magnam perferendis, quaerat voluptas.
+                    </p>
+                </div>
+
+                <div class="w-full text-center mx-auto mt-20">
+
+                    <div class="why3 h-48 w-48 mb-3 mx-auto">
+                        <img class="m-auto pt-5" src="/images/why1.png">
+                    </div>
+
+                    <h2 class="text-2xl text-blue-700 font-medium py-4">Guaranteed Returns</h2>
+
+                    <p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                         accusantium necessitatibus doloribus tempora magnam perferendis, quaerat voluptas.
+                    </p>
+                </div>
+
+
+            </div>
 
         </div>
 
     </section>
 
 
+    <!--------------TESTIMONIALS-------------------------->
+    <section class="thirdwavemonial py-20">
+
+        <div class="w-10/12 mx-auto pb-10">
+            <h1 class="text-base text-blue-700 mt-8 mb-2 ubuntu">Reviews from our clients</h1>
+            <h1 class="text-4xl mb-1 tracking-widest publicsans font-bold">Testimonials</h1>
+        </div>
+
+        <div class="lg:pl-96 md:pl-60 sm:pl-20 pl-6">
+            <img class="w-20 h-12" src="/images/okquote.png" alt="quotepng">
+        </div>
+
+        <div class="lg:w-5/12 md:w-8/12 w-11/12 mx-auto text-2xl">
+
+            <div class="callout-text">
+                <div class="testimonial-carousel">
+                    <!-- Circled Left 2 icon by Icons8 -->
+                    <div class="icon-container">
+                        <span class="lnr lnr-arrow-left-circle"></span>
+                    </div>
+                    <div class="testimonial-items">
+                        <div class="testimonial-item first">
+                            <blockquote>
+                                <p class="text-lg text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum hic quis velit, blanditiis temporibus dicta molestiae rerum fugit ipsa quo nisi. Nobis illo tempora, dolorem quidem in, dolores vel enim officiis, facere architecto blanditiis.</p>
+                                <p class="testimonial-author text-xl text-blue-700"><cite>— Fara Bridget, Edinburgh</cite></p>
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-item second">
+                            <blockquote>
+                                <p class="text-lg text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum hic quis velit, blanditiis temporibus dicta molestiae rerum fugit ipsa quo nisi. Nobis illo tempora, dolorem quidem in, dolores vel enim officiis, facere architecto blanditiis.</p>
+                                <p class="testimonial-author text-xl text-blue-700"><cite>— Fara Bridget, Edinburgh</cite></p>
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-item third">
+                            <blockquote>
+                                <p class="text-lg text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum hic quis velit, blanditiis temporibus dicta molestiae rerum fugit ipsa quo nisi. Nobis illo tempora, dolorem quidem in, dolores vel enim officiis, facere architecto blanditiis.</p>
+                                <p class="testimonial-author text-xl text-blue-700"><cite>— Fara Bridget, Edinburgh</cite></p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <!-- End .testimonial-items -->
+                    <div class="icon-container">
+                        <span class="lnr lnr-arrow-right-circle"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+    <footer class="footershape relative md:h-80 h-auto overflow-hidden">
+
+        <div class="flex justify-between opacity-30 overflow-hidden">
+            <img src="/images/wmap.png" alt="trans-bg">
+            <img src="/images/wmap.png" alt="trans-bg">
+        </div>
 
 
+        <div class="absolute top-24 left-48 flex justify-around items-start w-10/12 mx-auto text-white">
+
+            <div class="w-4/12">
+                <a href="Home.html"> <div class="flex justify-between items-center w-1/12 pl-20">
+                    <div class="">
+                        <svg class="w-20 h-14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="186.847" height="214.403" viewBox="0 0 186.847 214.403">
+                            <defs>
+                            <linearGradient id="linear-gradient" x1="0.5" x2="0.382" y2="0.084" gradientUnits="objectBoundingBox">
+                                <stop offset="0" stop-color="#e4af00"/>
+                                <stop offset="1" stop-color="#b18900"/>
+                            </linearGradient>
+                            </defs>
+                            <g id="Group_5" data-name="Group 5" transform="translate(-16.964 -140.856) rotate(-1)">
+                            <g id="Group_2" data-name="Group 2" transform="translate(12.429 224.859) rotate(-40)">
+                                <path id="Subtraction_6" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+                                <path id="Path_1" data-name="Path 1" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                            </g>
+                            <g id="Group_3" data-name="Group 3" transform="translate(199.654 275.032) rotate(140)">
+                                <path id="Subtraction_6-2" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+                                <path id="Path_2" data-name="Path 2" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                            </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-2xl font-semibold text-white publicsans burron texto">Coinloft</div>
+                </div></a>
+
+                <p class="text-lg">
+                    We are committed to the principle of Capital maximization and reduction of the financial risks at investing.
+                </p>
+            </div>
+
+            
+            <div class="w-3/12 text-lg">
+                <h1 class="text-2xl pb-3 font-semibold">Quick links</h1>
+
+               <p class="border-b border-yellow-600 w-3/12 mb-6">
+
+                <a href="Login.html"><div class="publicsans transition-all duration-200 ease-in-out hover:text-yellow-600">Login</div></a>
+                <a href="Signup.html"><div class="publicsans transition-all duration-200 ease-in-out hover:text-yellow-600">Create account</div></a>
+                <a href="Login.html"><div class="publicsans transition-all duration-200 ease-in-out hover:text-yellow-600">Forgot Password</div></a>
+            </div>
 
 
-<!-- <div class="w-full h-40 absolute bottom-0">
-         <img class="w-full" src="/images/Techblock.svg" alt="circuit img">
-        </div> -->
-        <script> 
-            $(document).ready(function(){
-            $("#flip").click(function(){
-                $("#panel").slideToggle("fast");
-            });
-            });
-        </script>
+            <div class="w-3/12 text-lg">
+                <h1 class="text-2xl pb-3 font-semibold">Other links</h1>
 
+               <p class="border-b border-yellow-600 w-3/12 mb-6">
+
+                <a href="Privacypolicy"><div class="publicsans transition-all duration-200 ease-in-out hover:text-yellow-600">Terms & Conditions</div></a>
+                <a href="Privacypolicy"><div class="publicsans transition-all duration-200 ease-in-out hover:text-yellow-600 ">Privacy Policy</div></a>
+            </div>
+
+        </div>
+    </footer> 
+    
+    <section class="copyright copyr h-12 text-gray-500 text-center w-full" >
+        <p class="pt-3">Copyrights &copy; All Rights Reserved, 2021 | Designed by Em_codes</p>
+    </section>
+
+    
     <script src="loft.js"></script>
     <script src="heroslider.js"></script>
 </body>

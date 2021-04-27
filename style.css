@@ -1,7 +1,7 @@
 .testimonial-carousel {
   background: transparent;
   overflow: hidden;
-  height: 200px;
+  height: 300px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,7 +38,7 @@
 }
 
 .testimonial-item p.testimonial-author {
-  font-weight: bold;
+  font-weight: 500;
   text-align: right;
 }
 

@@ -3,6 +3,7 @@ window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", window.scrollY > 0)
 });
 
+//////////// INVESTMENT BUTTONS////////////////////////////////
 
 const about = document.querySelector(".about");
 const btns = document.querySelectorAll(".tab-btn");
@@ -47,3 +48,17 @@ questions.forEach(function (question) {
    
   });
 });
+
+
+/////////////LOADER/////////////////////////////
+document.addEventListener("DOMContentLoaded", function() {
+    const roso = document.getElementById('loader');
+    const rosoh = document.querySelector('.rosoh');
+
+    setTimeout(function(){
+           rosoh.remove();
+       }, 4000);
+    setTimeout(function(){
+           roso.remove();
+       }, 6000);
+   });  

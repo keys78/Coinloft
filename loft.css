@@ -1,3 +1,19 @@
+/* Loader */
+.rosoh{
+    position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	box-sizing:border-box;
+    overflow-y: hidden;
+   
+
+	}
+
+#loader{
+    z-index:999999999999999999999;
+}
+
 header{
     position: fixed;
     top:0;
@@ -8,7 +24,7 @@ header{
     align-items: center;
     transition: 0.6s;
     padding:15px 0;
-    z-index: 100000;
+    z-index: 100;
 }
 
 .banner{
@@ -62,6 +78,14 @@ header.sticky a .newsticky:hover{
     font-family: 'Maven Pro', sans-serif;
 }
 
+.opensans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cabino{
+    font-family: 'Cabin', sans-serif;
+}
+
 /* BUTTON GRAD */
 
 .burron{
@@ -95,7 +119,7 @@ header.sticky a .newsticky:hover{
  
 .gradient-text {
     background-color: red;
-    background-image: linear-gradient(45deg, #ac8218,  #ffcc4b);
+    background-image: linear-gradient(45deg, #83620e,  #ffcc4b);
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -126,6 +150,10 @@ header.sticky a .newsticky:hover{
   
 .thirdwave{
     background-image:linear-gradient(180deg,  rgba(26, 98, 207, 0) 0%, #0c56c214 100%)
+}
+  
+.thirdwavemonial{
+    background-image:linear-gradient(to top,  rgba(26, 98, 207, 0) 0%, #0c56c214 30%, rgba(26, 98, 207, 0) 70%)
 }
 
 /* ***********************THIRD WAVE ************************88*/
@@ -348,9 +376,43 @@ box-shadow: inset 5px 5px 10px #b8b8b8,
   .far{
       color:rgb(156, 133, 0);
   }
-  .far:focus{
-      outline-color: transparent;
+  
+  .why1{
+      border-radius:0% 100% 54% 46% / 49% 49% 51% 51% ;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   }
+
+
+
+  .why2{
+      border-radius:50% 50% 50% 50% / 50% 50% 50% 50% ;
+      background: linear-gradient(to right, #6441a5, #2a0845);
+  }
+
+  .why3{
+      border-radius:63% 37% 0% 100% / 41% 38% 62% 59% ;
+      background: linear-gradient(to right, #141e30, #243b55);
+  }
+
+
+
+  
+
+
+
+
+/* ****************************** FOOTER**************** */
+.footershape{
+    background-color: #000029;
+}
+
+.copyr{
+    background-color: #000012;
+}
+
+
+
+
 
 
 

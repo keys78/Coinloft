@@ -1,7 +1,7 @@
 .testimonial-carousel {
 	background:transparent;
 	overflow: hidden;
-	height: 200px;
+	height: 300px;
 	position: relative;
 	display: flex;
 	color:white;
@@ -24,7 +24,7 @@
 	flex-direction: column;
 	justify-content: center;
 	p.testimonial-author {
-		font-weight: bold;
+		font-weight: 500;
 		text-align: right;
 	}
 	&.first {
@@ -37,3 +37,8 @@
 		left: 200%;
 	}
 }
+
+// @media screen and (max-width:1024px){
+// 	.testimonial-carousel {
+// 		height: 300px;
+// }
