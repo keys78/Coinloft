@@ -1,6 +1,6 @@
 
   .comie{
-    z-index: 9999999999999999999999999i;
+    z-index: 9999999999999999999999;
   }
   .topper {
     width: 100%;
@@ -10,6 +10,7 @@
     z-index: 20;
   }
   nav {
+    padding:12px 0 12px 22px;
     height: 100%;
     position: fixed;
     left: 0;
@@ -17,51 +18,11 @@
     margin-top: 60px;
     transform: translateX(-320px);
     transition: transform 260ms ease-in-out;
-    background-color: rgb(28, 0, 184);
-  
-    color:white;
+    background:#00003f;
+    
+   
   }
-  nav ul {
-    margin:0;
-    padding:0;
-  
-  }
-  nav ul>li {
-    list-style: none;
-    color: #fff;
-    padding: 20px;
-    cursor: pointer;
-  
-    transition: .25s
-  }
-  nav ul>li span {
-    display: block;
-    font-size: 14px;
-    color: white;
-  }
-  nav ul>li a {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  nav ul>li:hover {
-    background-color: #dddddd;
-  }
-  nav li#nav-signup {
-    list-style: none;
-    background-color: #00B2D3;
-  }
-  nav ul>li#nav-signup span {
-    color: #00B2D3;
-  }
-  nav ul>li#nav-signup a {
-    color: #ffffff;
-  }
-  nav ul>li#nav-signup:hover {
-    background-color: #006375;
-  }
+
   input[type="checkbox"]:checked ~ nav {
     transform: translateX(0);
     z-index: 40;

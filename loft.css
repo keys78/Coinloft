@@ -132,9 +132,6 @@ header.sticky a .newsticky:hover{
   } 
 
   .shape{
-    /* border-radius:100% 0% 80% 20% / 22% 54% 46% 78% ; */
-    /* border-radius: 24px; */
-    /* background: #e0e0e0; */
     border-top-left-radius: 4px;
     border-top-right-radius: 700px;
     border-bottom-right-radius: 700px;
