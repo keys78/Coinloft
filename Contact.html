@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Public+Sans:wght@200&display=swap" rel="stylesheet">
@@ -20,7 +26,7 @@
     <link rel="stylesheet" href="hambuger.css">
     <title>Document</title>
 </head>
-<body>
+<body class="thirdwave">
 
 
    <!------large screen-->
@@ -103,66 +109,51 @@
 
     
     <div class="banner md:h-28 h-0 "></div>
-    <div class="relative">
-        <img class="absolute top-0 right-0" src="https://gifimage.net/wp-content/uploads/2017/11/estadistica-gif-animados-3.gif">
-    </div>
-
-    <section class="about relative thirdwavemonial">
-      
-        <div class="">
-            <div class="sm:w-9/12 w-11/12 mx-auto">
-                <h1 class="text-3xl py-6 opensans font-semibold text-blue-900">ABOUT US</h1>
-                <p class="mt-4 text-gray-900 lg:text-lg text-base">
-                    Coinloft is a full service universal cryptocurrency platform that provides a wide gamut of financial products
-                     and services encompassing investment solutions, loans, deposits and payment services. We are
-                      committed to understanding our investor's needs and aim at consistently delivering relevant 
-                      financial solutions and excellent customer's service.
-
-                </p>
-
-                <p class="mt-4 text-gray-900 opensans lg:text-lg text-base">
-                    Understanding today’s fast - paced and digital world, we offer an innovative range of digital
-                     services that complement our pan-African network of branches and outlets. Investor's can also reach
-                      out to us through our 24x7 investor's care facilities. We strive to provide our investor's with 
-                      the best possible combination of safety, convenience and innovation in all of our financial 
-                      products and services.
-                </p>
-
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-    <section class="">
-        <div class="relative md:w-9/12 w-11/12 mx-auto pt-16">
-
-            <div class="lg:w-5/12 10/12">
-                <img class="" src="https://acjus.org/wp-content/uploads/2021/02/about-us-png-1.png" alt="aboutus png">
-            </div>
-
-            <div class="lg:absolute top-28 right-0 lg:w-6/12 w-full">
-                <h1 class="sm:text-base text-xs text-blue-700 mt-8 mb-1 ubuntu">values</h1>
-                <h1 class="sm:text-3xl text-2xl mb-1 publicsans font-bold">Our Drive</h1>
-
-                <h2 class="pt-2 pb-5 lg:text-lg opensans text-base">We are committed to the principle of Capital maximization and reduction of the financial risks at Fund Management
-                    The vision ‘to be one of the most preferred and trusted cryptocurrency investment platform enhancing value for all stakeholders’ defines and shapes our day-to-day 
-                    business, helping us to build long-lasting relationships.
-                </h2>
-
-            </div>
-
-        </div>
-    </section>
-
-
    
+   <section class="contact  bg-blue-100">
+        <div class="h-screen pt-12 w-10/12 mx-auto">
+
+            <h1 class="text-base text-blue-700 mt-8 mb-2 ubuntu">Get in touch</h1>
+            <h1 class="text-3xl mb-1 publicsans font-bold">We are just a click away</h1>
+
+
+
+                        <div class="alert animate__animated animate__zoomIn py-4 bg-green-400 text-white lg:w-4/12 md:w-7/12 w-8/12 m-auto text-center border border-current hidden">Your message has been delivered!</div>
+
+             <div class="w-10/12 mx-auto flex justify-between relative ">
+
+                <div class="w-5/12">
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Enter name" class="mt-4 py-2 px-3 border focus:outline-none w-full m-auto bg-white text-black " required>
+                        <input type="text" id="company" placeholder="Enter company (optional)" class="mt-4 py-2 px-3 border focus:outline-none w-full m-auto bg-white text-black">
+                        <input type="email" id="email" placeholder="email" class="mt-4 py-2 px-3 border focus:outline-none w-full m-auto bg-white text-black" required>
+                        <input type="text" id="phone" placeholder="phone" class="mt-4 py-2 px-3 border focus:outline-none w-full m-auto bg-white text-black" required>
+                        <textarea name="message" id="message" class="w-full mt-6 focus:outline-none" rows="5"></textarea>
+                        
+                        <input type="submit" class="mt-6 py-1 px-2 bg-black text-white hover:bg-gray-600" value="SUBMIT">
+                        </div>
+                    </form>
+                </div>
+            
+                <div class="absolute top-0 right-0">
+
+
+
+
+                    <div class="">
+                        <img src="https://o.remove.bg/downloads/c9c1dd61-04b9-48d3-9541-086b476b3005/pngtree-contact-us-flat-design-style-png-image_2766546-removebg-preview.png">
+                    </div>
+
+                </div>
+        
+            </div>
+
+
+
+        </div>
+   </section>
 
     
-    <!---end of header-->
-
 
     
 
@@ -234,6 +225,88 @@
     <section class="copyright copyr h-12 text-gray-500 text-center w-full" >
         <p class="sm:text-base text-xs pt-3">Copyrights &copy; All Rights Reserved, 2021 | Designed by Em_codes</p>
     </section>
+
+
+    
+    <script>
+    
+        // Your web app's Firebase configuration
+ var firebaseConfig = {
+   apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+   authDomain: "form-a2fa1.firebaseapp.com",
+   projectId: "form-a2fa1",
+   storageBucket: "form-a2fa1.appspot.com",
+   messagingSenderId: "195902252855",
+   appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+ };
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+
+   //refrence messages
+   
+   var messagesRef = firebase.database().ref("messages");
+
+
+
+   //Listen for form submit
+   document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+   function submitForm(e){
+       e.preventDefault();
+       
+       let name = getInputVal('name');
+       let company = getInputVal('company');
+       let email = getInputVal('email');
+       let phone = getInputVal('phone');
+       let message = getInputVal('message');
+
+       //save message
+       saveMessage(name, company, email, phone, message);
+
+        //show Alert
+       document.querySelector('.alert').style.display = 'block';
+
+       //set timer to hide
+
+       setTimeout(function(){
+           document.querySelector('.alert').style.display = 'none';
+       },3000);
+
+     
+         //Clear Form
+       document.getElementById('contactForm').reset();
+       
+
+
+   }
+
+    
+
+   //function to get form values
+   function getInputVal(id){
+       return document.getElementById(id).value;
+   }
+
+
+   
+   
+   //save to firebase
+   function saveMessage(name, company, email, phone, message){
+       var newMessageRef = messagesRef.push();
+       newMessageRef.set({
+           name:name,
+           company: company,
+           email:email,
+           phone:phone,
+           message:message,
+
+       });
+   }
+
+
+
+   </script>
+
 
     
     <script src="loft.js"></script>
