@@ -16,6 +16,17 @@
     z-index:999999999999999999999;
 }
 
+.login-div{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	box-sizing:border-box;
+    overflow-y: hidden;
+
+	}
+
+
 header{
     position: fixed;
     top:0;
@@ -88,6 +99,10 @@ header.sticky a .newsticky:hover{
     font-family: 'Cabin', sans-serif;
 }
 
+
+.navico{
+    color:#bd8906 ;
+}
 /* BUTTON GRAD */
 
 .burron{

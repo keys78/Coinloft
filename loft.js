@@ -62,3 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
            roso.remove();
        }, 6000);
    });  
+
+
+   ///Translate ////
+   
+ 
+
