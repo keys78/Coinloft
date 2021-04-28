@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
-
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Public+Sans:wght@200&display=swap" rel="stylesheet">
@@ -19,14 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cabin:wdth@89.7&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wdth@89.7&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loft.css">
     <link rel="stylesheet" href="hambuger.css">
     <title>Document</title>
 </head>
-<body class="thirdwave">
+<body class="">
 
 
    <!------large screen-->
@@ -110,63 +104,59 @@
     
     <div class="banner lg:h-28 md:h-0 "></div>
    
-   <section class="contact  bg-blue-100">
-        <div class="h-auto pt-6 pb-28 lg:w-10/12 w-11/12 mx-auto">
+   <section class="contact  ">
+       <div class="lg:w-10/12 w-11/12 mx-auto flex md:flex-row flex-col  justify-between">
+    
+        <div class="md:w-6/12 w-full">
 
-          <div class="w-full pb-4 xl:px-28 px-auto">
-            <h1 class="sm:text-3xl text-2xl mb-1 opensans font-semibold text-blue-900">Get in touch</h1>
-
-            <p class="">We would love to hear from you, whether you have a question
-                 about features, pricing loans or anything else. Our team 
-                is always ready to answer all your questions.
-            </p>
-          </div>
-
-
-
-                        <div class="alert animate__animated animate__backInLeft animate__faster py-4 bg-green-400 text-white lg:w-3/12 md:w-4/12 w-8/12 absolute top-60 left-0 text-center border border-current hidden">Your message has been delivered!</div>
-
-            <div class="lg:w-10/12 w-full mx-auto flex md:flex-row flex-col justify-between gap-6 items-start">
-
-                <div class="lg:w-6/12 w-full">
-                    <form id="contactForm">
-                        <input type="text" id="name" placeholder="Enter full name" class="py-2 px-3 focus:outline-none w-full m-auto bg-white text-black " required>
-                        <input type="text" id="company" placeholder="Enter company (optional)" class="mt-4 py-2 px-3 focus:outline-none w-full m-auto bg-white text-black">
-                        <input type="email" id="email" placeholder="email" class="mt-4 py-2 px-3 focus:outline-none w-full m-auto bg-white text-black" required>
-                        <input type="text" id="phone" placeholder="phone" class="mt-4 py-2 px-3 focus:outline-none w-full m-auto bg-white text-black">
-                        <textarea name="message" id="message" class="w-full mt-6 focus:outline-none" rows="5"></textarea>
-                        <input type="submit" class="mt-6 conti-btn py-2 px-2 w-full bg-black text-white" value="SUBMIT">
-                    </form>
-                </div>
-            
-                <div class="lg:w-6/12 w-full">
-
-                    <div class="conti text-white px-5 pb-10 pt-6">
-                        <a href="https://api.whatsapp.com/send/?phone=+2348108243267&text=I%27m+contacting+you+from+coinloft.net&app_absent=0"><h1  class="text-lg hover:text-yellow-300"><i class="fab fa-whatsapp"></i> +234 8108243267</h1></a>
-                        <a href="https://www.gmail.com"><h1 class="text-lg py-3 hover:text-yellow-300"><i class="far fa-envelope "></i> rahzy24@gmail.com</h1></a>
-                        <a target="_blank" href="https://twitter.com/home"><h1 class="text-lg hover:text-yellow-300"><i class="fab fa-twitter"></i> Em_codes</h1></a>
-
-                        <div class="w-full mx-auto neu my-2">
-                            <img class="w-52 h-52 mx-auto" src="/images/callcont.png" alt="callcenter">
-                        </div>
-
-                        <p class="text-3x1 text-center">Website live chat available</p>
-
-                    </div>
-
-
-                   
-
-                </div>
-        
+            <div class="py-8">
+                <h1 class="sm:text-3xl text-2xl mb-1 opensans font-semibold text-blue-900">Request a Loan</h>
             </div>
+
+            <div class="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum praesentium asperiores
+                     autem rem iusto deserunt cumque, nam deleniti inventore maiores exercitationem a harum. 
+                     Beatae optio possimus quaerat? Veritatis exercitationem tempora illo in debitis odit harum
+                     autem maiores tempore explicabo quaerat officia possimus atque ipsam, necessitatibus id? 
+                     Beatae corporis quod nisi!
+                </p>
+                <p class="pt-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum praesentium asperiores
+                     autem rem iusto deserunt cumque, nam deleniti inventore maiores exercitationem a harum. 
+                     Beatae optio possimus quaerat? Veritatis exercitationem tempora illo in debitis odit harum
+                     autem maiores tempore explicabo quaerat officia possimus atque ipsam, necessitatibus id? 
+                     Beatae corporis quod nisi!
+                </p>
+            </div>
+
+        </div>
+    
+        <div class="">
+            <img src="https://o.remove.bg/downloads/16d481dd-1b29-408b-b75c-a555cd030e5c/time-money-illustration-hourglass-money-bag-stack-coins-business-concept-white-isolated_138676-608-removebg-preview.png" alt="money">
+        </div>
+    
+    </div>
+   </section>
+
+ 
+
+
+    <section class="">
+       
+        <div class="lg:w-10/12 w-11/12 mx-auto pb-6 justify-between">
+    
+                <div class="pt-12 pb-4">
+                    <h1 class="sm:text-2xl text-xl mb-1 publicsans font-bold text-blue-900">How loan request works</h>
+                </div>
+    
+
+                <p class="">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere laborum blanditiis quam optio corrupti, quidem aperiam quas ab earum, temporibus aut quasi ex quis minus quos nemo corporis molestias tempora.
+                </p>
 
 
 
         </div>
-   </section>
-
-    
+    </section>
 
     
 
@@ -229,7 +219,8 @@
                <p class="border-b border-yellow-600 w-3/12 md:mb-6 mb-2">
 
                 <a href="Privacypolicy"><div class="pb-2 publicsans md:text-xl text-base transition-all duration-200 ease-in-out hover:text-yellow-600">Terms & Conditions</div></a>
-                <a href="Privacypolicy"><div class="publicsans md:text-xl text-base transition-all duration-200 ease-in-out hover:text-yellow-600 ">Privacy Policy</div></a>
+                <a href="Privacypolicy"><div class="pb-2 publicsans md:text-xl text-base transition-all duration-200 ease-in-out hover:text-yellow-600 ">Privacy Policy</div></a>
+                <div id="google_translate_element" class="w-12 absolute opacity-70 mx-auto text-white"></div>
             </div>
 
         </div>
@@ -240,88 +231,17 @@
     </section>
 
 
-    
-    <script>
-    
-        // Your web app's Firebase configuration
- var firebaseConfig = {
-   apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
-   authDomain: "form-a2fa1.firebaseapp.com",
-   projectId: "form-a2fa1",
-   storageBucket: "form-a2fa1.appspot.com",
-   messagingSenderId: "195902252855",
-   appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
- };
- // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
 
-   //refrence messages
-   
-   var messagesRef = firebase.database().ref("messages");
+  
+<div id="google_translate_element"></div>
 
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
 
-
-   //Listen for form submit
-   document.getElementById('contactForm').addEventListener('submit', submitForm);
-
-   function submitForm(e){
-       e.preventDefault();
-       
-       let name = getInputVal('name');
-       let company = getInputVal('company');
-       let email = getInputVal('email');
-       let phone = getInputVal('phone');
-       let message = getInputVal('message');
-
-       //save message
-       saveMessage(name, company, email, phone, message);
-
-        //show Alert
-       document.querySelector('.alert').style.display = 'block';
-
-       //set timer to hide
-
-       setTimeout(function(){
-           document.querySelector('.alert').style.display = 'none';
-       },3000);
-
-     
-         //Clear Form
-       document.getElementById('contactForm').reset();
-       
-
-
-   }
-
-    
-
-   //function to get form values
-   function getInputVal(id){
-       return document.getElementById(id).value;
-   }
-
-
-   
-   
-   //save to firebase
-   function saveMessage(name, company, email, phone, message){
-       var newMessageRef = messagesRef.push();
-       newMessageRef.set({
-           name:name,
-           company: company,
-           email:email,
-           phone:phone,
-           message:message,
-
-       });
-   }
-
-
-
-   </script>
-
-
-    
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="loft.js"></script>
     <script src="heroslider.js"></script>
 </body>

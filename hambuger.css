@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+}
   .comie{
     z-index: 9999999999999999999999;
   }
@@ -19,8 +21,6 @@
     transform: translateX(-320px);
     transition: transform 260ms ease-in-out;
     background:#00003f;
-    
-   
   }
 
   input[type="checkbox"]:checked ~ nav {

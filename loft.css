@@ -6,9 +6,11 @@
 	transform:translate(-50%, -50%);
 	box-sizing:border-box;
     overflow-y: hidden;
-   
-
 	}
+
+    html {
+        scroll-behavior: smooth;
+      }
 
 #loader{
     z-index:999999999999999999999;
@@ -409,8 +411,29 @@ box-shadow: inset 5px 5px 10px #b8b8b8,
 
 
 
+/*******************8CONTACT FORM********************************/
+.conti{
+    background: #000029;
+    color:rgb(228, 228, 228);
+}
 
+.conti-btn{
+    background: #000029;
+    color:rgb(228, 228, 228);
+    transition: all 0.3s linear;
+}
+.conti-btn:hover{
+    background: #01016d;
+    transition: all 0.3s linear;
+   
+}
 
+.neu{
+    border-radius: 35px;
+    background: #000029;
+    box-shadow: inset 14px 14px 34px #000010,
+                inset -14px -14px 34px #000042;
+}
 
 
 
