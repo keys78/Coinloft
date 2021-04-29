@@ -1,0 +1,128 @@
+html {
+    scroll-behavior: smooth;
+  }
+    .comie{
+      z-index: 9999999999999999999999;
+    }
+    .topper {
+      width: 100%;
+      background:#000029;
+      position: fixed;
+      height: 60px!important;
+      z-index: 20;
+    }
+    
+  
+    .topper {
+      width: 100%;
+      background:#000029;
+      position: fixed;
+      height: 60px!important;
+      z-index: 20;
+    }
+    
+    .holder {
+      padding:12px 0 12px 22px;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top:0;
+      width: 320px;
+      margin-top:0;
+      transform: translateX(-320px);
+      transition: transform 260ms ease-in-out;
+      background:#00003f;
+    }
+  
+  
+  
+  
+  
+  
+    nav {
+      padding:12px 0 12px 22px;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      width: 320px;
+      margin-top: 60px;
+      transform: translateX(-320px);
+      transition: transform 260ms ease-in-out;
+      background:#00003f;
+    }
+  
+    input[type="checkbox"]:checked ~ nav {
+      transform: translateX(0);
+      z-index: 40;
+    }
+    input[type=checkbox] {
+      box-sizing: border-box;
+      display: none;
+      transition: all 0.25s;
+    }
+    .menuIconToggle {
+      box-sizing: border-box;
+      cursor: pointer;
+      position: fixed;
+      z-index: 40;
+      height: 100%;
+      width: 100%;
+      top: 23px;
+      right: 30px;
+      height: 22px;
+      width: 22px;
+      transition: all 0.3s;
+    }
+    .hamb-line {
+      box-sizing: border-box;
+      position: absolute;
+      top:0;
+      height: 3px;
+      width: 100%;
+      background-color: #775704;
+      transition: all 0.25s;
+    }
+    .hor {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+      margin-top: 5px;
+    }
+    .dia.part-1 {
+      position: relative;
+      box-sizing: border-box;
+      float: left;
+      transition: all .25s;
+    }
+    .dia.part-2 {
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+      margin-top: 5px;
+      transition: all .25s;
+    }
+    input[type=checkbox]:checked ~ .menuIconToggle > .hor {
+      box-sizing: border-box;
+      opacity: 0;
+      transition: all .25s;
+    }
+    input[type=checkbox]:checked ~ .menuIconToggle > .dia.part-1 {
+      box-sizing: border-box;
+      transform: rotate(135deg);
+      margin-top: 8px;
+      transition: all .25s;
+    }
+    input[type=checkbox]:checked ~ .menuIconToggle > .dia.part-2 {
+      box-sizing: border-box;
+      transform: rotate(-135deg);
+      margin-top: -9px;
+      transition: all .25s;
+    }
+    @media screen and (max-width: 640px) {
+     nav {
+        height: 100%;
+        width: 100%;
+        transform: translateX(100%);
+      } 
+    }

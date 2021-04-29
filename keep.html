@@ -1,0 +1,66 @@
+<div class="login-div py-8 shadow h-auto lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 m-auto">
+
+    <div class="sm:w-10/12 w-11/12 m-auto">
+
+    
+      <form id="register">
+
+        <div class="flex justify-around gap-4">
+         
+            <div class="w-full input-group">
+              <label>First Name</label>
+              <input class="rounded w-full border border-blue-200 py-2 px-3 focus:outline-none text-black" type="text" name="firstName" id="firstName"/>
+            </div>
+
+            <div class="w-full input-group">
+              <label>Last Name</label>
+              <input class="rounded w-full border border-blue-200 py-2 px-3 focus:outline-none text-black" type="text" name="lastName" id="lastName"/>
+            </div>
+
+        </div>
+
+            <div class="w-full pt-6 input-group">
+              <label>Email</label>
+              <input class="rounded w-full border border-blue-200 py-2 px-3 focus:outline-none text-black" type="text" name="email" id="email"/>
+            </div>
+
+            <div class="flex justify-around gap-4 pt-6">
+
+              <div class="w-full input-group">
+                <label>Phone</label>
+                <input class="rounded w-full border border-blue-200 py-2 px-3 focus:outline-none text-black" type="text" name="text" id="phone"/>
+              </div>
+      
+              <div class="w-full">
+                <label>Password</label>
+                <div class="rounded w-full bg-white px-3 border border-blue-200 input-group">
+                    <div class="flex justify-center items-center">
+                        <input class="w-full py-2 focus:outline-none text-black" type="password" name="password" id="password" /><i class=" text-red-500 far fa-eye" id="togglePassword"></i>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="flex justify-around sm:flex-row flex-col-reverse gap-4">
+              <div class="pt-2 w-full">
+                  <input type="checkbox" id="tick"required/><span class="text-sm text-gray-600 ml-2">I have read and agree to the<a class="text-blue-700" href="privacypolicy.html"> Terms of Service</a>.</span>
+              </div>
+            
+              <p class="w-full text-sm pt-2 text-blue-700">*Minimum of 8 characters, must consist at least 1 uppercase letter, 1 lowercase letter and 1 number</p>
+           </div>
+              <div class="input-group full mt-4 mb-8">
+              <input onclick="signUp()" id="signUp" class="rounded focus:outline-none py-2 w-full sm:text-xl text-base contii-btn text-white" type="submit" value="SIGN UP" class="submit-btn" />
+              <div class="clear"></div>
+              </div>
+   
+      </form>
+  
+        
+
+        <h1 class="py-2 text-base text-center">Already have an account? <a class="text-blue-700" href="Login.html">Log In</a> here</h1>
+
+      </div>
+
+
+  </div>

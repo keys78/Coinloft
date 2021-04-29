@@ -13,21 +13,27 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="loft.css">
-    <link rel="stylesheet" href="hambuger.css">
+    <link rel="stylesheet" href="hambug.css">
   </head>
-<body class="locol">
+<body class="bg-gray-100">
 
     
     <!---ALERTS-->
     <div class="errors alert animate__animated animate__bounceInLeft text-base absolute top-5 lg:w-4/12 sm:w-8/12 w-10/12 left-0 overflow-y-hidden py-2 rounded h-10 bg-red-700 text-white w-full m-auto text-center hidden">
     </div>
 
-    <div class="goodalert animate__animated animate__bounceInLeft absolute top-5 lg:w-4/12 sm:w-8/12 w-10/12 left-0 overflow-y-hidden h-12 py-6 bg-green-400 rounded text-white w-full m-auto text-center hidden">
-      <h1 class="-mt-3 text-lg">Account Succefully Created
+    <div class="goodalert animate__animated animate__bounceInLeft absolute top-5 lg:w-4/12 sm:w-8/12 w-10/12 left-0 overflow-y-hidden h-12 py-6 bg-yellow-600 rounded text-white w-full m-auto text-center hidden">
+      <h1 class="-mt-3 text-lg">Make sure your details are correct</h1>
     </div>
 
     <div class="reca w-60 h-32">
       <a target="_blank" href="https://policies.google.com/privacy?hl=en"><img class="tch" src="/images/tryi.jpg"></a>
+  </div>
+
+  <div class="resalert animate__animated animate__backInDown animate__faster border border-gray-300 absolute mx-auto lg:w-4/12 sm:w-8/12 w-10/12 right-0 top-28 h-auto py-3 bg-white rounded text-black hidden">
+    <h1 class=" md:text-lg text-base px-3 ">
+        An email has been sent to you. Follow prompt to reset password                   
+    </h1>
   </div>
 
 
@@ -56,7 +62,7 @@
               <a href="Loan.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Loans</div></a>
               <a href="About.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> About</div></a>
               <a href="Contact.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Contact</div></a>
-              <a href="Login.html"><button class="mt-4 burron publicsans text-white px-4 py-1 rounded">LOGIN</button></a>
+              <a href="Signup.html"><button class="mt-4 burron publicsans text-white px-4 py-1 rounded">SIGN UP</button></a>
           </ul>
           <div class="nabfoot absolute bottom-0 right-24">
             <h1 class="ml-14">
@@ -74,15 +80,11 @@
 
 
 
-
-
-
-
-
-    <div class="login-div py-8 shadow h-auto lg:w-4/12 md:w-5/12 sm:w-7/12 w-10/12 m-auto">
+    <div class="login-div rounded py-8 shadow h-auto lg:w-3/12 md:w-5/12 sm:w-7/12 w-11/12 m-auto bg-white">
 
       <div class="sm:w-10/12 w-11/12 m-auto">
 
+        <h1 class="w-full mx-auto text-center text-2xl my-6 publicsans text-gray-500">Login</h1>
       
         <form id="register">
 
@@ -94,7 +96,7 @@
                 <div class="w-full  pt-8">
                     <div class="flex justify-between">
                         <label>Password</label>
-                        <p class="text-base text-blue-700">Forgot Password?</p>
+                        <p class="cursor-pointer JPO_open text-base text-blue-700">Forgot Password?</p>
                     </div>
                   <div class="rounded w-full bg-white px-3 border border-blue-200">
                     <div class="flex justify-center items-center">
@@ -103,17 +105,13 @@
                     </div>
                 </div>
 
-
                 <div class="input-group full mt-4 mb-8">
-                <input onclick="signIn()" id="signIn" class="rounded focus:outline-none py-2 w-full sm:text-xl text-base contii-btn text-white" type="submit" value="LOG IN" class="submit-btn" />
+                <input onclick="signIn()" id="signIn" class="rounded focus:outline-none py-2 w-full sm:text-xl text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="LOG IN" class="submit-btn" />
                 <div class="clear"></div>
                 </div>
      
         </form>
-    
-          
-
-          <h1 class="py-2 text-base text-center">Don't have an account? <a class="text-blue-700" href="Login.html">Create One</a></h1>
+          <h1 class="py-2 text-base text-center">Don't have an account? <a class="text-blue-700" href="Signup.html">Create One</a></h1>
 
         </div>
 
@@ -121,9 +119,52 @@
     </div>
 
 
+<!---------FoRGET PASSWORD----------->
+    <div id="JPO" class="relative bg-white rounded lg:w-4/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
+
+        <div class="sm:w-8/12 w-11/12 mx-auto py-8">
+            <h1 class="text-2xl font-medium pb-4">Reset Login Password</h1>
+
+            <div class="flex justify-between items-start py-6 bg-yellow-50 gap-4 px-1">
+                <p class=""><i class="text-yellow-400 text-2xl fas fa-exclamation-circle"></i></p>
+                <p class="text-yellow-500">For security purposes, no withdrawals are permitted for 24 hours after modification of security methods.</p>
+            </div>
+
+            <form id="formus">
+                <div class="w-full pt-6">
+                    <label>Email</label>
+                    <input class="w-full rounded border border-blue-200 py-2 px-3 focus:outline-none text-black" type="email" name="email" id="mailres"required/>
+                  </div>
+
+                  <input class="mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="RESET PASSWORD" class="submit-btn"/>
+            </form>
+        </div>
+     
+        <input type="button" class="JPO_close focus:outline-none absolute top-3 right-6 text-white text-sm rounded-full px-3 py-1" style="background-color: #230fdb;" value="X"/>
+     </div>
 
 
 
+
+
+
+
+
+
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+          $('#JPO').popup();
+ 
+          $.fn.popup.defaults.pagecontainer = '#page';
+     
+        });
+     
+        </script>
         
     <script>
   // Your web app's Firebase configuration
@@ -140,7 +181,7 @@
 
     const auth = firebase.auth();
 
-    const userRef = firebase.database().ref("Logger");
+    const userRst = firebase.database().ref("reset");
 
 
 
@@ -189,7 +230,7 @@
 
       setTimeout(function(){
           document.querySelector('.goodalert').style.display = 'none';
-      },3000);
+      },4000);
 
       
 
@@ -199,22 +240,12 @@
         console.log("Logx-$34567")
        
 
-        window.location.href = "dashboard.html";
+        window.location.href = "Dashboard.html";
         regForm.reset();
-        localStorage.setItem('nameTest', firstName.value);
-        localStorage.setItem('lastTest', surname.value);
+       
         localStorage.setItem('mailTest', email.value);
-        localStorage.setItem('pnumTest', phone.value);
-        // localStorage.setItem('nameTest', firstName.value);
-
-
-        name = firstName.value
-        last = surname.value
-        hemail = email.value
-        hphone = phone.value
        
 
-        saveUser(name, last);
      
       });
      
@@ -224,17 +255,35 @@
     
 
     }
-     //save to firebase
-        function saveUser(first, last, hemail, hphone){
-        const newUserRef = userRef.push();
-        newUserRef.set({
-            first:name,
-            last:last,
-            hemail:email,
-            hphone:phone
 
-        });
-    }
+
+            document.getElementById('formus').addEventListener('submit', resForm);
+
+            function resForm(e){
+            e.preventDefault();
+            const mainfo = document.getElementById('mailres').value;
+                    resUser(email)
+                    email = mainfo ;
+                    
+                    document.querySelector('.resalert').style.display = 'block';
+
+                    setTimeout(function(){
+                        document.querySelector('.resalert').style.display = 'none';
+                    },4000);
+
+
+                 resUser(email);
+
+            document.getElementById('formus').reset();
+            
+        }
+                //save to firebase
+                    function resUser(email){
+                    const newRst = userRst.push();
+                    newRst.set({
+                        email:email
+                    });
+                }
 
     function handle_errors(errs) {
       let str = "Error! Please check your ";
@@ -264,7 +313,6 @@
           document.querySelector('.alert').style.display = 'none';
       },3000);
 
-      
     
     }
     

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="loft.css">
+    <link rel="stylesheet" href="hambuger.css">
+  </head>
+<body class="locol">
+    <input onclick="signOut()" id="signIn" class="mt-40 pr-40 rounded focus:outline-none py-2 w-full sm:text-xl text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="LOG IN" class="submit-btn" />
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+    authDomain: "form-a2fa1.firebaseapp.com",
+    projectId: "form-a2fa1",
+    storageBucket: "form-a2fa1.appspot.com",
+    messagingSenderId: "195902252855",
+    appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+
+    const userRef = firebase.database().ref("Logger");
+
+
+
+
+    const regForm = document.querySelector('form#register');
+    const errors_el = document.querySelector('.errors');
+
+    regForm.addEventListener('submit', validateRegisterForm);
+
+    function validateRegisterForm (e) {
+    e.preventDefault();
+    
+    const email = document.querySelector('#register #email');
+    const password = document.querySelector('#register #password');
+    const phone = document.querySelector('#register #phone');
+    
+
+
+
+    let errors = [];
+    
+    const email_reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const pass_reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    
+    
+    
+    if (email.value == "") {
+    errors.push({text: "email", el: email});
+    } else if (!email_reg.test(email.value)) {
+    errors.push({text: "email", el: email});
+    }
+    
+    if (password.value == "") {
+    errors.push({text: "password", el: password});
+    } else if (!pass_reg.test(password.value)) {
+    errors.push({text: "password", el: password});
+    }
+    
+    if (errors.length > 0) {
+    handle_errors(errors);
+    return false;
+    } 
+  
+      //show Alert
+      document.querySelector('.goodalert').style.display = 'block';
+
+      setTimeout(function(){
+          document.querySelector('.goodalert').style.display = 'none';
+      },3000);
+
+      
+
+      auth.signInWithEmailAndPassword(email.value, password.value)
+    .then(function(){
+     
+        console.log("Logx-$34567")
+       
+
+        window.location.href = "Dashboard.html";
+        regForm.reset();
+        localStorage.setItem('nameTest', firstName.value);
+        localStorage.setItem('lastTest', surname.value);
+        localStorage.setItem('mailTest', email.value);
+        localStorage.setItem('pnumTest', phone.value);
+        // localStorage.setItem('nameTest', firstName.value);
+
+
+        name = firstName.value
+        last = surname.value
+        hemail = email.value
+        hphone = phone.value
+       
+
+        saveUser(name, last);
+     
+      });
+     
+     
+    return true;
+      
+    
+
+    }
+     //save to firebase
+        function saveUser(first, last, hemail, hphone){
+        const newUserRef = userRef.push();
+        newUserRef.set({
+            first:name,
+            last:last,
+            hemail:email,
+            hphone:phone
+
+        });
+    }
+
+    function handle_errors(errs) {
+      let str = "Error! Please check your ";
+      
+      errs.map((er) => {
+      er.el.classList.add('error');
+      str += er.text + ", ";
+      });
+      
+      errs[0].el.focus();
+      
+      let error_el = document.createElement('div');
+      error_el.classList.add('error');
+      error_el.innerText = str;
+      
+      error_el.addEventListener('click', function () {
+      errors_el.removeChild(error_el);
+      });
+      
+      errors_el.appendChild(error_el);
+
+      //show Alert
+      document.querySelector('.alert').style.display = 'block';
+
+      //set timer to hide
+      setTimeout(function(){
+          document.querySelector('.alert').style.display = 'none';
+      },3000);
+
+      
+    
+    }
+    
+       
+
+
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+
+
+  </script>
+
+<script>
+auth.onAuthStateChanged(function(user) {
+       if(user) {
+
+         var email = user.email;
+        //  setTimeout (function(){
+        //  alert("Active User " + email).remove();
+        //  }, 3000)
+       }
+       
+    
+    //   else {
+    //  alert("No active user")
+    
+    //   }
+
+    
+  });
+
+
+</script>
+
+<script>
+    function signOut() {
+
+      auth.signOut();
+      alert("Signed out");
+      window.location = "Login.html";
+}
+</script>
+
+</body>
+</html>

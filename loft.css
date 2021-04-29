@@ -15,20 +15,19 @@
 #loader{
     z-index:999999999999999999999;
 }
+.resalert{
+    z-index:9999999999999999999999999999999;
+}
 
 .login-div{
 	position: absolute;
-	top:45%;
+	top:43%;
 	left:50%;
 	transform:translate(-50%, -50%);
 	box-sizing:border-box;
     overflow-y: hidden;
 
 	}
-
-    .locol{
-        background: rgba(79, 161, 255, 0.096);
-    }
 
 header{
     position: fixed;
