@@ -13,16 +13,104 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="loft.css">
-    <link rel="stylesheet" href="hambuger.css">
+    <link rel="stylesheet" href="Dashcss.css">
   </head>
 <body class="locol">
+
+
+      <!-------MObile-------->
+      <section class="">
+        <div class="topper">
+           <div class="flex items-center w-4/12 mt-3 gdown">             
+                <div class="w-4/12 text-blue-900"> <img class="w-20 h-20" src="images\clogo.png" alt="logo">.</div>
+                    
+                <a href="Home.html"><div class="text-2xl -mt-12 font-semibold text-white publicsans burron texto">Coinloft</div></a>
+            </div>
+         
+        <div class="md:hidden block">
+          <input type="checkbox" id="openSideMenu" class="openSideMenu">
+          <label for="openSideMenu" class="menuIconToggle">
+            <div class="hamb-line dia part-1"></div>
+            <div class="hamb-line hor"></div>
+            <div class="hamb-line dia part-2"></div>
+          </label>
+          <nav  class="holder">
+            <ul>
+                <a href="Home.html"><div class="navico newsticky text-lg border-b border-blue-900 pt-3"> Home</div></a>
+                <!-- <a href="#How it works"><div id="remo" class="textohov newsticky text-lg border-b border-blue-900 pt-3"> How it works</div></a> -->
+                <a href="Loan.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Loans</div></a>
+                <a href="About.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> About</div></a>
+                <a href="Contact.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Contact</div></a>
+                <a href="Login.html"><button class="mt-4 burron publicsans text-white px-4 py-1 rounded">LOGIN</button></a>
+            </ul>
+            <div class="nabfoot absolute bottom-0 right-24">
+                <h1 class="ml-14">
+                <i class="text-gray-400 hover:text-red-500 fab fa-twitter"></i>
+                <i class="text-gray-400 hover:text-red-500 fab fa-facebook"></i>
+                </h1>
+              <p class="text-gray-300">seismic ideas | &copy; 2021</p>
+              </div>
+          </nav>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <input onclick="signOut()" id="signIn" class="mt-40 pr-40 rounded focus:outline-none py-2 w-full sm:text-xl text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="LOG IN" class="submit-btn" />
-              
-
-
-
-
-
+ 
+    <img src="images\clogo.png" alt="logo">
 
 
 
@@ -59,183 +147,26 @@
   };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
     const auth = firebase.auth();
-
-    const userRef = firebase.database().ref("Logger");
-
-
-
-
-    const regForm = document.querySelector('form#register');
-    const errors_el = document.querySelector('.errors');
-
-    regForm.addEventListener('submit', validateRegisterForm);
-
-    function validateRegisterForm (e) {
-    e.preventDefault();
-    
-    const email = document.querySelector('#register #email');
-    const password = document.querySelector('#register #password');
-    const phone = document.querySelector('#register #phone');
-    
-
-
-
-    let errors = [];
-    
-    const email_reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const pass_reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-    
-    
-    
-    if (email.value == "") {
-    errors.push({text: "email", el: email});
-    } else if (!email_reg.test(email.value)) {
-    errors.push({text: "email", el: email});
-    }
-    
-    if (password.value == "") {
-    errors.push({text: "password", el: password});
-    } else if (!pass_reg.test(password.value)) {
-    errors.push({text: "password", el: password});
-    }
-    
-    if (errors.length > 0) {
-    handle_errors(errors);
-    return false;
-    } 
-  
-      //show Alert
-      document.querySelector('.goodalert').style.display = 'block';
-
-      setTimeout(function(){
-          document.querySelector('.goodalert').style.display = 'none';
-      },3000);
-
-      
-
-      auth.signInWithEmailAndPassword(email.value, password.value)
-    .then(function(){
-     
-        console.log("Logx-$34567")
-       
-
-        window.location.href = "Dashboard.html";
-        regForm.reset();
-        localStorage.setItem('nameTest', firstName.value);
-        localStorage.setItem('lastTest', surname.value);
-        localStorage.setItem('mailTest', email.value);
-        localStorage.setItem('pnumTest', phone.value);
-        // localStorage.setItem('nameTest', firstName.value);
-
-
-        name = firstName.value
-        last = surname.value
-        hemail = email.value
-        hphone = phone.value
-       
-
-        saveUser(name, last);
-     
-      });
-     
-     
-    return true;
-      
-    
-
-    }
-     //save to firebase
-        function saveUser(first, last, hemail, hphone){
-        const newUserRef = userRef.push();
-        newUserRef.set({
-            first:name,
-            last:last,
-            hemail:email,
-            hphone:phone
-
-        });
-    }
-
-    function handle_errors(errs) {
-      let str = "Error! Please check your ";
-      
-      errs.map((er) => {
-      er.el.classList.add('error');
-      str += er.text + ", ";
-      });
-      
-      errs[0].el.focus();
-      
-      let error_el = document.createElement('div');
-      error_el.classList.add('error');
-      error_el.innerText = str;
-      
-      error_el.addEventListener('click', function () {
-      errors_el.removeChild(error_el);
-      });
-      
-      errors_el.appendChild(error_el);
-
-      //show Alert
-      document.querySelector('.alert').style.display = 'block';
-
-      //set timer to hide
-      setTimeout(function(){
-          document.querySelector('.alert').style.display = 'none';
-      },3000);
-
-      
-    
-    }
-    
-       
-
-
-    const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#password');
-
-    togglePassword.addEventListener('click', function (e) {
-        // toggle the type attribute
-        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-        password.setAttribute('type', type);
-        // toggle the eye slash icon
-        this.classList.toggle('fa-eye-slash');
-    });
-
-
-  </script>
-
-<script>
-auth.onAuthStateChanged(function(user) {
+    auth.onAuthStateChanged(function(user) {
        if(user) {
-
          var email = user.email;
-        //  setTimeout (function(){
         //  alert("Active User " + email).remove();
-        //  }, 3000)
        }
-       
-    
     //   else {
     //  alert("No active user")
     
     //   }
-
     
   });
 
+  function signOut() {
 
-</script>
-
-<script>
-    function signOut() {
-
-      auth.signOut();
-      alert("Signed out");
-      window.location = "Login.html";
+auth.signOut();
+alert("Signed out");
+window.location = "Login.html";
 }
+
 </script>
 
 </body>

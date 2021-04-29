@@ -15,6 +15,19 @@
     <link rel="stylesheet" href="loft.css">
     <link rel="stylesheet" href="hambug.css">
   </head>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/60761301f7ce1827093a1d7f/1f36jkg0m';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 <body class="bg-gray-100">
 
     
@@ -22,7 +35,7 @@
     <div class="errors alert animate__animated animate__bounceInLeft text-base absolute top-5 lg:w-4/12 sm:w-8/12 w-10/12 left-0 overflow-y-hidden py-2 rounded h-10 bg-red-700 text-white w-full m-auto text-center hidden">
     </div>
 
-    <div class="goodalert animate__animated animate__bounceInLeft absolute top-5 lg:w-4/12 sm:w-8/12 w-10/12 left-0 overflow-y-hidden h-12 py-6 bg-yellow-600 rounded text-white w-full m-auto text-center hidden">
+    <div class="goodalert animate__animated animate__bounceInLeft absolute top-5 lg:w-4/12 sm:w-8/12 w-10/12 left-0 overflow-y-hidden h-12 py-6 bg-yellow-300 rounded text-white w-full m-auto text-center hidden">
       <h1 class="-mt-3 text-lg">Make sure your details are correct</h1>
     </div>
 
@@ -200,7 +213,6 @@
     
 
 
-
     let errors = [];
     
     const email_reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -245,8 +257,6 @@
        
         localStorage.setItem('mailTest', email.value);
        
-
-     
       });
      
      
@@ -257,33 +267,7 @@
     }
 
 
-            document.getElementById('formus').addEventListener('submit', resForm);
-
-            function resForm(e){
-            e.preventDefault();
-            const mainfo = document.getElementById('mailres').value;
-                    resUser(email)
-                    email = mainfo ;
-                    
-                    document.querySelector('.resalert').style.display = 'block';
-
-                    setTimeout(function(){
-                        document.querySelector('.resalert').style.display = 'none';
-                    },4000);
-
-
-                 resUser(email);
-
-            document.getElementById('formus').reset();
             
-        }
-                //save to firebase
-                    function resUser(email){
-                    const newRst = userRst.push();
-                    newRst.set({
-                        email:email
-                    });
-                }
 
     function handle_errors(errs) {
       let str = "Error! Please check your ";
@@ -318,7 +302,6 @@
     
        
 
-
     const togglePassword = document.querySelector('#togglePassword');
     const password = document.querySelector('#password');
 
@@ -332,6 +315,39 @@
 
 
   </script>
+
+
+
+  <script>
+      document.getElementById('formus').addEventListener('submit', resForm);
+
+function resForm(e){
+e.preventDefault();
+const mainfo = document.getElementById('mailres').value;
+        resUser(email)
+        email = mainfo ;
+        
+        document.querySelector('.resalert').style.display = 'block';
+
+        setTimeout(function(){
+            document.querySelector('.resalert').style.display = 'none';
+        },4000);
+
+
+     resUser(email);
+
+document.getElementById('formus').reset();
+
+}
+    //save to firebase
+        function resUser(email){
+        const newRst = userRst.push();
+        newRst.set({
+            email:email
+        });
+    }
+  </script>
+
 
 <script>
 auth.onAuthStateChanged(function(user) {
