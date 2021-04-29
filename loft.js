@@ -61,10 +61,4 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function(){
            roso.remove();
        }, 6000);
-   });  
-
-
-   ///Translate ////
-   
- 
-
+   });

@@ -11,6 +11,34 @@ html {
     height: 60px!important;
     z-index: 20;
   }
+  
+
+  .topper {
+    width: 100%;
+    background:#000029;
+    position: fixed;
+    height: 60px!important;
+    z-index: 20;
+  }
+  
+  .holder {
+    padding:12px 0 12px 22px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 320px;
+    margin-top:0;
+    transform: translateX(-320px);
+    transition: transform 260ms ease-in-out;
+    background:#00003f;
+  }
+
+
+
+
+
+
   nav {
     padding:12px 0 12px 22px;
     height: 100%;

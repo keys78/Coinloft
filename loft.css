@@ -18,7 +18,7 @@
 
 .login-div{
 	position: absolute;
-	top:50%;
+	top:45%;
 	left:50%;
 	transform:translate(-50%, -50%);
 	box-sizing:border-box;
@@ -26,6 +26,9 @@
 
 	}
 
+    .locol{
+        background: rgba(79, 161, 255, 0.096);
+    }
 
 header{
     position: fixed;
@@ -438,6 +441,16 @@ box-shadow: inset 5px 5px 10px #b8b8b8,
     transition: all 0.3s linear;
 }
 .conti-btn:hover{
+    background: #01016d;
+    transition: all 0.3s linear;
+   
+}
+.contii-btn{
+    background: #000036ec;
+    color:rgb(228, 228, 228);
+    transition: all 0.3s linear;
+}
+.contii-btn:hover{
     background: #01016d;
     transition: all 0.3s linear;
    
