@@ -11,44 +11,26 @@ html {
       height: 60px!important;
       z-index: 20;
     }
-    
   
     .topper {
       width: 100%;
       background:#000029;
       position: fixed;
-      height: 60px!important;
+      height: 80px!important;
       z-index: 20;
     }
-    
-    .holder {
-      padding:12px 0 12px 22px;
-      height: 100%;
-      position: fixed;
-      left: 0;
-      top:0;
-      width: 320px;
-      margin-top:0;
-      transform: translateX(-320px);
-      transition: transform 260ms ease-in-out;
-      background:#00003f;
-    }
-  
-  
-  
-  
-  
   
     nav {
       padding:12px 0 12px 22px;
       height: 100%;
       position: fixed;
       left: 0;
+      top:0;
       width: 320px;
-      margin-top: 60px;
+      margin-top: 80px;
       transform: translateX(-320px);
       transition: transform 260ms ease-in-out;
-      background:#00003f;
+      background:#ffffff;
     }
   
     input[type="checkbox"]:checked ~ nav {
@@ -134,3 +116,113 @@ html {
         transform: translateX(100%);
       } 
     }
+
+
+    .navcolor{
+        background: #f1f1f1;
+        /* background: #e0e0e0; */
+    }
+    
+    .basecolor{
+        background:#fafafa;
+        /* background: #e0e0e0; */
+    }
+
+
+
+
+    .newneu{
+      
+            box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+                        0 2px 2px rgba(0,0,0,0.20), 
+                        0 4px 4px rgba(0,0,0,0.15), 
+                        0 8px 8px rgba(0,0,0,0.10),
+                        0 16px 16px rgba(0,0,0,0.05);
+         
+    }
+
+    .navhov{
+        transition: 0.2s linear all;
+    }
+
+.navhov:hover{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+    0 2px 2px rgba(0,0,0,0.20), 
+    0 4px 4px rgba(0,0,0,0.15), 
+    0 8px 8px rgba(0,0,0,0.10),
+    0 16px 16px rgba(0,0,0,0.05);
+    background: white;
+    transition: 0.1s linear all;
+}
+
+.navhov:hover .fas{
+   color:#000079;
+   animation: fade 1s ease-in-out ;
+   animation-duration: 0.5s;
+}
+
+
+  @keyframes fade {
+ 
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+    from{
+        font-size: 150px;
+    }
+    to{
+        font-size: 20px;
+    }
+  }
+
+  /* .btnns{
+      background: #000029;
+      color:rgb(235, 235, 235);
+  }
+
+  .btnns:hover{
+      background: #000029;
+  } */
+
+
+  .buttn{
+    background-image:linear-gradient(to right, #ceba09 25%,  #000029  50%, #000072 40%);
+    color:rgb(235, 235, 235);
+    transition: all linear 0.2s;
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.buttn:hover{
+    background-position: left bottom;
+}
+
+
+/*********************************************** FONTS ***************************************************/
+.overpass{
+    font-family: 'Overpass', sans-serif;
+}
+.publicsans{
+    font-family: 'Public Sans', sans-serif
+}
+
+.ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.maven{
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.opensans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cabino{
+    font-family: 'Cabin', sans-serif;
+}
+
