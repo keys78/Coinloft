@@ -251,21 +251,44 @@ html {
     0 16px 16px rgba(0,0,0,0.05);
 }
 
+.keke{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+    0 2px 2px rgba(0,0,0,0.15), 
+    0 4px 4px rgba(0,0,0,0.15), 
+    0 8px 8px rgba(0,0,0,0.15);
+}
 
- /* hide content */
- .content {
-    display: none;
-  }
-  .tab-btn.active {
-    background: rgb(255, 255, 255);
-    color:black;
-    cursor: none;
-    
-  }
-  .content.active {
-    display: block;
-  }
+.fokpu{
+    transition: 0.1s linear all;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+    0 2px 2px rgba(0,0,0,0.15), 
+    0 4px 4px rgba(0,0,0,0.15), 
+    0 8px 8px rgba(0,0,0,0.15);
+}
+.fokpu:hover{
+    transform: scale(0.99);
+    transition: 0.2s linear all;
+}
 
-  .btn-nav{
-      background:  #0c56c214;
-  }
+.fa-bell{
+    animation: jingle 2s linear infinite;
+}
+
+@keyframes jingle{
+    0%{
+      transform: rotate(35deg);
+    }
+    50%{
+      transform: rotate(0deg);
+      animation-delay: 10s;
+    }
+  65%{
+      transform: rotate(-35deg);
+    }
+  85%{
+      transform: rotate(-12deg);
+    }
+    100%{
+      transform: rotate(35deg);
+    }
+}
