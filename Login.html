@@ -248,14 +248,13 @@
 
       auth.signInWithEmailAndPassword(email.value, password.value)
     .then(function(){
-     
+        localStorage.setItem('mailTest', email.value);
         console.log("Logx-$34567")
-       
 
         window.location.href = "Dashboard.html";
         regForm.reset();
        
-        localStorage.setItem('mailTest', email.value);
+       
        
       });
      

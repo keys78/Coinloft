@@ -9,21 +9,23 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- <link rel="stylesheet" href="loft.css"> -->
     <link rel="stylesheet" href="Dashcss.css">
   </head>
-<body class="locol">
+<body>
 
 
-      <!-------MObile-------->
+      <!-------topnav-------->
       <section class="">
         <div class="topper">
-           <div class="flex justify-center items-center lg:-ml-20 sm:-ml-0 sm:ml-0 ml-5  md:w-1/12 md:w-3/12 w-4/12 mt-6 gdown">             
+           <div class="flex justify-center items-center lg:-ml-10 sm:ml-0 ml-8  md:w-1/12 md:w-3/12 w-3/12 mt-6 gdown">             
 
-                <div class="">
+                <a href="Home.html"><div class="">
                     <svg class="w-20 h-14 -mt-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="186.847" height="214.403" viewBox="0 0 186.847 214.403">
                         <defs>
                         <linearGradient id="linear-gradient" x1="0.5" x2="0.382" y2="0.084" gradientUnits="objectBoundingBox">
@@ -42,11 +44,11 @@
                         </g>
                         </g>
                     </svg>
-                </div>
+                </div></a>
                     
                 <a href="Home.html"><div class="text-2xl -mt-2 -ml-3 font-semibold text-white publicsans burron texto">Coinloft</div></a> 
                 <div class="lg:block hidden text-white text-xl text-green-500 cursor-pointer absolute top-8 right-80"><i class="far fa-bell"></i></div>         
-                <div class="lg:block hidden text-white absolute text-lg top-8 right-16 overflow-hidden">hejimofor141@uniport.edu.ng</div>         
+                <div id="fmail" class="lg:block hidden text-white absolute text-lg top-8 right-16 overflow-hidden"></div>                  
             </div>
 
            
@@ -58,16 +60,43 @@
             <div class="hamb-line hor"></div>
             <div class="hamb-line dia part-2"></div>
           </label>
-          <div class="text-green-500 absolute cursor-pointer text-xl right-20 top-7 "><i class="far fa-bell"></i></div> 
+          <div class="berro text-green-500 absolute cursor-pointer text-xl right-20 top-7 "><i class="far fa-bell"></i></div> 
           <nav>
             <ul>
-                <a href="Home.html"><div class="navico newsticky text-lg border-b border-blue-900 pt-3"> Home</div></a>
-                
-                <!-- <a href="#How it works"><div id="remo" class="textohov newsticky text-lg border-b border-blue-900 pt-3"> How it works</div></a> -->
-                <a href="Loan.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Loans</div></a>
-                <a href="About.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> About</div></a>
-                <a href="Contact.html"><div class="textohov newsticky text-lg border-b border-blue-900 pt-3"> Contact</div></a>
-                <a href="Login.html"><button class="mt-4 burron publicsans text-white px-4 py-1 rounded">LOGIN</button></a>
+                <a href="Dashboard.html"><div class="flex gap-4 py-3 bg-white font-medium px-3 mr-4 newneu items-start rounded">  
+                    <i class="text-xl fas fa-door-open"></i>
+                    <h1 class="text-lg">Dashboard</h1>
+                </div></a>
+    
+                <a href="Account.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                 <i class="fas text-blue-700 text-xl far fa-user"></i>
+                    <h1 class="text-lg">Account</h1>
+                </div></a>
+    
+                <a href="Transactions.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-coins"></i>
+                    <h1 class="text-lg">Transactions</h1>
+                </div></a>
+    
+                <a href="Investments.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-wallet"></i>
+                    <h1 class="text-lg">Investments</h1>
+                </div></a>
+    
+                <a href="Loan.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
+                    <h1 class="text-lg">Loans</h1>
+                </div></a>
+    
+                <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-cog"></i>
+                    <h1 class="text-lg">Settings</h1>
+                </div></a>
+    
+                <div onclick="signOut()" id="signIn" class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
+                    <h1 class="text-lg">Log out</h1>
+                </div>
             </ul>
             <div class="nabfoot absolute bottom-0 right-24">
                 <h1 class="ml-14">
@@ -82,7 +111,7 @@
 
     <!------------------------ SIDE BAR -------------------------->
 
-    <section class="h-screen w-3/12 fixed navcolor lg:block hidden pt-20">
+    <section class="h-screen w-3/12 fixed basecolor border-r lg:block hidden pt-20">
         <div class="w-11/12 mx-auto mt-8">
 
             <a href="Dashboard.html"><div class="flex gap-4 py-3 bg-white font-medium px-3 newneu items-start rounded">  
@@ -124,53 +153,150 @@
         </div>
     </section>
 
-    <section class="mt-12 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
-        <div class="w-11/12 mx-auto">
+    <section class="mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
+        <div class="w-full mx-auto">
 
             <div class="WELCOME pt-6">
-                <h1 class="text-4xl">Dashboard</h1>
-                <p class="text-xl text-gray-700 pt-4">Welcome back!</p>
+                <h1 class="sm:text-4xl text-3xl">Dashboard</h1>
+                <p class="text-xl text-gray-700 pt-2">Welcome back! </p>
+                <p id="smail" class="lg:hidden block text-xl text-gray-700 pt-1"></p>             
             </div>
 
             <div class="flex justify-between mt-16">
-                <div class="flex">
-                    <div class=" border-r border-current pr-5">
-                         <h1 class="text-2xl opensans">Portfolio Balance</h1>
-                         <p class="text-3xl ubuntu text-gray-700 pt-4">$11,250.54</p>
+                <div class="flex md:flex-row flex-col ">
+                    <div class="md:w-8/12 w-full border-r border-blue-500 lg:pr-0 pr-3 py-6 rounded pl-2 wheee">
+                         <h1 class="sm:text-2xl text-2xl opensans -mr-2">Portfolio Balance</h1>
+                            <div class="flex">
+                                <input class="md:text-3xl text-2xl md:w-8/12 w-11/12 bg-transparent numb text-gray-700 text-blue-600 border-none" disabled type="password" name="password" value="$11,250.55" id="password" />
+                                <i class="md:-ml-0 -ml-14 mt-2 text-blue-600 far fa-eye" id="togglePassword"></i>
+                            </div>
                     </div>
-                    <div class="">
-                         <h1 class="text-2xl">Coins</h1>
-                         <p class="text-xl text-gray-700 pt-4">ddkhss.54</p>
+                    <div class="md:pl-5 md:block hidden py-6">
+                         <h1 class="sm:text-2xl text-lg opensans text-gray-500">Coins</h1>
+                        <div class="flex gap-2">
+                            <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng">
+                            <img class="h-8 w-8"src="/images/etpng.png" alt="ethpng">
+                            <img class="h-10 w-10 -mt-1 -ml-1"src="https://www.logo.wine/a/logo/Binance/Binance-BNB-Icon-Logo.wine.svg" alt="bnbpng">
+                            <i class="hover:text-blue-600 text-2xl text-gray-600 fas fa-plus-circle cursor-pointer"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="flex md:flex-row flex-col items-center gap-2">
+                <div class="flex sm:flex-row flex-col items-center sm:gap-2 gap-6 sm:ml-0 ml-2">
 
-                    <div class="flex gap-2  py-2 px-2 text-lg cursor-pointer buttn rounded">
-                        <i class="text-xl fas fa-university"></i>
-                         <p class="">Withdraw</p>                  
+                    <div class="flex gap-2 text-gray-300 py-2 px-6 text-lg cursor-pointer buttn rounded">
+                        <i class="text-xl text-gray-300 fas fa-university"></i>
+                         <p class="text-gray-300 ">Deposit</p>                  
                     </div>
-                    
-                    <div class="flex gap-2  py-2 px-2 text-lg cursor-pointer buttn rounded">
-                        <i class="text-xl fas fa-university"></i>
-                         <p class="">Withdraw</p>                  
+
+                    <div class="flex gap-2  py-2 px-4 text-lg cursor-pointer buttn rounded">
+                        <i class="text-xl text-gray-300  fas fa-university"></i>
+                         <p class="text-gray-300 ">Withdraw</p>                  
                     </div>
                    
                 </div>
             </div>
 
+            <!-----------SMALL COIN----------->
+            <div class="md:pl-5 md:hidden block py-2 mt-3 bg-gray-300 px-2">
+                <h1 class="sm:text-2xl text-lg opensans text-gray-500">Coins</h1>
+               <div class="flex gap-2">
+                   <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng">
+                   <img class="h-8 w-8"src="/images/etpng.png" alt="ethpng">
+                   <img class="h-10 w-10 -mt-1 -ml-1"src="https://www.logo.wine/a/logo/Binance/Binance-BNB-Icon-Logo.wine.svg" alt="btcpng">
+                   <i class="hover:text-blue-600 text-2xl text-gray-600 fas fa-plus-circle cursor-pointer"></i>
+               </div>
+           </div>
 
-            <!-- <div class="">
-                <div class="">
-                    <h1 class="text-xl text-gray-700">YOUR COINLOFT BALANCE</h1>
-                    <h2 class=""></h2>
-                </div>
-            </div> -->
+
+           <!--------section 3------>
+           <section class="flex sm:flex-row flex-col gap-3 mt-10 ubuntu">
+               <div class="sm:w-6/12 w-full">
+                <h1 class="sm:text-2xl text-xl pb-1 text-gray-600">Your Wallets</h1>
+                   <div class="flex justify-between bg-gray-700 py-4 px-2 text-white ubuntu rounded-t">
+                        <p class="">WALLETS</p>
+                        <p class="">BALANCE</p>
+                        <p class="">AMOUNT</p>
+                   </div>
+
+                   <div class="flex justify-between items-center px-1 py-1 hover:border-r-2 chthov bg-gray-150">
+                       <div class="">
+                           <div class="flex items-center gap-2">
+                               <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng">
+                               <div>
+                                    <p class="text-blue-500">(BTC)</p>
+                                    <p>Bitcoin</p>
+                               </div>
+                            </div>
+                       </div>
+                       <p>0.005 BTC</p>
+                       <p>$3,453.23</p>
+                   </div>
+
+                   
+                   <div class="flex justify-between items-center px-1 py-1 hover:border-r-2 chthov bg-gray-300">
+                       <div class="">
+                           <div class="flex items-center gap-2">
+                               <img class="h-7 w-7"src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="btcpng">
+                               <div>
+                                    <p class="text-blue-500">(ETH)</p>
+                                    <p>Ethereum</p>
+                               </div>
+                            </div>
+                       </div>
+                       <p>0.798 ETH</p>
+                       <p>$1,453.23</p>
+                   </div>
+
+                   
+                   <div class="flex justify-between items-center px-1 py-1 hover:border-r-2 chthov bg-gray-100">
+                       <div class="">
+                           <div class="flex items-center gap-2">
+                               <img class="h-7 w-7"src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="btcpng">
+                               <div>
+                                    <p class="text-blue-500">(BNB)</p>
+                                    <p>Binance</p>
+                               </div>
+                            </div>
+                       </div>
+                       <p>2.05 BNB</p>
+                       <p>$2,453.23</p>
+                   </div>
+
+                   <div class="px-1 py-2 hover:border-r-2 chthov bg-gray-200">
+                    <i class="text-2xl text-gray-600 fas hover:text-blue-600 fa-plus-circle cursor-pointer"></i>
+                    <span>Add Coin</span>
+                   </div>
+
+
+                   <div class="mt-10 w-full h-40 py-4 wheree px-2 rounded-t">
+                      <p>Don't know where to purchase your cryptocurrencies? Here are some globally trusted sites to purchase from </p>
+                      <p><a class="text-blue-500 hover:text-blue-400 text-base pl-2" target="_blank" href="https://www.coinmama.com/?locale=en">Coinmama</a></p>
+                      <p><a class="text-blue-500 hover:text-blue-400 text-base pl-2" target="_blank" href="https://www.coinbase.com/">Coinbase</a></p>
+                      <p><a class="text-blue-500 hover:text-blue-400 text-base pl-2" target="_blank" href="https://www.blockchain.com/es/">Blockchain</a></p>
+                   </div>
+                   <!--end of holder-->
+               </div>
+
+               <div class="sm:w-6/12 w-full sm:mt-0 mt-5">
+                <h1 class="sm:text-2xl text-xl pb-1 text-gray-600">Currenncy Rates</h1>
+                <div style="height:551px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38; padding: 0px; margin: 0px; width: 100%;"><div style="height:531px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=dark&cnt=8&pref_coin_id=1505&graph=yes" width="100%" height="527px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
+               </div>
+
+           </section>
+          
 
         </div>
+        <div class="hidden notif absolute top-1 md:right-60 right-16 bg-white w-68 py-6 px-3 rounded border text-black">
+            You have no unread notifications   
+        </div>
+
+        <section class="copyright bg-gray-200 h-12 text-gray-500 text-center w-full" >
+            <p class="sm:text-base text-xs pt-3">Copyrights &copy; All Rights Reserved, 2021 | Designed by Em_codes</p>
+        </section>
     </section>
    
 
-
+   
 
 
 
@@ -241,7 +367,18 @@
 
 
 
+<script>
+     const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
 
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+</script>
 
 
 
@@ -276,8 +413,9 @@ auth.signOut();
 alert("Signed out");
 window.location = "Login.html";
 }
-
 </script>
 
+
+<script src="Dash.js"></script>
 </body>
 </html>

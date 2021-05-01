@@ -30,7 +30,7 @@ html {
       margin-top: 80px;
       transform: translateX(-320px);
       transition: transform 260ms ease-in-out;
-      background:#ffffff;
+      background:#38eeee;
     }
   
     input[type="checkbox"]:checked ~ nav {
@@ -179,19 +179,26 @@ html {
     }
   }
 
-  /* .btnns{
+   .wheree{
       background: #000029;
       color:rgb(235, 235, 235);
   }
-
-  .btnns:hover{
-      background: #000029;
-  } */
+   .wheee{
+      background: #ffffff;
+      color:#080101;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                    0 2px 4px rgba(0,0,0,0.07), 
+                    0 4px 8px rgba(0,0,0,0.07), 
+                    0 8px 16px rgba(0,0,0,0.07),
+                    0 16px 32px rgba(0,0,0,0.07), 
+                    0 32px 64px rgba(0,0,0,0.07);
+    
+  }
 
 
   .buttn{
-    background-image:linear-gradient(to right, #ceba09 25%,  #000029  50%, #000072 40%);
-    color:rgb(235, 235, 235);
+    background-image:linear-gradient(to right, #6e6401 25%,  #000029  50%, #000072 40%);
+    color:rgb(245, 245, 245);
     transition: all linear 0.2s;
     background-size: 200% 100%;
     background-position: right bottom;
@@ -200,6 +207,20 @@ html {
 .buttn:hover{
     background-position: left bottom;
 }
+
+.chthov:hover{
+    border-left: 2px solid blue;
+    transition: all linear 0.2s;
+}
+
+
+
+
+
+
+
+
+
 
 
 /*********************************************** FONTS ***************************************************/
@@ -226,3 +247,6 @@ html {
     font-family: 'Cabin', sans-serif;
 }
 
+.numb{
+    font-family: 'Merriweather', serif;
+}
