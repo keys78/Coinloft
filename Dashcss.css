@@ -215,14 +215,6 @@ html {
 
 
 
-
-
-
-
-
-
-
-
 /*********************************************** FONTS ***************************************************/
 .overpass{
     font-family: 'Overpass', sans-serif;
@@ -258,3 +250,22 @@ html {
     0 8px 8px rgba(0,0,0,0.10),
     0 16px 16px rgba(0,0,0,0.05);
 }
+
+
+ /* hide content */
+ .content {
+    display: none;
+  }
+  .tab-btn.active {
+    background: rgb(255, 255, 255);
+    color:black;
+    cursor: none;
+    
+  }
+  .content.active {
+    display: block;
+  }
+
+  .btn-nav{
+      background:  #0c56c214;
+  }
