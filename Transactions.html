@@ -83,9 +83,9 @@
                     <h1 class="text-lg">Investments</h1>
                 </div></a>
     
-                <a href="Loan.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
                     <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
-                    <h1 class="text-lg">Loans</h1>
+                    <h1 class="text-lg">Loans <span class="text-pink-400 text-xs">(new)</span></h1>
                 </div></a>
     
                 <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
@@ -134,9 +134,9 @@
                 <h1 class="text-lg">Investments</h1>
             </div></a>
 
-            <a href="Loan.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+            <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
                 <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
-                <h1 class="text-lg">Loans</h1>
+                <h1 class="text-lg">Loans <span class="text-pink-400 text-xs">(new)</span></h1>
             </div></a>
 
             <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
@@ -155,8 +155,28 @@
 
     <section class="transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
              
-        <h1 class="sm:text-4xl text-3xl my-6">Transcations</h1>
+        <div class="flex justify-between w-11/12 pt-6">
+            <h1 class="sm:text-4xl text-3xl">Transcations</h1>
+            <div class="">
+                <p class="w-5 h-5 bg-green-500 gap-4 fokpu"><span>Deposits</span></p>
+                <p class="w-5 h-5 bg-red-500 fokpu mt-2"><span>Withdrawals</span></p>
+            </div>
+        </div>
 
+        <i id="pune" class="absolute cursor-pointer top-6 right-5 hover:text-blue-600 text-xl text-blue-700 fas fa-cog"></i>
+
+        <div id="popi" class="md:w-2/12 sm:w-3/12 w-4/12 bg-white absolute top-7 right-10 py-1 px-3 hidden">
+            <p><input name="sele" type="radio"> All</p>
+            <p><input name="sele" type="radio"> Approved</p>
+            <p><input name="sele" type="radio"> Pending</p>
+            <p><input name="sele" type="radio"> Canceled</p>
+            
+        </div>
+
+
+        <h1 class="sm:text-xl text-base mt-6 mb-2">Here is a history of your transcations</h1>
+
+        
         <div class="w-full mx-auto border px-5 py-8 keke">
 
             <div class="flex justify-between text-xl font-medium">

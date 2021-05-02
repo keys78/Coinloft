@@ -47,3 +47,11 @@ needr.appendChild(document.createTextNode(infom));
     mailo.appendChild(document.createTextNode(mailoo));
     phone.appendChild(document.createTextNode(pnum));
   } 
+
+
+  document.getElementById('pune').addEventListener('click', popi);
+  const popin =  document.getElementById('popi');
+  function popi(){
+    popin.classList.toggle('show');
+      
+  }

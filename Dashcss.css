@@ -292,3 +292,55 @@ html {
       transform: rotate(35deg);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.show{
+    background: rgb(189, 253, 255);
+    display: block;
+}
+
+
+
+
+.products-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-column-gap: 2.0rem; */
+    grid-row-gap: 0.9rem;
+    justify-content: center;
+    align-items: center;
+
+  }

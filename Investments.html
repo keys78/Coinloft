@@ -83,9 +83,9 @@
                     <h1 class="text-lg">Investments</h1>
                 </div></a>
     
-                <a href="Loan.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
                     <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
-                    <h1 class="text-lg">Loans</h1>
+                    <h1 class="text-lg">Loans <span class="text-pink-400 text-xs">(new)</span></h1>
                 </div></a>
     
                 <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
@@ -134,9 +134,9 @@
                 <h1 class="text-lg">Investments</h1>
             </div></a>
 
-            <a href="Loan.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+            <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
                 <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
-                <h1 class="text-lg">Loans</h1>
+                <h1 class="text-lg">Loans <span class="text-pink-400 text-xs">(new)</span></h1>
             </div></a>
 
             <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
@@ -153,31 +153,141 @@
         </div>
     </section>
 
-    <section class="h-screen transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
+    <section class="transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
              
+        <i id="pune" class="absolute cursor-pointer top-6 right-5 hover:text-blue-600 text-xl text-blue-700 fas fa-cog"></i>
+
+        <div id="popi" class="md:w-2/12 sm:w-3/12 w-4/12 bg-white absolute top-7 right-10 py-1 px-3 hidden">
+            <p><input name="sele" type="radio"> All</p>
+            <p><input name="sele" type="radio"> Approved</p>
+            <p><input name="sele" type="radio"> Pending</p>
+            <p><input name="sele" type="radio"> Canceled</p>
+            
+        </div>
+    
+
         <h1 class="sm:text-4xl text-3xl my-6">Investments</h1>
 
-        <div class="flex items-center">
+        <h1 class="sm:text-xl text-base mt-6 mb-2">Your Investments Cards</h1>
+
+        <!---ONE -->
+        <div class="relative sm:text-left text-center fokpu lg:w-11/12 w-full md:text-lg text-base mx-auto rounded products-center border py-6 px-2">
+            <div class="mx-auto">
+                <img class="lg:w-32 w-20 sm:mx-0 mx-auto" src="https://www.pngfind.com/pngs/m/5-58015_png-file-svg-briefcase-transparent-png.png">
+                <p class="text-xl text-medium flex gap-2">Starter Plan <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p></p>
+            </div>
+
+
             <div class="">
-                <img class="w-40" src="https://o.remove.bg/downloads/56355412-dd5f-48f3-9866-b3ce5594b4de/142-1423908_briefcase-icon-source-paulhendrixfilms-com-suitcase-icon-in-removebg-preview.png">
-                <p class="text-xl text-center">Starter Plan</p>
+                <p>Start Date:<span class="text-green-500"> 11/04/2021</span></p>
+                <p>Due Date: <span class="text-red-600"> 11/04/2021</span></p>
             </div>
 
-            <div class="flex">
-                <div class="-mt-3">
-                    <p>Date: 11/12/2020</p>
-                    <p>Due Date: 11/01/2021</p>
-                </div>
+            <div class="">
+                <p>Amount Invested: <span class="font-medium"> 0.01 BTC</span> </p>
+                <p>Returns Expected: <span class="font-medium"> 0.0115 BTC</span></p>
+             </div>
+                
+             <div class="">
+                 <p>Status: <span class="text-green-500"> Active</span></p>
+                 <p>Returns %:<span class="text-green-500 font-medium"> +15%</span></p>
+             </div>
 
-                <div class="">
-                    <p>Date: 11/12/2020</p>
-                    <p>Date: 11/12/2020</p>
-                </div>
+
+
+            <div class="w-full h-full absolute top-0 opacity-10"style="background:url('https://i.pinimg.com/originals/85/53/43/855343242e633ab957754b7819867cf1.png');"></div>
+            <div class="bg-black w-full h-full absolute top-0 opacity-10"></div>
+        </div>
+
+
+        <!---TWO -->
+        <div class="relative sm:text-left text-center mt-3 fokpu lg:w-11/12 w-full md:text-lg text-base mx-auto rounded products-center border py-6 px-2">
+            <div class="mx-auto">
+                <img class="lg:w-32 w-20 sm:mx-0 mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Suitcase_icon_red.svg/256px-Suitcase_icon_red.svg.png">
+                <p class="text-xl text-center text-medium flex gap-2">Premium Plan <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p></p>
             </div>
 
 
+            <div class="">
+                <p>Start Date:<span class="text-green-500"> 11/04/2021</span></p>
+                <p>Due Date: <span class="text-red-600"> 11/04/2021</span></p>
+            </div>
+
+            <div class="">
+                <p>Amount Invested: <span class="font-medium"> 1.0 BTC</span> </p>
+                <p>Returns Expected: <span class="font-medium"> 1.5 BTC</span></p>
+             </div>
+                
+             <div class="">
+                 <p>Status: <span class="text-green-500"> Active</span></p>
+                 <p>Returns %:<span class="text-green-500 font-medium"> +50%</span></p>
+             </div>
 
 
+
+            <div class="w-full h-full absolute top-0 opacity-10"style="background:url('https://i.pinimg.com/originals/85/53/43/855343242e633ab957754b7819867cf1.png');"></div>
+            <div class="bg-black w-full h-full absolute top-0 opacity-10"></div>
+        </div>
+
+
+        <!---THreeWO -->
+        <div class="relative sm:text-left text-center mt-3 fokpu lg:w-11/12 w-full md:text-lg text-base mx-auto rounded products-center border py-6 px-2">
+            <div class="mx-auto">
+                <img class="lg:w-32 w-20 sm:mx-0 mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Suitcase_icon_blue.svg/1024px-Suitcase_icon_blue.svg.png">
+                <p class="text-xl text-center text-medium flex gap-2">Masters Plan <img class="h-7 w-7"src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="btcpng"></p></p>
+            </div>
+
+
+            <div class="">
+                <p>Start Date:<span class="text-green-500"> 11/04/2021</span></p>
+                <p>Due Date: <span class="text-red-600"> 11/04/2021</span></p>
+            </div>
+
+            <div class="">
+                <p>Amount Invested: <span class="font-medium"> 1.0 ETH</span> </p>
+                <p>Returns Expected: <span class="font-medium"> 1.6 ETH</span></p>
+             </div>
+                
+             <div class="">
+                 <p>Status: <span class="text-yellow-500"> Completed</span></p>
+                 <p>Returns %:<span class="text-green-500 font-medium"> +27%</span></p>
+             </div>
+
+
+
+            <div class="w-full h-full absolute top-0 opacity-10"style="background:url('https://i.pinimg.com/originals/85/53/43/855343242e633ab957754b7819867cf1.png');"></div>
+            <div class="bg-black w-full h-full absolute top-0 opacity-10"></div>
+        </div>
+
+
+
+        <!---FOUR -->
+        <div class="relative sm:text-left text-center mb-20 mt-3 fokpu lg:w-11/12 w-full md:text-lg text-base mx-auto rounded products-center border py-6 px-2">
+            <div class="mx-auto">
+                <img class="lg:w-32 w-20 sm:mx-0 mx-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAgAD///8AfQAAdgDo8OhWm1YAegAwizBhoGEAfAB5rHnx9vG707sAeAAAdAD5/Pmuzq7J3smQvJBho2E4kTjT5dM+lD51q3VVnlWdxJ1op2jB18GFs4VioGJHlEcoiygTghODtoPc69yUvpSnyqcPhw+207YfiB9xq3EsBVmCAAAENUlEQVR4nO3d61KrMBSG4QRqNCrQ0qOorXio3v8Vbt1amrICASXRxXzvrz1qOnkkux1JpxFy7InfnoD3IOQfhPyDkH8Q8g9C/kHIPwj5ByH/IOQfhPyDkH8Q8g9C/nkVzvL54tzVYp7PfE7Cn3BymSQ66pJOknLibR7ehGWsRfd0XPqaiCfh44Pq4ftIvXi6jH6EyyTqCRQiSpZe5uJF+Bj39n0UP/qYjA9hJvpfwf9XUWQeZuNDOO/zHGOmCw+z8SBcfm+NfhR7+K/oQbg112ikXZ389Gb46QwvnKTGjJPV+rK99cp83k2Hf8kYXnhzfCVUmy4TnmyMETeDz2d44aa6JJ2fOIrqqcnDMh1eaKzRzmOMdTr8fIZ+wKtqyemy86CyuojqaugJDS+sXivUvvOgffVriVkJrzsPuobwB0HYOwitQfiTIOwdhNYg/EkQ9i47Cm87D7o9Cge/GdUkfJzmxcVJZ1+/3buLtu7n1V9C0fa+9UeNQccbH9G8fdDd5ySuzk6/XOTTpluRVuGsiGKla5sOhxsMZ6p9F0JUddq06DdInX1OYpLWtj60iqPCusNjEU5FYrsdGB+E37sZOkzRQWi7n6cTMe0gXO4S+4P/feF7yY7cj6wL87QJwEIoojRvF24aLqDgIny/jJs24aplT4yLUKhVs3DbtuHARij0pklYNi9RwUkoktIunKVtozgJRTqzCh0Pzklo3lg+/vPJsfPOSqieLELXWwtYCYWiwueRCZ+JcOGaOC9htKgLnUOYCavpVsK98x0+zITVvtBBWDrfP8FMWO3tHYQb57yZCavd5IPwxfngzITipSZ0v8mHmzCqCd1vJeQmVBCSIAwShEYQ0iAMEoRGENIgDBKERhDSIAwShEYQ0iAMEoRGENIgDBKERhDSIAwShEYQ0iAMEoRGENIgDBKERhDSIAwShEYQ0iAMEoRGENIgDBKERhDSIAwShEYQ0iAMEoRGENIgDBKERhDSIAwShEYQ0iAMEoRGENIgDBKERhDSIAwShEYQ0iAMEoRGENIgDBKERhDSIAwShEYQ0iAMEoRGENIgDBKERhDSuAvH9znCuiYc/2dBb53zZiaMtjXhenSfyb6uCaej+1z9aU04/rMR5G5k51vsZF1441qmvITqhggz1xhewuNJkceTdMpRnRV0J6kwc7xesBLqzCKU+/ZRnITxXtqEsmhdp4yEqpB2oTwfydl5C9kkzF5biGyE+jVrFMps0bxQuQjV4vRI4VOhlG+NQ5kI47eaqC6U11HDZWQhVBE5KpsIpcx1YkP8fWGU6PpBsnahzKarNNH145SrM53JdwKmD8KUfCdJV5bzju3C965u82J1ftLDl/B+d/577e6/hA+nX18V+W3DqewNwhEFIf8g5B+E/IOQfxDyD0L+Qcg/CPkHIf8g5B+E/IOQfxDyb/zCfykyjkuHQq0DAAAAAElFTkSuQmCC">
+                <p class="text-xl text-center text-medium flex gap-2">Veteran Plan <img class="h-7 w-7"src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="btcpng"></p></p>
+            </div>
+
+
+            <div class="">
+                <p>Start Date:<span class="text-green-500"> 11/04/2021</span></p>
+                <p>Due Date: <span class="text-red-600"> 11/04/2021</span></p>
+            </div>
+
+            <div class="">
+                <p>Amount Invested: <span class="font-medium"> 3.0 BNB</span> </p>
+                <p>Returns Expected: <span class="font-medium"> 5.0 ETH</span></p>
+             </div>
+                
+             <div class="">
+                 <p>Status: <span class="text-yellow-500"> Completed</span></p>
+                 <p>Returns %:<span class="text-green-500 font-medium"> +42%</span></p>
+             </div>
+
+
+
+            <div class="w-full h-full absolute top-0 opacity-10"style="background:url('https://i.pinimg.com/originals/85/53/43/855343242e633ab957754b7819867cf1.png');"></div>
+            <div class="bg-black w-full h-full absolute top-0 opacity-10"></div>
         </div>
 
 
@@ -214,6 +324,9 @@
 
 
 
+    <script>
+       
+    </script>
 
 
     <script>
