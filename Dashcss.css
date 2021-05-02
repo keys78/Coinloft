@@ -298,7 +298,16 @@ html {
 
 
 
-
+/* ************************************88SETTTINGS********************************************* */
+.content {
+    display: none;
+  }
+  .tab-btn.active {
+    background: red;
+  }
+  .content.active {
+    display: block;
+  }
 
 
 

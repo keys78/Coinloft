@@ -79,17 +79,17 @@
                 </div></a>
     
                 <a href="Investments.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
-                    <i class="text-xl text-blue-700 fas fa-wallet"></i>
+                    <i class="text-xl text-blue-700  fas fa-wallet"></i>
                     <h1 class="text-lg">Investments</h1>
                 </div></a>
     
-                <a href="Loandash.html"><div class="flex gap-4 py-3 bg-white font-medium px-3 mr-4 newneu items-start rounded">  
-                    <i class="text-xl  fas fa-money-check-alt"></i>
+                <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                    <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
                     <h1 class="text-lg">Loans <span class="text-pink-400 text-xs">(new)</span></h1>
                 </div></a>
     
-                <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
-                    <i class="text-xl text-blue-700 fas fa-cog"></i>
+                <a href="Settings.html"><div class="flex gap-4 py-3 bg-white font-medium px-3 mr-4 newneu items-start rounded">  
+                    <i class="text-xl fas fa-cog"></i>
                     <h1 class="text-lg">Settings</h1>
                 </div></a>
     
@@ -134,13 +134,13 @@
                 <h1 class="text-lg">Investments</h1>
             </div></a>
 
-            <a href="Loandash.html"><div class="flex gap-4 py-3 mt-3 bg-white font-medium px-3 newneu items-start rounded">  
-                <i class="text-xl  fas fa-money-check-alt"></i>
+            <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+                <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
                 <h1 class="text-lg">Loans <span class="text-pink-400 text-xs">(new)</span></h1>
             </div></a>
 
-            <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
-                <i class="text-xl text-blue-700 fas fa-cog"></i>
+            <a href="Settings.html"><div class="flex gap-4 py-3 mt-3 bg-white font-medium px-3 newneu items-start rounded">  
+                <i class="text-xl  fas fa-cog"></i>
                 <h1 class="text-lg">Settings</h1>
             </div></a>
 
@@ -153,12 +153,75 @@
         </div>
     </section>
 
-    <section class="transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
-             
-        <h1 class="sm:text-4xl text-3xl my-6">Loans</h1>
+    <section class="h-screen transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
+    
 
-       
+        <h1 class="sm:text-4xl text-3xl my-6">Settings</h1>
 
+        <h1 class="sm:text-xl text-base mt-6 mb-2">Profile Settings</h1>
+
+
+
+
+
+
+
+        <article class="about">
+     
+        <div class="flex border border-current">
+            <div class="w-3/12">
+                <div class="cursor pointer py-2 my-3 px-2 hover:bg-white tab-btn active" data-id="history">history</div>
+                <div class="cursor pointer py-2 my-3 px-2 hover:bg-white tab-btn" data-id="vision">vision</div>
+                <div class="cursor pointer py-2 my-3 px-2 hover:bg-white tab-btn" data-id="goals">goals</div>
+            </div>
+    
+          <div class="about-content">
+            <!-- single item -->
+            <div class="content active" id="history">
+              <h4>history</h4>
+              <p>
+                I'm baby wolf pickled schlitz try-hard normcore marfa man bun
+                mumblecore vice pop-up XOXO lomo kombucha glossier bicycle
+                rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard
+               
+              </p>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="vision">
+              <h4>vision</h4>
+              <p>
+                Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth
+                crucifix offal deep v hella biodiesel. Church-key listicle
+                polaroid put a bird on it chillwave palo santo enamel pin,
+                tattooed meggings franzen la croix cray. Retro yr aesthetic four
+               
+              </p>
+              <ul>
+                <li>list item</li>
+                <li>list item</li>
+                <li>list item</li>
+              </ul>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="goals">
+              <h4>goals</h4>
+              <p>
+                Chambray authentic truffaut, kickstarter brunch taxidermy vape
+                heirloom four dollar toast raclette shoreditch church-key.
+                Poutine etsy tote bag, cred fingerstache leggings cornhole
+                everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk
+              </p>
+            </div>
+            <!-- end of single item -->
+          </div>
+        </div>
+        </article>
+  
+   
+  
+   
 
 
 
@@ -182,6 +245,33 @@
    
 
    
+
+
+
+    <script>
+        const about = document.querySelector(".about");
+        const btns = document.querySelectorAll(".tab-btn");
+        const articles = document.querySelectorAll(".content");
+        about.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
+  if (id) {
+    // remove selected from other buttons
+    btns.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    // hide other articles
+    articles.forEach(function (article) {
+      article.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+});
+
+    </script>
+
+
 
 
 
