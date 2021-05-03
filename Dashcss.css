@@ -303,7 +303,7 @@ html {
     display: none;
   }
   .tab-btn.active {
-    background: rgb(201, 201, 201);
+    background: rgb(241, 241, 241);
   }
   .content.active {
     display: block;

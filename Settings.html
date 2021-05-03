@@ -17,6 +17,9 @@
     <!-- <link rel="stylesheet" href="loft.css"> -->
     <link rel="stylesheet" href="Dashcss.css">
   </head>
+  <style>
+    
+  </style>
 <body>
 
 
@@ -111,7 +114,7 @@
 
     <!------------------------ SIDE BAR -------------------------->
 
-    <section class=" w-3/12 fixed basecolor border-r lg:block hidden pt-20">
+    <section class="h-screen w-3/12 fixed basecolor border-r lg:block hidden pt-20">
         <div class="w-11/12 mx-auto mt-8">
 
             <a href="Dashboard.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
@@ -168,68 +171,97 @@
 
         <article class="about">
      
-        <div class="flex border border-current">
-            <div class="w-4/12 border px-1 py-12">
-                <div class="cursor pointer py-2 my-3 cursor-pointer pl-2 hover:bg-white tab-btn active" data-id="history">Change your password</div>
-                <div class="cursor pointer py-2 my-3 cursor-pointer pl-2 hover:bg-white tab-btn" data-id="vision">Set withdrawal Address</div>
-                <div class="cursor pointer py-2 my-3 cursor-pointer pl-2 hover:bg-white tab-btn" data-id="goals">Help & Support</div>
+        <div class="keke flex md:flex-row flex-col w-11/12 mx-auto md:gap-0 gap-4 items-start px-3 py-5 border bg-grey-100">
+            <div class="md:w-4/12 w-full">
+                <div class="cursor pointer py-4 cursor-pointer pl-2 hover:bg-white tab-btn active" data-id="history">Change your password</div>
+                <div class="cursor pointer py-4 cursor-pointer pl-2 hover:bg-white tab-btn" data-id="vision">Set withdrawal Address</div>
+                <div class="cursor pointer py-4 cursor-pointer pl-2 hover:bg-white tab-btn" data-id="goals">Help & Support</div>
             </div>
     
           <div class="about-content">
             <!-- single item -->
-            <div class="content active" id="history">
-                <form class="md:w-7/12 w-11/12 m-auto" id="register">
+            <div class="content active py-6" id="history">
+                <form class="mx-auto px-2" id="register">
 
 
                     <div class="input-group mt-6 border-b border-current bg-gray-50 px-2">
-                        <div class="flex justify-center items-center">
-                            <input class="w-full py-1 bg-gray-50 focus:outline-none text-black" type="password" name="password" id="oldpassword" placeholder="Enter current password"/><i class="cursor-pointer text-red-500 far fa-eye" id="toggleoldPassword"></i>
-                        </div>
+                            <input class="w-full py-1 bg-gray-50 focus:outline-none text-black" type="password" name="password" id="oldpassword" placeholder="Enter current password"/>
                     </div>
-        
-            
+                   
                     <div class="input-group mt-6 border-b border-current bg-gray-50 px-2 ">
-                        <div class="flex justify-center items-center">
-                            <input class="w-full py-1 bg-gray-50 focus:outline-none text-black" type="password" name="password" id="password" placeholder="Enter new password"/><i class="cursor-pointer text-red-500 far fa-eye" id="togglePassword"></i>
-                        </div>
+                            <input class="w-full py-1 bg-gray-50 focus:outline-none text-black" type="password" name="password" id="password" placeholder="Enter new password"/>                      
                     </div>
         
                     <div class="input-group mt-6 border-b border-current bg-gray-50 px-2">
-                        <div class="flex justify-center items-center">
-                            <input class="w-full py-1 bg-gray-50 focus:outline-none text-black" type="password" name="password" id="Confirmpassword" placeholder="Confirm new password"/><i class="cursor-pointer text-red-500 far fa-eye" id="toggleconfirmPassword"></i>
-                        </div>
+                            <input class="w-full py-1 bg-gray-50 focus:outline-none text-black" type="password" name="password" id="Confirmpassword" placeholder="Confirm new password"/>                       
                     </div>
             
-        
-        
+               
                     <div class="input-group full my-4">
-                     <input class="focus:outline-none py-2 md:w-2/12 sm:w-3/12 w-4/12 text-white bg-red-700 hover:bg-red-600 cursor-pointer" type="submit" value="SUBMIT" class="submit-btn" />
+                     <input class="focus:outline-none py-2 w-full text-white bg-blue-700 hover:bg-red-600 cursor-pointer" type="submit" value="SUBMIT" class="submit-btn" />
                      <div class="clear"></div>
                     </div>
         
         
                     <p class="text-xs text-gray-600 mt-6 m-auto">&#8505;*Minimum of 8 characters, must consist at least 1 uppercase letter, 1 lowercase letter and 1 number</p>
-        
-                    
-            
-                    <div class="errors mt-4 text-xs leading-none font-thin text-gray-700 border border-gray-200 animate-pulse">
-                    </div>
-                   </form>
+                </form>
             </div>
-            <!-- end of single item -->
+           
 
             <!-- single item -->
             <div class="content" id="vision">
             
-              
+                <div class="bg-gray-50  relative rounded w-full mx-auto">
+                    
+                    <div id="shorei" class="absolute bg-gray-50 top-0 w-full hidden">
+                        <div class="w-9/12 text-white text-lg mx-auto py-10">
+                            <p class="text-gray-600 text-center">Your Wallet Address Has Succefully Been Updated!</p>
+                            <img class="mx-auto w-8/12" src="https://i.pinimg.com/originals/40/1b/31/401b31cb214385088e3b636159bdbdf2.png">
+                        </div>
+                    </div>
+                    
+                    <div id="loafi" class="absolute bg-white top-0 w-full hidden">
+                        <img class="mx-auto pt-10" src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif">
+                   </div>
+        
+                    <div id="levofla" class="sm:w-8/12 w-11/12 bg-gray-50 mx-auto py-8">
+                        <h1 class="text-2xl font-medium pb-4">Update Wallet Address</h1>
+        
+                        <div class="flex justify-between items-start py-6 bg-yellow-50 gap-4 px-1">
+                            <p class=""><i class="text-yellow-400 text-2xl fas fa-exclamation-circle"></i></p>
+                            <p class="text-yellow-500">A confirmation mail would be sent to you on every new wallet address update. 
+                                Do well to paste in correctly</p>
+                        </div>
+        
+                        <form id="form-me">
+                            <div class="w-full pt-6 pb-3">
+                                <label>Paste Wallet Address</label>
+                                <input class="w-full  rounded border border-blue-200 py-2 px-3 focus:outline-none text-black" type="text" name="text" id="wallres"required/>
+                            </div>
+                            
+                            <label >Select Coin Type</label>
+                                <select class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                                    <option class="text-yellow-600" value="volvo">Bitcoin</option>
+                                    <option class="text-yellow-600" value="saab">Ethereum</option>
+                                    <option class="text-yellow-600" value="opel">Binance</option>
+                                </select>
+
+                            <input  class="mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="RESET PASSWORD" class="submit-btn"/>
+                        </form>
+                    </div>
+                  
+
+                </div>
+        
+           
             </div>
             <!-- end of single item -->
 
             <!-- single item -->
-            <div class="content" id="goals">
-              <div class="w-full bg-blue-900">
+            <div class="content pb-6" id="goals">
+                 <div class="sm:w-96 sm:border">
 
-                    <div class="conti text-white px-5 pb-10 pt-6">
+                    <div class="text-gray-600 px-2 pb-10 pt-6 ">
                         <a href="https://api.whatsapp.com/send/?phone=+2348108243267&text=I%27m+contacting+you+from+coinloft.net&app_absent=0"><h1  class="text-lg hover:text-yellow-300"><i class="fab fa-whatsapp"></i> +234 8108243267</h1></a>
                         <a href="https://www.gmail.com"><h1 class="text-lg py-3 hover:text-yellow-300"><i class="far fa-envelope "></i> rahzy24@gmail.com</h1></a>
                         <a target="_blank" href="https://twitter.com/home"><h1 class="text-lg hover:text-yellow-300"><i class="fab fa-twitter"></i> Em_codes</h1></a>
@@ -241,13 +273,8 @@
                         <p class="text-3x1 text-center">Website live chat available</p>
 
                     </div>
-
-
-                   
-
                 </div>
         
-            </div>
             </div>
             <!-- end of single item -->
           </div>
@@ -255,37 +282,7 @@
         </article>
   
    
-  
-        <div class="relative bg-white rounded lg:w-11/12 sm:w-11/12 w-11/12 mx-auto">
-
-            <div class="sm:w-8/12 w-11/12 mx-auto py-8">
-                <h1 class="text-2xl font-medium pb-4">Reset Login Password</h1>
-
-                <div class="flex justify-between items-start py-6 bg-yellow-50 gap-4 px-1">
-                    <p class=""><i class="text-yellow-400 text-2xl fas fa-exclamation-circle"></i></p>
-                    <p class="text-yellow-500">For security purposes, no withdrawals are permitted for 24 hours after modification of security methods.</p>
-                </div>
-
-                <form id="form-me">
-                    <div class="w-full pt-6">
-                        <label>Email</label>
-                        <input class="w-full rounded border border-blue-200 py-2 px-3 focus:outline-none text-black" type="email" name="email" id="wallres"/>
-                    </div>
-
-                    <input class="mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="RESET PASSWORD" class="submit-btn"/>
-                </form>
-            </div>
-    
-        </div>
-
-
-
-
-
-
-
-
-
+      
 
 
 
@@ -294,34 +291,14 @@
             You have no unread notifications   
         </div>
 
-        <section class="left-0 absolute bottom-0 copyright bg-gray-200 h-8 text-gray-500 text-center w-full" >
+        <section class="left-0 absolute bottom-0 copyright bg-gray-200 py-2 text-gray-500 text-center w-full" >
             <p class="text-xs pt-3">Copyrights &copy; All Rights Reserved, 2021 | Designed by Em_codes</p>
         </section>
     </section>
    
 
-   
 
-    <script>
-         document.getElementById('form-me').addEventListener('submit', wallAdd);
-    function wallAdd(e){
-
-        console.log("here")
-
-        e.preventDefault();
-    }
-    </script>
-
-
-
-
-
-
-
-
-
-
-    <script>
+     <script>
         const about = document.querySelector(".about");
         const btns = document.querySelectorAll(".tab-btn");
         const articles = document.querySelectorAll(".content");
@@ -346,84 +323,92 @@
 
 
 
-    <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
-    authDomain: "form-a2fa1.firebaseapp.com",
-    projectId: "form-a2fa1",
-    storageBucket: "form-a2fa1.appspot.com",
-    messagingSenderId: "195902252855",
-    appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
-  };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-
-    const auth = firebase.auth();
-
-    const wallieAdd = firebase.database().ref("wallet Address");
 
 
-
-//      document.getElementById('wall').addEventListener('submit', wallAdd);
-//     function wallAdd(e){
    
-//     // const mainfo = document.getElementById('wallres').value;
-//         // resUser(email)
-//         // email = mainfo ;
-        
-//         // document.querySelector('.resalert').style.display = 'block';
 
-//         // setTimeout(function(){
-//         //     document.querySelector('.resalert').style.display = 'none';
-//         // },4000);
 
-//             console.log("here")
-//     //  resUser(email);
 
-// // document.getElementById('wall').reset();
-// e.preventDefault();
-// }
 
-    //save to firebase
-    function reWallie(email){
-        const newWallie = wallieAdd.push();
-        newWallie.set({
-            email:email
-        });
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+      authDomain: "form-a2fa1.firebaseapp.com",
+      projectId: "form-a2fa1",
+      storageBucket: "form-a2fa1.appspot.com",
+      messagingSenderId: "195902252855",
+      appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+    };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+  
+      const wallieAdd = firebase.database().ref("wallet");
+  
+  
+         document.getElementById('form-me').addEventListener('submit', wallAdd);
+
+        function wallAdd(e){
+
+            const wallinfo = document.getElementById('wallres').value;
+            document.getElementById('levofla').remove();
+
+            document.getElementById('loafi').style.display = "contents";
+            setTimeout(function(){
+                document.getElementById('loafi').style.display = "none";
+            }, 3000)
+
+            document.getElementById('shorei').style.display = "none";
+            setTimeout(function(){
+                document.getElementById('shorei').style.display = "contents";
+            }, 3000)
+
+           
+
+            wallet = wallinfo;
+            reWallie(wallet);
+
+            e.preventDefault();
     }
+  
+      //save to firebase
+      function reWallie(wallet){
+          const newWallie = wallieAdd.push();
+          newWallie.set({
+              wallet:wallet
+          });
+      }
+
+
+
+
+  
+  
+      auth.onAuthStateChanged(function(user) {
+         if(user) {
+           var email = user.email;
+          //  alert("Active User " + email).remove();
+         }
+      //   else {
+      //  alert("No active user")
+      
+      //   }
+      
+    });
+  
+    function signOut() {
+  
+  auth.signOut();
+  alert("Signed out");
+  window.location = "Login.html";
+  }
+  </script>
 
 
 
 
 
-
-
-
-
-
-
-
-    auth.onAuthStateChanged(function(user) {
-       if(user) {
-         var email = user.email;
-        //  alert("Active User " + email).remove();
-       }
-    //   else {
-    //  alert("No active user")
-    
-    //   }
-    
-  });
-
-  function signOut() {
-
-auth.signOut();
-alert("Signed out");
-window.location = "Login.html";
-}
-</script>
 
 
 <script src="Dash.js"></script>
