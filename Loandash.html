@@ -153,16 +153,26 @@
         </div>
     </section>
 
-    <section class="transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
+    <section class="h-screen transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
              
         <h1 class="sm:text-4xl text-3xl my-6">Loans</h1>
 
        
 
 
+        <form id="loner">
+            <input id="name" type="text" class="py-1 bg-gray-200 mb-2">
 
-
-
+            <label >Select Coin Type</label>
+                                <select id="selio" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                                    <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                                    <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                                    <option class="text-yellow-600" value="Binance">Binance</option>
+                                </select>
+            <input id="sub-loan" class="py-2 px-10" type="submit">
+        </form>
+        
+        
 
 
 
@@ -186,6 +196,9 @@
 
 
 
+    <script>
+        
+    </script>
 
 
     <script>
@@ -201,6 +214,37 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
+  
+    const loaneeDetails = firebase.database().ref("Loan-Form");
+
+
+     
+    document.getElementById('loner').addEventListener('submit', giveAm);
+        function giveAm(e) {
+            e.preventDefault();
+            const mifo = document.getElementById('selio').value;
+
+            loanask = mifo;
+              reLoan(loanask);
+
+
+            console.log(mifo)
+        }
+   
+
+  //save to firebase
+  function reLoan(loanask){
+      const newLoanne = loaneeDetails.push();
+      newLoanne.set({
+          loanask:loanask
+      });
+  }
+
+
+
+
+
+
     auth.onAuthStateChanged(function(user) {
        if(user) {
          var email = user.email;
