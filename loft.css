@@ -25,7 +25,7 @@
 
 .login-div{
 	position: absolute;
-	top:43%;
+	top:47%;
 	left:50%;
 	transform:translate(-50%, -50%);
 	box-sizing:border-box;
@@ -45,6 +45,18 @@ header{
     padding:15px 0;
     z-index: 100;
 }
+/* .topper{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding:15px 0;
+    z-index: 100;
+} */
 
 .banner{
     position: relative;

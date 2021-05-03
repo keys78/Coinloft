@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="loft.css">
     <link rel="stylesheet" href="hambuger.css">
     <title>Document</title>
+    <style>
+         #loading, #results {
+        display:none;
+      }
+    </style>
 </head>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -33,7 +38,7 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
-<body class="thirdwave">
+<body class="">
 
 
    <!------large screen-->
@@ -156,31 +161,180 @@
     </div>
    </section>
 
- 
-
-
-    <section class="thirdwave">
-       
-        <div class="lg:w-10/12 w-11/12 mx-auto pb-6 justify-between">
     
-                <div class="pt-6 pb-4">
-                    <h1 class="sm:text-2xl text-xl mb-1 publicsans font-bold text-blue-900">How loan request works</h>
+
+    <section class="my-16">
+        <div class="w-11/12 mx-auto">
+            <h1 class="md:text-3xl text-2xl text-center font-medium mb-6">See How It Works</h1>
+
+
+            <article class="sm:w-11/12 w-full mx-auto bg-gray-50 px-5 py-5 about flex md:flex-row-reverse flex-col-reverse border">
+     
+        
+                <div class="md:w-6/12 w-full">
+                    <div class="cursor-pointer py-7 px-4 bg-blue-100 rounded border border-current pl-2 tab-btn active" data-id="history">
+                        <span class="text-xl font-medium text-blue-600">Apply</span> </br>
+                        <span class="text-lg">Choose your loan tenure & amount then share some information about yourself</span> </br>
+                    </div>
+                    <div class="cursor-pointer my-3 py-7 px-4 bg-blue-100 rounded border border-current tab-btn" data-id="vision">
+                        <span class="text-xl font-medium text-blue-600">Verify</span> </br>
+                            <span class="text-lg">Verify the information that you've provided</span> </br>
+                    </div>
+                    <div class="cursor-pointer py-7 px-4 bg-blue-100 rounded border border-current tab-btn" data-id="goals">
+                        <span class="text-xl font-medium text-blue-600">Recieve your funds</span> </br>
+                            <span class="text-lg">Sign your documents and get the money in your wallet within 24 hours,
+                                 if your loan is approved</span> </br>
+                    </div>
                 </div>
-    
+        
+              <div class="about-content">
+                <!-- single item -->
+                <div class="content active" id="history">
+                  <div class="w-9/12 mx-auto mt-6">
+                   <img class="rounded-full mx-auto" src="https://cdn.dribbble.com/users/925542/screenshots/5570436/apply-loan.jpg">
 
-                <p class="">
-                    We offer verified loanees 2 types of loans the (i).Loan Invest and (ii).Loan out quam optio corrupti, quidem aperiam quas ab earum, temporibus aut quasi ex quis minus quos nemo corporis molestias tempora.
-                </p>
-
-                <a href="Login.html"><button class="mt-4 burron publicsans px-4 py-2 text-white py-1 rounded">Request loan</button></a>
-
+                  </div>
+                 
+                </div>
+                <!-- end of single item -->
+                <!-- single item -->
+                <div class="content" id="vision">
+                   <div class="w-full md:-ml-14 md:mt-20">
+                        <img class="" src="/images/ver2.png">
+                    </div>
+                 
+                </div>
+                <!-- end of single item -->
+                <!-- single item -->
+                <div class="content" id="goals">
+                    <div class="w-full">
+                        <img class="w-full"src="/images/ver3.png">
+                    </div>
+                </div>
+                <!-- end of single item -->
+              </div>
+            </article>
+       
         </div>
     </section>
 
-    
+
+         <h1 class="sm:text-2xl text-xl text-center font-medium my-10">Loan Calculator</h1>
+    <div class="w-10/12 gap-12 py-12 bg-gray-50 rounded px-4 justify-around flex md:flex-row flex-col-reverse mx-auto border">
+       
+          <div class="md:w-6/12 w-full mx-auto">
+          
+            <h1 class="sm:text-xl text-base text-center font-medium">Calculate Loan Ranges</h1>
+
+              <form id="loan-form">
+
+                  <div class="input-group">
+                    <span class="">$</span>
+                    <input type="number" class="form-control border border-current rounded w-full py-2 px-2 " id="amount" placeholder="Loan Amount">
+                </div>
+
+                  <div class="input-group">
+                    <span class="">%</span>
+                    <input type="number" class="form-control w-full py-2 px-2 border border-current rounded"  id="interest" placeholder="Interest">
+                </div>
+
+                <div class="input-group">
+                  <input type="number" class="my-3 form-control w-full py-2 px-2 border border-current rounded" id="years" placeholder="Years To Repay">
+                </div>
 
 
-    <footer class="footershape thirdwave relative md:pb-0 pb-56 overflow-hidden">
+                <div class="forn-group">
+                  <input type="submit" value="Calculate" class="hover:bg-blue-900 btn bg-blue-600 text-white rounded btn-block w-full py-2 px-2 border rounded">
+                </div>
+              </form>
+              <!-- LOADER -->
+              <div id="loading">
+                <img class="mx-auto" src="/images/Loading-GIF-by-Mashable-unscreen.gif" alt="">
+              </div>
+              <!-- RESULTS -->
+              <div id="results" class="pt-4">
+                <h1 class="sm:text-xl text-base text-center font-medium">Results</h1>
+                  <div class="input-group">
+                    <span class="">Monthly Payment</span>
+                    <input type="number" class="form-control border border-current rounded w-full py-2 px-2 " id="monthly-payment" disabled>
+                 
+                </div>
+  
+                  <div class="input-group">
+                    <span class="">Total Payment</span>
+                    <input type="number" class="form-control border border-current rounded w-full py-2 px-2 " id="total-payment" disabled>
+                  
+                </div>
+  
+                  <div class="input-group">
+                    <span class="">Total Interest</span>
+                    <input type="number" class="form-control border border-current rounded w-full py-2 px-2 " id="total-interest" disabled>
+                  </div>
+                
+              </div>
+          
+          </div>
+
+
+
+
+          <div>
+
+            <script src="https://cdn.jsdelivr.net/gh/coinponent/coinponent@1.2.6/dist/coinponent.js"></script>
+            <coin-ponent shadow=""sm"></coin-ponent>
+         </div>
+
+
+
+
+      </div>
+
+      <div class="w-10/12 mx-auto">
+      <a href="Signup.html"><div class="rounded hover:text-white py-2 px-2 bg-yellow-600 hover:bg-yellow-800 text-center text-lg">Request Loan</div></a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footershape thirdwave relative mt-40 md:pb-0 pb-56 overflow-hidden">
 
         <div class="flex justify-between opacity-30">
             <img src="/images/wmap.png" alt="trans-bg">
@@ -264,6 +418,7 @@
           <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           
     <script src="loft.js"></script>
+    <script src="loan.js"></script>
     <script src="heroslider.js"></script>
 </body>
 </html>
