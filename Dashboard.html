@@ -184,7 +184,7 @@
                 <div class="flex sm:flex-row flex-col items-center sm:gap-2 gap-6 sm:ml-0 ml-2">
 
                     <div class="JPO_open flex gap-2 text-gray-300 py-2 px-6 text-lg cursor-pointer buttn rounded">
-                        <i class="text-xl text-gray-300 fas fa-university"></i>
+                        <i class="text-xl text-gray-300 fas fa-hand-holding-usd"></i>
                          <p class="text-gray-300 ">Deposit</p>                  
                     </div>
 
@@ -286,28 +286,76 @@
           
 
 
-           <div id="JPO" class="relative bg-white rounded lg:w-4/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
+           <div id="JP" class="mb-96 relative bg-white rounded lg:w-5/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
+                <div class="w-11/12 mx-auto py-8">
+                    <p class="py-6 px-2 border">MAKE DEPOSIT</p>
+            
+                    <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
 
-            <div class="sm:w-8/12 w-11/12 mx-auto py-8">
-                <h1 class="text-2xl font-medium pb-4">Reset Login Password</h1>
-    
-                <div class="flex justify-between items-start py-6 bg-yellow-50 gap-4 px-1">
-                    <p class=""><i class="text-yellow-400 text-2xl fas fa-exclamation-circle"></i></p>
-                    <p class="text-yellow-500">For security purposes, no withdrawals are permitted for 24 hours after modification of security methods.</p>
+
+                    <label>Select Currenncy</label>
+                            <select id="currencyType" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                                <option value="Select">Select</option>
+                                <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                                <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                                <option class="text-yellow-600" value="Binance">Binance</option>
+                            </select>
+
+                        <input type="text" class=" focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+
+                        
+                    <input class="JPA_open JPB_open mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="CONTINUE" class="submit-btn"/>
+                    <input type="button" class="JPO_close focus:outline-none absolute top-3 right-6 text-black text-sm px-2 py-1" value="X"/>
                 </div>
-    
-                <form id="formus">
-                    <div class="w-full pt-6">
-                        <label>Email</label>
-                        <input class="w-full rounded border border-blue-200 py-2 px-3 focus:outline-none text-black" type="email" name="email" id="mailres"required/>
-                      </div>
-    
-                      <input class="mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="RESET PASSWORD" class="submit-btn"/>
-                </form>
-            </div>
-         
-            <input type="button" class="JPO_close focus:outline-none absolute top-3 right-6 text-white text-sm rounded-full px-3 py-1" style="background-color: #230fdb;" value="X"/>
+
+                <div id="JPB" class="hidden w-11/12 mx-auto py-8">
+                    <p class="py-6 px-2 border">Ethereum</p>
+            
+                    <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+
+
+                    <label >Select Currenncy</label>
+                            <select id="coinitype" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                                <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                                <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                                <option class="text-yellow-600" value="Binance">Binance</option>
+                            </select>
+
+                        <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+
+                        
+                </div>
+
+
+                <div id="JPA" class="hidden w-11/12 mx-auto py-8">
+                    <p class="py-6 px-2 border">BITCOIN</p>
+            
+                    <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+
+
+                    <label >Select Currenncy</label>
+                            <select id="" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                                <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                                <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                                <option class="text-yellow-600" value="Binance">Binance</option>
+                            </select>
+
+                        <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+
+                        
+                </div>
+
+            <!---endof JPO-->
          </div>
+    
+           <!-- <div id="JPA" class="hidden relative bg-white rounded lg:w-5/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
+               
+         </div>
+    
+
+           <div id="JPB" class="hidden relative bg-white rounded lg:w-5/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
+                
+         </div> -->
     
 
 
@@ -344,12 +392,28 @@
           $('#JPO').popup();
  
           $.fn.popup.defaults.pagecontainer = '#page';
-     
         });
-     
+    </script>
+
+   
+
+
+        <script>
+            document.getElementById('currencyType').addEventListener('click', changeCurr);
+            function changeCurr() {
+                if(document.getElementById('currencyType').value === "Bitcoin"){
+                    console.log('btc')
+                    document.getElementById('JPA').display = "block";
+                    // document.getElementById('JPB').display = "none";
+                    
+                }
+                if(document.getElementById('currencyType').value === "Ethereum"){
+                    console.log('eth')
+                    document.getElementById('JPB').display = "block";
+                    // document.getElementById('JPA').display = "none";
+                }
+            }
         </script>
-
-
 
 
 <script>
