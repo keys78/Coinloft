@@ -96,7 +96,7 @@
                     <h1 class="text-lg">Settings</h1>
                 </div></a>
     
-                <div onclick="signOut()" id="signIn" class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
                     <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
                     <h1 class="text-lg">Log out</h1>
                 </div>
@@ -147,7 +147,7 @@
                 <h1 class="text-lg">Settings</h1>
             </div></a>
 
-            <div onclick="signOut()" id="signIn" class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+            <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
                 <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
                 <h1 class="text-lg">Log out</h1>
             </div>
@@ -240,13 +240,13 @@
                             </div>
                             
                             <label >Select Coin Type</label>
-                                <select class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
-                                    <option class="text-yellow-600" value="volvo">Bitcoin</option>
-                                    <option class="text-yellow-600" value="saab">Ethereum</option>
-                                    <option class="text-yellow-600" value="opel">Binance</option>
+                                <select id="coinitype" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                                    <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                                    <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                                    <option class="text-yellow-600" value="Binance">Binance</option>
                                 </select>
 
-                            <input  class="mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="RESET PASSWORD" class="submit-btn"/>
+                            <input  class="mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="UPDATE WALLET ADDRESS" class="submit-btn"/>
                         </form>
                     </div>
                   
@@ -352,6 +352,7 @@
         function wallAdd(e){
 
             const wallinfo = document.getElementById('wallres').value;
+            const coiniType = document.getElementById('coinitype').value;
             document.getElementById('levofla').remove();
 
             document.getElementById('loafi').style.display = "contents";
@@ -366,17 +367,19 @@
 
            
 
-            wallet = wallinfo;
-            reWallie(wallet);
+            AdressID = wallinfo;
+            walletName = coiniType;
+            reWallie(AdressID, walletName);
 
             e.preventDefault();
     }
   
       //save to firebase
-      function reWallie(wallet){
+      function reWallie(AdressID, walletName){
           const newWallie = wallieAdd.push();
           newWallie.set({
-              wallet:wallet
+            AdressID:AdressID,
+            walletName:walletName
           });
       }
 

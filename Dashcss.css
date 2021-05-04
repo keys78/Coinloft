@@ -1,8 +1,25 @@
 html {
     scroll-behavior: smooth;
   }
+
+  
+.login-div{
+	position: absolute;
+	top:47%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	box-sizing:border-box;
+    overflow-y: hidden;
+
+	}
+
+
     .comie{
       z-index: 9999999999999999999999;
+    }
+
+    .fifi{
+      z-index: 99999999999999999999999999999;
     }
     .topper {
       width: 100%;

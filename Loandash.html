@@ -10,14 +10,14 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- <link rel="stylesheet" href="loft.css"> -->
     <link rel="stylesheet" href="Dashcss.css">
   </head>
-<body>
+<body class="budy">
 
 
       <!-------topnav-------->
@@ -93,7 +93,7 @@
                     <h1 class="text-lg">Settings</h1>
                 </div></a>
     
-                <div onclick="signOut()" id="signIn" class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
                     <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
                     <h1 class="text-lg">Log out</h1>
                 </div>
@@ -144,7 +144,7 @@
                 <h1 class="text-lg">Settings</h1>
             </div></a>
 
-            <div onclick="signOut()" id="signIn" class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+            <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
                 <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
                 <h1 class="text-lg">Log out</h1>
             </div>
@@ -153,20 +153,23 @@
         </div>
     </section>
 
-    <section class="h-screen transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
+    <section class="md:h-screen lg:h-auto h-auto transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
              
-        <h1 class="sm:text-3xl text-2xl my-6">Welcome To Loans</h1>
+        <h1 class="sm:text-3xl text-2xl mt-6 overpass">Welcome To Loans</h1>
 
+        <p class="pt-2 pb-6 sm:w-11/12 w-full mx-autooverpass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ab eveniet vitae ut
+             expedita at aut modi culpa inventore,sequi tempore debitis excepturi enim sint dolorem ipsa 
+             minus quod pariatur!</p>
        
-        <div class="flex md:flex-row flex-col">
-            <div class="md:w-6/12 mx-auto w-full">
-                <div class="flex py-7 justify-between px-2 bg-blue-50">
-                    <p>Loan Portfolio</p>
-                    <p class="numb text-3xl">$0.00</p>
+        <div class="relative overflow-hidden flex md:flex-row flex-col pb-20 md:gap-0 gap-8">
+            <div class="md:w-6/12 mx-auto w-full keke border">
+                <div class="flex py-7 w-11/12 mx-auto justify-between px-4 bg-blue-50 mt-3 rounded">
+                    <p>Loan Portfolio Balance</p>
+                    <p class="numb text-3xl">$1000.00</p>
                 </div>
 
-                <div class="">
-                    <p class="text-xl font-medium">Loan History</p>
+                <div class=" mt-10">
+                    <p class="text-xl font-medium pl-2 pb-1">Loan History</p>
 
                     <article class="about">
      
@@ -190,17 +193,92 @@
                                 <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
                                     <p>#00000</p>
                                     <p>11/04/2021</p>
-                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7 sm:block hidden"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
                                 </div>
                             </div>
                            
-                
+                <!---withdraws-->
                             <div class="content" id="vision">
-                            safwedswds
+                                <div class="flex justify-between text-xl font-medium">
+                                    <p class="md:block hidden sm:text-xl text-base">Transcation ID</p>
+                                    <p class="md:hidden block text-base">Trx ID</p>
+                                    <p class="-ml-8 sm:text-xl text-base">Date</p>
+                                    <p class="sm:text-xl text-base">Amount</p>               
+                                </div>
+
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-red-500">0.37BTC <img class="h-7 w-7"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
                             </div>
                           
                             <div class="content pb-6" id="goals">
-                               tehrt
+                                <div class="flex justify-between text-xl font-medium">
+                                    <p class="md:block hidden sm:text-xl text-base">Transcation ID</p>
+                                    <p class="md:hidden block text-base">Trx ID</p>
+                                    <p class="-ml-8 sm:text-xl text-base">Date</p>
+                                    <p class="sm:text-xl text-base">Amount</p>               
+                                </div>
+
+                                <div class="flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-2">
+                                   No Data in Table
+                                </div>
                             </div>
 
                         </div>
@@ -213,12 +291,16 @@
             </div>
 
 
-            <form id="loner" class="md:w-5/12 w-full sm:mt-0 mt-8 mx-auto p-3 border">
+            <form id="loner" class="overflow-hidden relative md:w-5/12 w-full sm:mt-0 mx-auto p-3 keke border">
 
-                <h1 class="text-2xl text-center pb-3 ">Loan Form</h1>
+                <h1 class="text-2xl text-center pb-3 ">Loan Request Form</h1>
+
+                <div id="success-alert" class="bg-blue-50 border-current hidden rounded animate__faster border bg-white text-lg px-4 absolute top-2 right-0 py-10 animate__slideInRight animate__animated animate__delay-4s">
+                    <p class="2xl">Congratulation! Your Loan Request has been submitted Successfully. Check your mail to for Verifcation!</p>
+                </div>
 
                 <label>What's your employment status</label>
-                    <select id="selio" class="focus:outline-none rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                    <select required id="selio" class="focus:outline-none rounded w-full border border-blue-200 py-2" name="coins" id="coins">
                         <option class="text-yellow-600" value="Select">Select...</option>
                         <option class="text-yellow-600" value="Employed">Employed</option>
                         <option class="text-yellow-600" value="Self Employed">Self Employed</option>
@@ -226,7 +308,7 @@
 
                     <div class="my-3">
                         <label>Select loan type</label>
-                        <select id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                        <select required id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
                             <option id="loan-S" class="text-yellow-600" value="Select">Select...</option>
                             <option id="loan-I" class="text-yellow-600" value="Loan-Invest">Loan-Invest</option>
                             <option id="loan-O" class="text-yellow-600" value="Loan-Out">Loan-Out</option>
@@ -235,13 +317,14 @@
 
                     <div class="flex gap-2">
                         <div>
-                            <label>What's your monthly income</label>
-                            <input id="mnt-income" type="text" value="$" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                            <label class="sm:block hidden">Monthly Income Range?</label>
+                            <label class="sm:hidden block">Monthly Income?</label>
+                            <input id="mnt-income" type="text" class="px-2 focus:outline-none rounded w-full border border-blue-200 py-2"required>
                         </div>
 
                         <div>
                             <label>Email</label>
-                            <input id="lnMail" type="email" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                            <input required id="lnMail" type="email" class="px-2 focus:outline-none rounded w-full border border-blue-200 py-2">
                         </div>
                     </div>
                 
@@ -250,11 +333,11 @@
                     <div class="flex gap-2 my-3">
                         <div>
                             <label>Your Country?</label>
-                            <input id="country" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                            <input required id="country" type="text" class=" px-2 focus:outline-none rounded w-full border border-blue-200 py-2">
                         </div>
                         <div>
                             <label>Your city?</label>
-                            <input id="city" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                            <input required id="city" type="text" class="px-2 focus:outline-none rounded w-full border border-blue-200 py-2">
                         </div>
 
                     </div>
@@ -274,7 +357,7 @@
                     </div>
 
                     <div class="my-4">
-                        <select id="loanAmount-2" class="hidden focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                        <select required id="loanAmount-2" class="hidden focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
                             <option class="font-medium" value="Select">Select Loan Amount (lO)</option>
                             <option class="text-yellow-700" value="$500">$500</option>
                             <option class="text-yellow-700" value="$1000">$1000</option>
@@ -287,22 +370,27 @@
 
                     <label>Tell us your Date of Birth</label>
                     <div class="flex gap-2">
-                        <input id="datee" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="DD">
-                        <input id="monthEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="MM">
-                        <input id="yearEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="YYYY">
+                        <input required id="datee" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="DD">
+                        <input required id="monthEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="MM">
+                        <input required id="yearEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="YYYY">
 
                     </div>
                 
 
 
                 <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
+
+                <div id="formiload" class="fifi hidden">
+                    <img class="w-40 mx-auto" src="https://28r0ml3w463qs2tkk26kwd5e-wpengine.netdna-ssl.com/wp-content/themes/RouRealty/assets/images/ajax-loader.gif">
+                </div>
             </form>
             
             
         </div>
 
 
-
+        
+       
 
 
 
@@ -317,10 +405,18 @@
     </section>
    
 
+           
+   
    
 
 
+    <script>
+        // document.getElementById('sub-loan').addEventListener('submit', comeUp)
 
+        // function comeUp() {
+          
+       
+    </script>
 
 
 
@@ -415,6 +511,18 @@
 
 
             reLoan(status, loantype, income, country, city, datem, xmonth, kyear, ymail, Amount, Amount2);
+
+            document.getElementById('formiload').style.display = "block";
+            document.getElementById('success-alert').style.display = "block";
+
+           setTimeout(function() {
+            document.getElementById('formiload').style.display = "none";
+           }, 4000);
+
+           setTimeout(function() {
+            document.getElementById('success-alert').style.display = "none";
+           }, 11000);
+        
         }
    
 

@@ -93,7 +93,7 @@
                     <h1 class="text-lg">Settings</h1>
                 </div></a>
     
-                <div onclick="signOut()" id="signIn" class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
                     <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
                     <h1 class="text-lg">Log out</h1>
                 </div>
@@ -144,7 +144,7 @@
                 <h1 class="text-lg">Settings</h1>
             </div></a>
 
-            <div onclick="signOut()" id="signIn" class="flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
+            <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 navhov items-start rounded">  
                 <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
                 <h1 class="text-lg">Log out</h1>
             </div>
@@ -165,9 +165,9 @@
             <div class="flex justify-between mt-16">
                 <div class="flex md:flex-row flex-col ">
                     <div class="md:w-8/12 w-full border-r border-blue-500 lg:pr-0 pr-3 py-6 rounded pl-2 wheee">
-                         <h1 class="sm:text-2xl text-2xl opensans -mr-2">Portfolio Balance</h1>
+                         <h1 class="sm:text-2xl text-xl opensans -mr-2">Portfolio Balance</h1>
                             <div class="flex">
-                                <input class="md:text-3xl text-2xl md:w-8/12 w-11/12 bg-transparent numb text-gray-700 text-blue-600 border-none" disabled type="password" name="password" value="$11,250.55" id="password" />
+                                <input class="md:text-3xl text-xl md:w-8/12 w-11/12 bg-transparent numb text-gray-700 text-blue-600 border-none" disabled type="password" name="password" value="$11,250.55" id="password" />
                                 <i class="md:-ml-0 -ml-14 mt-2 text-blue-600 far fa-eye cursor-pointer" id="togglePassword"></i>
                             </div>
                     </div>
@@ -183,7 +183,7 @@
                 </div>
                 <div class="flex sm:flex-row flex-col items-center sm:gap-2 gap-6 sm:ml-0 ml-2">
 
-                    <div class="flex gap-2 text-gray-300 py-2 px-6 text-lg cursor-pointer buttn rounded">
+                    <div class="JPO_open flex gap-2 text-gray-300 py-2 px-6 text-lg cursor-pointer buttn rounded">
                         <i class="text-xl text-gray-300 fas fa-university"></i>
                          <p class="text-gray-300 ">Deposit</p>                  
                     </div>
@@ -285,6 +285,40 @@
            </section>
           
 
+
+           <div id="JPO" class="relative bg-white rounded lg:w-4/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
+
+            <div class="sm:w-8/12 w-11/12 mx-auto py-8">
+                <h1 class="text-2xl font-medium pb-4">Reset Login Password</h1>
+    
+                <div class="flex justify-between items-start py-6 bg-yellow-50 gap-4 px-1">
+                    <p class=""><i class="text-yellow-400 text-2xl fas fa-exclamation-circle"></i></p>
+                    <p class="text-yellow-500">For security purposes, no withdrawals are permitted for 24 hours after modification of security methods.</p>
+                </div>
+    
+                <form id="formus">
+                    <div class="w-full pt-6">
+                        <label>Email</label>
+                        <input class="w-full rounded border border-blue-200 py-2 px-3 focus:outline-none text-black" type="email" name="email" id="mailres"required/>
+                      </div>
+    
+                      <input class="mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="RESET PASSWORD" class="submit-btn"/>
+                </form>
+            </div>
+         
+            <input type="button" class="JPO_close focus:outline-none absolute top-3 right-6 text-white text-sm rounded-full px-3 py-1" style="background-color: #230fdb;" value="X"/>
+         </div>
+    
+
+
+
+
+
+
+         
+
+
+
         </div>
         <div class="hidden notif absolute top-1 md:right-60 right-16 bg-white w-68 py-6 px-3 rounded border text-black">
             You have no unread notifications   
@@ -301,68 +335,19 @@
 
 
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-    <input onclick="signOut()" id="signIn" class="mt-40 pr-40 rounded focus:outline-none py-2 w-full sm:text-xl text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="LOG IN" class="submit-btn" />
-  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          $('#JPO').popup();
+ 
+          $.fn.popup.defaults.pagecontainer = '#page';
+     
+        });
+     
+        </script>
 
 
 
