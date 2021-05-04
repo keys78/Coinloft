@@ -155,61 +155,151 @@
 
     <section class="h-screen transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 lg:w-9/12 basecolor w-full absolute top-8 right-0">
              
-        <h1 class="sm:text-4xl text-3xl my-6">Loans</h1>
+        <h1 class="sm:text-3xl text-2xl my-6">Welcome To Loans</h1>
 
        
-
-
-        <form id="loner" class="md:w-5/12 w-11/12 mx-auto">
-
-            <h1 class="text-2xl text-center pb-3 ">Loan Form</h1>
-
-            <label>What's your employment status</label>
-                <select id="selio" class="focus:outline-none rounded w-full border border-blue-200 py-2" name="coins" id="coins">
-                    <option class="text-yellow-600" value="Select">Select...</option>
-                    <option class="text-yellow-600" value="Employed">Employed</option>
-                    <option class="text-yellow-600" value="Self Employed">Self Employed</option>
-                </select>
-
-                <div class="my-3">
-                    <label>Select loan type</label>
-                    <select id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
-                        <option class="text-yellow-600" value="Select">Select...</option>
-                        <option class="text-yellow-600" value="Loan-Invest">Loan-Invest</option>
-                        <option class="text-yellow-600" value="Loan-Out">Loan-Out</option>
-                    </select>
-                 </div>
-
-            <label>What's your monthly income</label>
-                <input id="mnt-income" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
-
-            <div class="flex gap-2 my-3">
-                <div>
-                    <label>What country do you live in?</label>
-                    <input id="country" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
-                </div>
-                <div>
-                    <label>Where is your city?</label>
-                    <input id="city" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+        <div class="flex md:flex-row flex-col">
+            <div class="md:w-6/12 mx-auto w-full">
+                <div class="flex py-7 justify-between px-2 bg-blue-50">
+                    <p>Loan Portfolio</p>
+                    <p class="numb text-3xl">$0.00</p>
                 </div>
 
+                <div class="">
+                    <p class="text-xl font-medium">Loan History</p>
+
+                    <article class="about">
+     
+                        <div class="mx-auto md:gap-0 gap-4 items-start px-3 py-5 border bg-grey-100">
+                            <div class="flex  justify-around w-full">
+                                <div class="md:py-3 py-1 rounded-full cursor-pointer bg-white font-medium md:px-7 px-2 text-green-500 border border-green-700 tab-btn active" data-id="history">Recieved</div>
+                                <div class="md:py-3 py-1 rounded-full cursor-pointer bg-white font-medium md:px-4 px-1 text-red-500 border border-red-700 tab-btn" data-id="vision">Withdrawals</div>
+                                <div class="md:py-3 py-1 rounded-full cursor-pointer bg-white font-medium md:px-7 px-2 text-yellow-400 border border-yellow-700 tab-btn" data-id="goals">Refunds</div>
+                            </div>
+                    
+                          <div class="about-content">
+
+                           <div class="content active py-6" id="history">
+                              
+                                <div class="flex justify-between text-xl font-medium">
+                                    <p class="md:block hidden sm:text-xl text-base">Transcation ID</p>
+                                    <p class="md:hidden block text-base">Trx ID</p>
+                                    <p class="-ml-8 sm:text-xl text-base">Date</p>
+                                    <p class="sm:text-xl text-base">Amount</p>               
+                                </div>
+                                <div class="fokpu flex items-center justify-between border sm:px-2 px-1 py-2 rounded bg-white mt-3">
+                                    <p>#00000</p>
+                                    <p>11/04/2021</p>
+                                    <p class="text-center flex gap-1 font-medium text-green-500">0.5BTC <img class="h-7 w-7 sm:block hidden"src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="btcpng"></p>
+                                </div>
+                            </div>
+                           
+                
+                            <div class="content" id="vision">
+                            safwedswds
+                            </div>
+                          
+                            <div class="content pb-6" id="goals">
+                               tehrt
+                            </div>
+
+                        </div>
+                        </article>
+
+
+                    <!---end-->
+                </div>
+                
             </div>
 
-            <label>Tell us your Date of Birth</label>
-                <div class="flex gap-2">
-                    <input id="datee" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="DD">
-                    <input id="monthEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="MM">
-                    <input id="yearEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="YYYY">
 
-                </div>
+            <form id="loner" class="md:w-5/12 w-full sm:mt-0 mt-8 mx-auto p-3 border">
+
+                <h1 class="text-2xl text-center pb-3 ">Loan Form</h1>
+
+                <label>What's your employment status</label>
+                    <select id="selio" class="focus:outline-none rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                        <option class="text-yellow-600" value="Select">Select...</option>
+                        <option class="text-yellow-600" value="Employed">Employed</option>
+                        <option class="text-yellow-600" value="Self Employed">Self Employed</option>
+                    </select>
+
+                    <div class="my-3">
+                        <label>Select loan type</label>
+                        <select id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                            <option id="loan-S" class="text-yellow-600" value="Select">Select...</option>
+                            <option id="loan-I" class="text-yellow-600" value="Loan-Invest">Loan-Invest</option>
+                            <option id="loan-O" class="text-yellow-600" value="Loan-Out">Loan-Out</option>
+                        </select>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <div>
+                            <label>What's your monthly income</label>
+                            <input id="mnt-income" type="text" value="$" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                        </div>
+
+                        <div>
+                            <label>Email</label>
+                            <input id="lnMail" type="email" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                        </div>
+                    </div>
+                
+
+
+                    <div class="flex gap-2 my-3">
+                        <div>
+                            <label>Your Country?</label>
+                            <input id="country" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                        </div>
+                        <div>
+                            <label>Your city?</label>
+                            <input id="city" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                        </div>
+
+                    </div>
+
+
+                    <div class="my-4">
+                        <select required id="loanAmount" class="hidden focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                            <option class="font-medium" value="Select">Select Loan Amount</option>
+                            <option class="text-yellow-700" value="$500">$500</option>
+                            <option class="text-yellow-700" value="$1000">$1000</option>
+                            <option class="text-yellow-700" value="$1500">$1,500</option>
+                            <option class="text-yellow-700" value="$5,000">$5,000</option>
+                            <option class="text-yellow-700" value="$10,000">$10,000</option>
+                            <option class="text-yellow-700" value="$15,000">$15,000</option>
+                            <option class="text-yellow-700" value="$25,000">$25,000</option>                      
+                        </select>
+                    </div>
+
+                    <div class="my-4">
+                        <select id="loanAmount-2" class="hidden focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                            <option class="font-medium" value="Select">Select Loan Amount (lO)</option>
+                            <option class="text-yellow-700" value="$500">$500</option>
+                            <option class="text-yellow-700" value="$1000">$1000</option>
+                            <option class="text-yellow-700" value="$1500">$1,500</option>
+                            <option class="text-yellow-700" value="$5,000">$5,000</option>
+                            <option class="text-yellow-700" value="$10,000">$10,000</option>                  
+                        </select>
+                    </div>
+
+
+                    <label>Tell us your Date of Birth</label>
+                    <div class="flex gap-2">
+                        <input id="datee" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="DD">
+                        <input id="monthEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="MM">
+                        <input id="yearEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="YYYY">
+
+                    </div>
+                
+
+
+                <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
+            </form>
             
-
-
-            <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
-        </form>
-        
-        
-
+            
+        </div>
 
 
 
@@ -232,8 +322,49 @@
 
 
 
+
+
+
     <script>
-        
+        const about = document.querySelector(".about");
+        const btns = document.querySelectorAll(".tab-btn");
+        const articles = document.querySelectorAll(".content");
+        about.addEventListener("click", function (e) {
+        const id = e.target.dataset.id;
+        if (id) {
+            // remove selected from other buttons
+            btns.forEach(function (btn) {
+            btn.classList.remove("active");
+            });
+            e.target.classList.add("active");
+            // hide other articles
+            articles.forEach(function (article) {
+            article.classList.remove("active");
+            });
+            const element = document.getElementById(id);
+            element.classList.add("active");
+        }
+        });
+
+    </script>
+
+
+    <script>
+        document.getElementById('loantype').addEventListener('click', showieHide);
+        function showieHide() {
+            if(document.getElementById('loantype').value === "Loan-Invest"){
+                document.getElementById('loanAmount-2').style.display = "none";
+                document.getElementById('loanAmount').style.display = "block";
+            } 
+            if (document.getElementById('loantype').value === "Loan-Out"){
+                document.getElementById('loanAmount').style.display = "none";
+                document.getElementById('loanAmount-2').style.display = "block";
+            } 
+            if (document.getElementById('loantype').value === "Select"){
+                document.getElementById('loanAmount').style.display = "none";
+                document.getElementById('loanAmount-2').style.display = "none";
+            } 
+        }
     </script>
 
 
@@ -260,32 +391,35 @@
             e.preventDefault();
             const mifo = document.getElementById('selio').value;
             const loanType = document.getElementById('loantype').value;
+            const loanAmount = document.getElementById('loanAmount').value;
+            const loanAmount2 = document.getElementById('loanAmount-2').value;
             const incomeMnt = document.getElementById('mnt-income').value;
             const countryi = document.getElementById('country').value;
             const cityi = document.getElementById('city').value;
             const datee = document.getElementById('datee').value;
             const montth = document.getElementById('monthEnd').value;
             const yeari = document.getElementById('yearEnd').value;
+            const lnMail = document.getElementById('lnMail').value;
 
             status = mifo,
             loantype = loanType,
+            Amount = loanAmount,
+            Amount2 = loanAmount2,
             income = incomeMnt,
             country = countryi,
             city = cityi,
             datem = datee,
             xmonth = montth,
-            kyear = yeari
+            kyear = yeari,
+            ymail = lnMail
 
-            // reLoan(status, loantype, income, country, city, datee, month, year);
 
-
-            reLoan(status, loantype, income, country, city, datem, xmonth, kyear);
-            console.log(status, loantype, income, country, city, datem, xmonth, kyear);
+            reLoan(status, loantype, income, country, city, datem, xmonth, kyear, ymail, Amount, Amount2);
         }
    
 
   //save to firebase
-  function reLoan(status, loantype, income, country, city, datem, xmonth, kyear){
+  function reLoan(status, loantype, income, country, city, datem, xmonth, kyear, ymail, Amount, Amount2){
       const newLoanne = loaneeDetails.push();
       newLoanne.set({
           status:status,
@@ -295,7 +429,10 @@
           city:city,
           datem:datem,
           xmonth:xmonth,
-          kyear:kyear
+          kyear:kyear,
+          ymail:ymail,
+          Amount:Amount,
+          Amount2:Amount2
       });
   }
 
