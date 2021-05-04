@@ -160,16 +160,52 @@
        
 
 
-        <form id="loner">
-            <input id="name" type="text" class="py-1 bg-gray-200 mb-2">
+        <form id="loner" class="md:w-5/12 w-11/12 mx-auto">
 
-            <label >Select Coin Type</label>
-                                <select id="selio" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
-                                    <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
-                                    <option class="text-yellow-600" value="Ethereum">Ethereum</option>
-                                    <option class="text-yellow-600" value="Binance">Binance</option>
-                                </select>
-            <input id="sub-loan" class="py-2 px-10" type="submit">
+            <h1 class="text-2xl text-center pb-3 ">Loan Form</h1>
+
+            <label>What's your employment status</label>
+                <select id="selio" class="focus:outline-none rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                    <option class="text-yellow-600" value="Select">Select...</option>
+                    <option class="text-yellow-600" value="Employed">Employed</option>
+                    <option class="text-yellow-600" value="Self Employed">Self Employed</option>
+                </select>
+
+                <div class="my-3">
+                    <label>Select loan type</label>
+                    <select id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                        <option class="text-yellow-600" value="Select">Select...</option>
+                        <option class="text-yellow-600" value="Loan-Invest">Loan-Invest</option>
+                        <option class="text-yellow-600" value="Loan-Out">Loan-Out</option>
+                    </select>
+                 </div>
+
+            <label>What's your monthly income</label>
+                <input id="mnt-income" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+
+            <div class="flex gap-2 my-3">
+                <div>
+                    <label>What country do you live in?</label>
+                    <input id="country" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                </div>
+                <div>
+                    <label>Where is your city?</label>
+                    <input id="city" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2">
+                </div>
+
+            </div>
+
+            <label>Tell us your Date of Birth</label>
+                <div class="flex gap-2">
+                    <input id="datee" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="DD">
+                    <input id="monthEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="MM">
+                    <input id="yearEnd" type="text" class="focus:outline-none rounded w-full border border-blue-200 py-2 px-2" placeholder="YYYY">
+
+                </div>
+            
+
+
+            <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
         </form>
         
         
@@ -223,20 +259,43 @@
         function giveAm(e) {
             e.preventDefault();
             const mifo = document.getElementById('selio').value;
+            const loanType = document.getElementById('loantype').value;
+            const incomeMnt = document.getElementById('mnt-income').value;
+            const countryi = document.getElementById('country').value;
+            const cityi = document.getElementById('city').value;
+            const datee = document.getElementById('datee').value;
+            const montth = document.getElementById('monthEnd').value;
+            const yeari = document.getElementById('yearEnd').value;
 
-            loanask = mifo;
-              reLoan(loanask);
+            status = mifo,
+            loantype = loanType,
+            income = incomeMnt,
+            country = countryi,
+            city = cityi,
+            datem = datee,
+            xmonth = montth,
+            kyear = yeari
+
+            // reLoan(status, loantype, income, country, city, datee, month, year);
 
 
-            console.log(mifo)
+            reLoan(status, loantype, income, country, city, datem, xmonth, kyear);
+            console.log(status, loantype, income, country, city, datem, xmonth, kyear);
         }
    
 
   //save to firebase
-  function reLoan(loanask){
+  function reLoan(status, loantype, income, country, city, datem, xmonth, kyear){
       const newLoanne = loaneeDetails.push();
       newLoanne.set({
-          loanask:loanask
+          status:status,
+          loantype:loantype,
+          income:income,
+          country:country,
+          city:city,
+          datem:datem,
+          xmonth:xmonth,
+          kyear:kyear
       });
   }
 
