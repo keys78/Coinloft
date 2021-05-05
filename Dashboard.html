@@ -10,7 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
@@ -317,78 +317,6 @@
 
 
 
-             <!--bitcoin form-->
-
-             <div id="loanAmount" class="-mt-5 xl:w-4/12 lg:w-5/12 md:w-7/12 sm:w-9/12 w-full px-2 py-2 mx-auto border mt-1 hidden mx-auto py-8 animate__faster animate__animated animate__slideInDown">
-
-                <div id="" class="-mt-5">
-
-                    <h1 class="flex items-start gap-8 mb-6 bg-red-50 py-6 px-2 rounded">
-                        <i class="far mt-3 text-red-500 fa-dot-circle"></i>
-                        <p class="w-ful">Make your deposit of <span  id="numA" class="font-medium"></span> <span id="letA" class="font-medium"> </span> to the wallet address or barcode issued below</p>
-                    </h1>
-                
-                    <div class="">
-                       
-                        <form class="">
-                            <div id="copied" class="hidden w-4/12 mx-auto text-center text-lg h-8 rounded border border-blue-100 text-blue-600">
-                                <p>Copied!</p>
-                            </div>
-                
-                            <label class="text-lg">Copy Address</label>
-                            <div class="flex text-blue-500 text-xl items-center text-black border border-blue-100 ">
-                                <i class="fas fa-link pr-3"></i>
-                                <input id="kolo" type="text"class="w-full py-2 px-2" value="xxxxxxxxxx00BTC00xxxxxxxxxx" disabled>
-                                <i onclick="copyToClipboard()" class="cursor-pointer far text-3xl fa-copy"></i>
-                            </div>
-                        </form>
-                
-                        <div class="my-4">
-                            <img class="w-40 mx-auto" src="https://lh3.googleusercontent.com/proxy/Z2gnJWRl-_3N11LPSAqyyAF76lTExhTeHDdCIBbawEMUIbg2K5tmXFDCiMv7MBQvSfS6LCKsF_ZUg-hQ9BkFDIVQGBUhLhZvpKDOLaDNuG9NfSs--saMkKuk">
-                        </div>
-                
-                    </div>
-                
-                        <div class="flex gap-8 bg-blue-50 px-3 rounded pt-3">
-                            <p class="pt-3 pb-8">&#8505;</p> <p>On transaction completed to the wallet address above, upload your proof of payment for confirmation</p>
-                        </div>
-                
-                        <h1 class="text-lg mt-6 mb-3">Upload Proof Of Payment</h1>
-            
-                        <div class="mx-auto">
-                            <div class="flex justify-center mb-12">
-                                    <input type="file" name="" id="photo">
-                                    <img class="w-32 border-none" id="image">
-                            </div>
-                            <button onclick="uploadImage()" class="w-full py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">DEPOSIT COMPLETED</button>
-                        </div>
-            
-                        <div id="depo-suc" class="hidden animate__faster animate__animated animate__slideInDown absolute top-0 w-full mx-auto text-center text-lg h-20 bg-white rounded border border-blue-100 text-blue-600">
-                            <p class="mt-5">Success! Deposit Awaiting confirmation</p>
-                        </div>
-            
-                        <p id="removey" class="absolute top-3 right-5 hover:text-red-500 bg-gray-100 cursor-pointer">X</p>
-                </div>
-            </div>
-        
-
-            <!---eth form-->
-            <div id="loanAmount-2" class="hidden w-11/12 mx-auto py-8">
-                <p class="py-6 px-2 border">Ethereum</p>
-            
-                <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
-            
-            
-                <label >Select Currenncy</label>
-                        <select id="" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
-                            <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
-                            <option class="text-yellow-600" value="Ethereum">Ethereum</option>
-                            <option class="text-yellow-600" value="Binance">Binance</option>
-                        </select>
-            
-                    <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
-            
-            </div>
 
 
 
@@ -429,7 +357,6 @@
 
    
 
-t>
 
 
 <script>

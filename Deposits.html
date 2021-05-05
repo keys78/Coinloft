@@ -116,10 +116,10 @@
    
 
 
-    <section class="h-auto transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 w-full absolute top-8 right-0">
+    <section class="h-auto transition-all duration-500 ease-in-out mt-20  lg:px-2 px-3 w-full absolute top-8 right-0">
         
 
-            <form id="loner" class="mt-12 lg:px-2 px-3 transition-all duration-500 ease-in-out mt-12 relative lg:w-5/12 md:w-7/12 sm:w-9/12 w-full sm:mt-0 mx-auto p-3 keke border">
+            <form id="loner" class=" lg:px-2 px-3 transition-all duration-500 ease-in-out  relative lg:w-5/12 md:w-7/12 sm:w-9/12 w-full sm:mt-0 mx-auto p-3 keke border">
 
                 <p class="py-6 px-2 border">MAKE DEPOSIT</p>
         
@@ -132,6 +132,7 @@
                         <option id="loan-S" class="text-yellow-600" value="Select">Select...</option>
                         <option id="loan-I" class="text-yellow-600" value="Bitcoin">Bitcoin</option>
                         <option id="loan-O" class="text-yellow-600" value="Ethereum">Ethereum</option>
+                        <option id="loan-B" class="text-yellow-600" value="Binance">Binance</option>
                     </select>
                 </div>
 
@@ -143,9 +144,9 @@
         
         <!--bitcoin form-->
 
-        <div id="loanAmount" class="mt-12 xl:w-4/12 lg:w-5/12 md:w-7/12 sm:w-9/12 w-full px-2 py-2 mx-auto border mt-1 hidden mx-auto py-8 animate__faster animate__animated animate__slideInDown">
+        <div id="loanAmount" class="relative -mt-3 xl:w-4/12 lg:w-5/12 md:w-7/12 sm:w-9/12 w-full px-2 mx-auto border hidden mx-auto py-8 animate__delay-1s animate__faster animate__animated animate__zoomIn">
 
-            <div id="" class="-mt-5">
+            <div class="-mt-6">
 
                 <h1 class="flex items-start gap-8 mb-6 bg-red-50 py-6 px-2 rounded">
                     <i class="far mt-3 text-red-500 fa-dot-circle"></i>
@@ -191,27 +192,117 @@
                         <p class="mt-5">Success! Deposit Awaiting confirmation</p>
                     </div>
         
-                    <p id="removey" class="absolute top-3 right-5 hover:text-red-500 bg-gray-100 cursor-pointer">X</p>
+                    <p id="removey" class="absolute text-xl top-3 right-5 hover:text-red-500 bg-gray-100 cursor-pointer">X</p>
             </div>
         </div>
 
 
         <!---eth form-->
-        <div id="loanAmount-2" class="hidden w-11/12 mx-auto py-8">
-            <p class="py-6 px-2 border">Ethereum</p>
+        <div id="loanAmount-2" class="relative -mt-3 xl:w-4/12 lg:w-5/12 md:w-7/12 sm:w-9/12 w-full px-2 mx-auto border hidden mx-auto py-8 animate__delay-1s animate__faster animate__animated animate__zoomIn">
+
+            <div class="-mt-6">
+
+                <h1 class="flex items-start gap-8 mb-6 bg-red-50 py-6 px-2 rounded">
+                    <i class="far mt-3 text-red-500 fa-dot-circle"></i>
+                    <p class="w-ful">Make your deposit of <span  id="numE" class="font-medium"></span> <span id="letE" class="font-medium"> </span> to the wallet address or barcode issued below</p>
+                </h1>
+            
+                <div class="">
+                
+                    <form class="">
+                        <div id="copiedd" class="hidden w-4/12 mx-auto text-center text-lg h-8 rounded border border-blue-100 text-blue-600">
+                            <p>Copied!</p>
+                        </div>
+            
+                        <label class="text-lg">Copy Address</label>
+                        <div class="flex text-blue-500 text-xl items-center text-black border border-blue-100 ">
+                            <i class="fas fa-link pr-3"></i>
+                            <input id="koloo" type="text"class="w-full py-2 px-2" value="xxxxxxxxxx00ETH00xxxxxxxxxx" disabled>
+                            <i onclick="copyToClipbord()" class="cursor-pointer far text-3xl fa-copy"></i>
+                        </div>
+                    </form>
+            
+                    <div class="my-4">
+                        <img class="w-40 mx-auto" src="https://lh3.googleusercontent.com/proxy/Z2gnJWRl-_3N11LPSAqyyAF76lTExhTeHDdCIBbawEMUIbg2K5tmXFDCiMv7MBQvSfS6LCKsF_ZUg-hQ9BkFDIVQGBUhLhZvpKDOLaDNuG9NfSs--saMkKuk">
+                    </div>
+            
+                </div>
+            
+                    <div class="flex gap-8 bg-blue-50 px-3 rounded pt-3">
+                        <p class="pt-3 pb-8">&#8505;</p> <p>On transaction completed to the wallet address above, upload your proof of payment for confirmation</p>
+                    </div>
+            
+                    <h1 class="text-lg mt-6 mb-3">Upload Proof Of Payment</h1>
+                                <!--photo firebase-->
+                    <div class="mx-auto">
+                        <div class="flex justify-center mb-12">
+                                <input type="file" name="" id="phot">
+                                <img class="w-32 border-none" id="imag">
+                        </div>
+                        <button onclick="uplodImage()" class="w-full py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">DEPOSIT COMPLETED</button>
+                    </div>
         
-            <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+                    <div id="depo-succ" class="hidden animate__faster animate__animated animate__slideInDown absolute top-0 w-full mx-auto text-center text-lg h-20 bg-white rounded border border-blue-100 text-blue-600">
+                        <p class="mt-5">Success! Deposit Awaiting confirmation</p>
+                    </div>
         
+                    <p id="remov" class="absolute text-xl top-3 right-5 hover:text-red-500 bg-gray-100 cursor-pointer">X</p>
+            </div>
+        </div>
+
+
+
+        <!---Binance form-->
+        <div id="loanAmount-3" class="relative -mt-3 xl:w-4/12 lg:w-5/12 md:w-7/12 sm:w-9/12 w-full px-2 mx-auto border hidden mx-auto py-8 animate__delay-1s animate__faster animate__animated animate__zoomIn">
+
+            <div class="-mt-6">
+
+                <h1 class="flex items-start gap-8 mb-6 bg-red-50 py-6 px-2 rounded">
+                    <i class="far mt-3 text-red-500 fa-dot-circle"></i>
+                    <p class="w-ful">Make your deposit of <span  id="numBina" class="font-medium"></span> <span id="letBina" class="font-medium"> </span> to the wallet address or barcode issued below</p>
+                </h1>
+            
+                <div class="">
+                
+                    <form class="">
+                        <div id="copieddd" class="hidden w-4/12 mx-auto text-center text-lg h-8 rounded border border-blue-100 text-blue-600">
+                            <p>Copied!</p>
+                        </div>
+            
+                        <label class="text-lg">Copy Address</label>
+                        <div class="flex text-blue-500 text-xl items-center text-black border border-blue-100 ">
+                            <i class="fas fa-link pr-3"></i>
+                            <input id="kolooo" type="text"class="w-full py-2 px-2" value="xxxxxxxxxx00BINANCE00xxxxxxxxxx" disabled>
+                            <i onclick="copyToClipbod()" class="cursor-pointer far text-3xl fa-copy"></i>
+                        </div>
+                    </form>
+            
+                    <div class="my-4">
+                        <img class="w-40 mx-auto" src="https://lh3.googleusercontent.com/proxy/Z2gnJWRl-_3N11LPSAqyyAF76lTExhTeHDdCIBbawEMUIbg2K5tmXFDCiMv7MBQvSfS6LCKsF_ZUg-hQ9BkFDIVQGBUhLhZvpKDOLaDNuG9NfSs--saMkKuk">
+                    </div>
+            
+                </div>
+            
+                    <div class="flex gap-8 bg-blue-50 px-3 rounded pt-3">
+                        <p class="pt-3 pb-8">&#8505;</p> <p>On transaction completed to the wallet address above, upload your proof of payment for confirmation</p>
+                    </div>
+            
+                    <h1 class="text-lg mt-6 mb-3">Upload Proof Of Payment</h1>
+                                <!--photo firebase-->
+                    <div class="mx-auto">
+                        <div class="flex justify-center mb-12">
+                                <input type="file" name="" id="pho">
+                                <img class="w-32 border-none" id="ima">
+                        </div>
+                        <button onclick="upldImage()" class="w-full py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">DEPOSIT COMPLETED</button>
+                    </div>
         
-            <label >Select Currenncy</label>
-                    <select id="" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
-                        <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
-                        <option class="text-yellow-600" value="Ethereum">Ethereum</option>
-                        <option class="text-yellow-600" value="Binance">Binance</option>
-                    </select>
+                    <div id="depo-succe" class="hidden animate__faster animate__animated animate__slideInDown absolute top-0 w-full mx-auto text-center text-lg h-20 bg-white rounded border border-blue-100 text-blue-600">
+                        <p class="mt-5">Success! Deposit Awaiting confirmation</p>
+                    </div>
         
-                <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
-        
+                    <p id="remo" class="absolute text-xl top-3 right-5 hover:text-red-500 bg-gray-100 cursor-pointer">X</p>
+            </div>
         </div>
 
 
@@ -225,43 +316,52 @@
                 You have no unread notifications   
             </div>
 
-            <!-- <section class=" left-0 absolute bottom-0 copyright bg-gray-200 py-2 text-gray-500 text-center w-full" >
-                <p class="text-xs pt-3">Copyrights &copy; All Rights Reserved, 2021 | Designed by Em_codes</p>
-            </section>
-             -->
     </section>
   
 
     <script>
         document.getElementById('loner').addEventListener('submit', showieHide);
         function showieHide(e) {
-
             
             const innieN = document.getElementById('coinNumb').value;
             document.getElementById('numA').innerHTML = innieN;
+            document.getElementById('numE').innerHTML = innieN;
+            document.getElementById('numBina').innerHTML = innieN;
 
             const innieL = document.getElementById('loantype').value;
             document.getElementById('letA').innerHTML = innieL;
+            document.getElementById('letE').innerHTML = innieL;
+            document.getElementById('letBina').innerHTML = innieL;
+
+            cointype = innieN,
+            cointamount = innieL
 
 
+            depore(cointype, cointamount);
 
             if(document.getElementById('loantype').value === "Bitcoin"){
                 document.getElementById('loanAmount-2').style.display = "none";
+                document.getElementById('loanAmount-3').style.display = "none";
                 document.getElementById('loanAmount').style.display = "block";
                 document.getElementById('loner').remove();
             } 
             if (document.getElementById('loantype').value === "Ethereum"){
                 document.getElementById('loanAmount').style.display = "none";
                 document.getElementById('loanAmount-2').style.display = "block";
+                document.getElementById('loanAmount-3').style.display = "none";
+                document.getElementById('loner').remove();
+            } 
+            if (document.getElementById('loantype').value === "Binance"){
+                document.getElementById('loanAmount').style.display = "none";
+                document.getElementById('loanAmount-2').style.display = "none";
+                document.getElementById('loanAmount-3').style.display = "block";
                 document.getElementById('loner').remove();
             } 
             if (document.getElementById('loantype').value === "Select"){
                 document.getElementById('loanAmount').style.display = "none";
                 document.getElementById('loanAmount-2').style.display = "none";
+                document.getElementById('loanAmount-3').style.display = "none";
             } 
-
-
-
 
 
 
@@ -290,7 +390,45 @@
     }
 
         document.getElementById('removey').addEventListener('click', function(){
-        document.getElementById('loanAmount').remove();
+        window.location.href = "Dashboard.html"
+        })
+
+    function copyToClipbord(text) {
+        var inputc = document.body.appendChild(document.createElement("input"));
+        const koloo = document.getElementById('koloo');
+        inputc.value = koloo.value;
+        inputc.focus();
+        inputc.select();
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
+
+        document.getElementById('copiedd').style.display = "block";
+        setTimeout(function() {
+            document.getElementById('copiedd').style.display = "none";
+        }, 2000)
+    }
+
+        document.getElementById('remov').addEventListener('click', function(){
+        window.location.href = "Dashboard.html"
+        })
+
+    function copyToClipbod(text) {
+        var inputc = document.body.appendChild(document.createElement("input"));
+        const kolooo = document.getElementById('kolooo');
+        inputc.value = kolooo.value;
+        inputc.focus();
+        inputc.select();
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
+
+        document.getElementById('copieddd').style.display = "block";
+        setTimeout(function() {
+            document.getElementById('copieddd').style.display = "none";
+        }, 2000)
+    }
+
+        document.getElementById('remo').addEventListener('click', function(){
+        window.location.href = "Dashboard.html"
         })
 </script>
 
@@ -310,6 +448,11 @@
   };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+  
+    const deporecord = firebase.database().ref("Deposit");
+
+
+
 
    function uploadImage() {
        const ref = firebase.storage().ref()
@@ -338,7 +481,77 @@
            image.src = url
        })
    }
+
+
+   function uplodImage() {
+       const ref = firebase.storage().ref()
+
+       const fil = document.querySelector('#phot').files[0]
+
+       const nam = new Date() + '-' + fil.nam
+
+       const metadata = {
+           contentType:fil.type
+       }
+
+       const tas = ref.child(nam).put(fil,metadata)
+
+       tas
+       .then(snapshot => snapshot.ref.getDownloadURL())
+       .then(url => {
+           console.log(url)
+
+           document.getElementById('depo-succ').style.display = "block";
+            setTimeout(function() {
+                document.getElementById('depo-succ').style.display = "none";
+            }, 4000)
+
+           const image = document.querySelector('#imag')
+           image.src = url
+       })
+   }
+
+
+   function upldImage() {
+       const ref = firebase.storage().ref()
+
+       const filee = document.querySelector('#pho').files[0]
+
+       const namee = new Date() + '-' + filee.namee
+
+       const metadata = {
+           contentType:filee.type
+       }
+
+       const taskk = ref.child(namee).put(filee,metadata)
+
+       taskk
+       .then(snapshot => snapshot.ref.getDownloadURL())
+       .then(url => {
+           console.log(url)
+
+           document.getElementById('depo-succe').style.display = "block";
+            setTimeout(function() {
+                document.getElementById('depo-succe').style.display = "none";
+            }, 4000)
+
+           const image = document.querySelector('#ima')
+           image.src = url
+       })
+   }
+
+
+
+    //save to firebase
+    function depore(cointype, cointamount){
+          const newDepo = deporecord.push();
+          newDepo.set({
+            cointype:cointype,
+            cointamount:cointamount
+          });
+      }
     </script>
+
     <script src="Dash.js"></script>
 </body>
 </html>
