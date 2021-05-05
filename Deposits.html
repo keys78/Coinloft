@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- <link rel="stylesheet" href="loft.css"> -->
+    <link rel="stylesheet" href="Dashcss.css">
+  </head>
+<body>
+
+
+      <!-------topnav-------->
+      <section class="">
+        <div class="topper">
+           <div class="flex justify-center items-center lg:-ml-10 sm:ml-0 ml-8  md:w-1/12 md:w-3/12 w-3/12 mt-6 gdown">             
+
+                <a href="Home.html"><div class="">
+                    <svg class="w-20 h-14 -mt-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="186.847" height="214.403" viewBox="0 0 186.847 214.403">
+                        <defs>
+                        <linearGradient id="linear-gradient" x1="0.5" x2="0.382" y2="0.084" gradientUnits="objectBoundingBox">
+                            <stop offset="0" stop-color="#e4af00"/>
+                            <stop offset="1" stop-color="#b18900"/>
+                        </linearGradient>
+                        </defs>
+                        <g id="Group_5" data-name="Group 5" transform="translate(-16.964 -140.856) rotate(-1)">
+                        <g id="Group_2" data-name="Group 2" transform="translate(12.429 224.859) rotate(-40)">
+                            <path id="Subtraction_6" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+                            <path id="Path_1" data-name="Path 1" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                        </g>
+                        <g id="Group_3" data-name="Group 3" transform="translate(199.654 275.032) rotate(140)">
+                            <path id="Subtraction_6-2" data-name="Subtraction 6" d="M128.132,137.616,7.057,131.63,4.571,82.2l10.762.532,1.98,39.366,99.55,4.921-3.081-61.237,10.762.532,3.587,71.3h0ZM14.783,71.8h0L4.02,71.269.455.41,121.53,6.395l2.465,48.989-10.762-.532-1.958-38.928L11.724,11Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+                            <path id="Path_2" data-name="Path 2" d="M.055.379,118.09,6.214l.534,10.608L.589,10.987Z" transform="translate(4.864 60.212)" fill="url(#linear-gradient)"/>
+                        </g>
+                        </g>
+                    </svg>
+                </div></a>
+                    
+                <a href="Home.html"><div class="text-2xl -mt-2 -ml-3 font-semibold text-white publicsans burron texto">Coinloft</div></a> 
+                <div class="lg:block hidden text-white text-xl text-green-500 cursor-pointer absolute top-8 right-80"><i class="far fa-bell"></i></div>         
+                <div id="fmail" class="lg:block hidden text-white absolute text-lg top-8 right-16 overflow-hidden"></div>                  
+            </div>
+
+ 
+
+            <div class="lg:hidden block ">
+                <input type="checkbox" id="openSideMenu" class="openSideMenu">
+                <label for="openSideMenu" class="menuIconToggle mt-2">
+                  <div class="hamb-line dia part-1"></div>
+                  <div class="hamb-line hor"></div>
+                  <div class="hamb-line dia part-2"></div>
+                </label>
+                <div class="berro text-green-500 absolute cursor-pointer text-xl right-20 top-7 "><i class="far fa-bell"></i></div> 
+                <nav>
+                  <ul>
+                      <a href="Dashboard.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                          <i class="text-xl text-blue-700 fas fa-door-open"></i>
+                          <h1 class="text-lg">Dashboard</h1>
+                      </div></a>
+          
+                      <a href="Account.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                       <i class="fas text-blue-700 text-xl far fa-user"></i>
+                          <h1 class="text-lg">Account</h1>
+                      </div></a>
+          
+                      <a href="Transactions.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                          <i class="text-xl text-blue-700 fas fa-coins"></i>
+                          <h1 class="text-lg">Transactions</h1>
+                      </div></a>
+          
+                      <a href="Investments.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                          <i class="text-xl text-blue-700 fas fa-wallet"></i>
+                          <h1 class="text-lg">Investments</h1>
+                      </div></a>
+          
+                      <a href="Loandash.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                          <i class="text-xl text-blue-700 fas fa-money-check-alt"></i>
+                          <h1 class="text-lg">Loans <span class="text-pink-400 text-xs">(new)</span></h1>
+                      </div></a>
+          
+                      <a href="Settings.html"><div class="flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                          <i class="text-xl text-blue-700 fas fa-cog"></i>
+                          <h1 class="text-lg">Settings</h1>
+                      </div></a>
+          
+                      <div onclick="signOut()" id="signIn" class="cursor-pointer flex gap-4 py-3 px-3 font-medium mt-3 items-start rounded">  
+                          <i class="text-xl text-blue-700 fas fa-sign-out-alt"></i>
+                          <h1 class="text-lg">Log out</h1>
+                      </div>
+                  </ul>
+                  <div class="nabfoot absolute bottom-0 right-24">
+                      <h1 class="ml-14">
+                      <i class="text-gray-400 hover:text-red-500 fab fa-twitter"></i>
+                      <i class="text-gray-400 hover:text-red-500 fab fa-facebook"></i>
+                      </h1>
+                    <p class="text-gray-300">seismic ideas | &copy; 2021</p>
+                    </div>
+                </nav>
+              </div>
+          </section>
+
+    <!------------------------ SIDE BAR -------------------------->
+
+   
+
+
+    <section class="h-auto transition-all duration-500 ease-in-out mt-12 lg:px-2 px-3 w-full absolute top-8 right-0">
+        
+
+            <form id="loner" class="mt-12 lg:px-2 px-3 transition-all duration-500 ease-in-out mt-12 relative lg:w-5/12 md:w-7/12 sm:w-9/12 w-full sm:mt-0 mx-auto p-3 keke border">
+
+                <p class="py-6 px-2 border">MAKE DEPOSIT</p>
+        
+                <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+
+
+                <div class="my-3">
+                    <label>Select Currency</label>
+                    <select required id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                        <option id="loan-S" class="text-yellow-600" value="Select">Select...</option>
+                        <option id="loan-I" class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                        <option id="loan-O" class="text-yellow-600" value="Ethereum">Ethereum</option>
+                    </select>
+                </div>
+
+                <input id="coinNumb" type="text" class="px-2 focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+            <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
+            <!--endof form-->
+        </form>
+        
+        
+        <!--bitcoin form-->
+
+        <div id="loanAmount" class="mt-12 xl:w-4/12 lg:w-5/12 md:w-7/12 sm:w-9/12 w-full px-2 py-2 mx-auto border mt-1 hidden mx-auto py-8 animate__faster animate__animated animate__slideInDown">
+
+            <div id="" class="-mt-5">
+
+                <h1 class="flex items-start gap-8 mb-6 bg-red-50 py-6 px-2 rounded">
+                    <i class="far mt-3 text-red-500 fa-dot-circle"></i>
+                    <p class="w-ful">Make your deposit of <span  id="numA" class="font-medium"></span> <span id="letA" class="font-medium"> </span> to the wallet address or barcode issued below</p>
+                </h1>
+            
+                <div class="">
+                
+                    <form class="">
+                        <div id="copied" class="hidden w-4/12 mx-auto text-center text-lg h-8 rounded border border-blue-100 text-blue-600">
+                            <p>Copied!</p>
+                        </div>
+            
+                        <label class="text-lg">Copy Address</label>
+                        <div class="flex text-blue-500 text-xl items-center text-black border border-blue-100 ">
+                            <i class="fas fa-link pr-3"></i>
+                            <input id="kolo" type="text"class="w-full py-2 px-2" value="xxxxxxxxxx00BTC00xxxxxxxxxx" disabled>
+                            <i onclick="copyToClipboard()" class="cursor-pointer far text-3xl fa-copy"></i>
+                        </div>
+                    </form>
+            
+                    <div class="my-4">
+                        <img class="w-40 mx-auto" src="https://lh3.googleusercontent.com/proxy/Z2gnJWRl-_3N11LPSAqyyAF76lTExhTeHDdCIBbawEMUIbg2K5tmXFDCiMv7MBQvSfS6LCKsF_ZUg-hQ9BkFDIVQGBUhLhZvpKDOLaDNuG9NfSs--saMkKuk">
+                    </div>
+            
+                </div>
+            
+                    <div class="flex gap-8 bg-blue-50 px-3 rounded pt-3">
+                        <p class="pt-3 pb-8">&#8505;</p> <p>On transaction completed to the wallet address above, upload your proof of payment for confirmation</p>
+                    </div>
+            
+                    <h1 class="text-lg mt-6 mb-3">Upload Proof Of Payment</h1>
+        
+                    <div class="mx-auto">
+                        <div class="flex justify-center mb-12">
+                                <input type="file" name="" id="photo">
+                                <img class="w-32 border-none" id="image">
+                        </div>
+                        <button onclick="uploadImage()" class="w-full py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">DEPOSIT COMPLETED</button>
+                    </div>
+        
+                    <div id="depo-suc" class="hidden animate__faster animate__animated animate__slideInDown absolute top-0 w-full mx-auto text-center text-lg h-20 bg-white rounded border border-blue-100 text-blue-600">
+                        <p class="mt-5">Success! Deposit Awaiting confirmation</p>
+                    </div>
+        
+                    <p id="removey" class="absolute top-3 right-5 hover:text-red-500 bg-gray-100 cursor-pointer">X</p>
+            </div>
+        </div>
+
+
+        <!---eth form-->
+        <div id="loanAmount-2" class="hidden w-11/12 mx-auto py-8">
+            <p class="py-6 px-2 border">Ethereum</p>
+        
+            <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+        
+        
+            <label >Select Currenncy</label>
+                    <select id="" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                        <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                        <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                        <option class="text-yellow-600" value="Binance">Binance</option>
+                    </select>
+        
+                <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+        
+        </div>
+
+
+
+
+          
+
+
+
+            <div class="hidden notif absolute top-1 md:right-60 right-16 bg-white w-68 py-6 px-3 rounded border text-black">
+                You have no unread notifications   
+            </div>
+
+            <!-- <section class=" left-0 absolute bottom-0 copyright bg-gray-200 py-2 text-gray-500 text-center w-full" >
+                <p class="text-xs pt-3">Copyrights &copy; All Rights Reserved, 2021 | Designed by Em_codes</p>
+            </section>
+             -->
+    </section>
+  
+
+    <script>
+        document.getElementById('loner').addEventListener('submit', showieHide);
+        function showieHide(e) {
+
+            
+            const innieN = document.getElementById('coinNumb').value;
+            document.getElementById('numA').innerHTML = innieN;
+
+            const innieL = document.getElementById('loantype').value;
+            document.getElementById('letA').innerHTML = innieL;
+
+
+
+            if(document.getElementById('loantype').value === "Bitcoin"){
+                document.getElementById('loanAmount-2').style.display = "none";
+                document.getElementById('loanAmount').style.display = "block";
+                document.getElementById('loner').remove();
+            } 
+            if (document.getElementById('loantype').value === "Ethereum"){
+                document.getElementById('loanAmount').style.display = "none";
+                document.getElementById('loanAmount-2').style.display = "block";
+                document.getElementById('loner').remove();
+            } 
+            if (document.getElementById('loantype').value === "Select"){
+                document.getElementById('loanAmount').style.display = "none";
+                document.getElementById('loanAmount-2').style.display = "none";
+            } 
+
+
+
+
+
+
+            e.preventDefault();
+        }
+    </script>
+
+
+
+    
+
+<script>
+    function copyToClipboard(text) {
+        var inputc = document.body.appendChild(document.createElement("input"));
+        const kolo = document.getElementById('kolo');
+        inputc.value = kolo.value;
+        inputc.focus();
+        inputc.select();
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
+
+        document.getElementById('copied').style.display = "block";
+        setTimeout(function() {
+            document.getElementById('copied').style.display = "none";
+        }, 2000)
+    }
+
+        document.getElementById('removey').addEventListener('click', function(){
+        document.getElementById('loanAmount').remove();
+        })
+</script>
+
+
+
+
+    <script>
+
+        // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+    authDomain: "form-a2fa1.firebaseapp.com",
+    projectId: "form-a2fa1",
+    storageBucket: "form-a2fa1.appspot.com",
+    messagingSenderId: "195902252855",
+    appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+   function uploadImage() {
+       const ref = firebase.storage().ref()
+
+       const file = document.querySelector('#photo').files[0]
+
+       const name = new Date() + '-' + file.name
+
+       const metadata = {
+           contentType:file.type
+       }
+
+       const task = ref.child(name).put(file,metadata)
+
+       task
+       .then(snapshot => snapshot.ref.getDownloadURL())
+       .then(url => {
+           console.log(url)
+
+           document.getElementById('depo-suc').style.display = "block";
+            setTimeout(function() {
+                document.getElementById('depo-suc').style.display = "none";
+            }, 4000)
+
+           const image = document.querySelector('#image')
+           image.src = url
+       })
+   }
+    </script>
+    <script src="Dash.js"></script>
+</body>
+</html>
