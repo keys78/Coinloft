@@ -4,129 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
+
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
     <title>Document</title>
 </head>
 <body>
 
+    <div id="pay-sheet" class="relative w-4/12 px-2 py-2 mx-auto border mt-4 ">
 
-    <div id="JP" class="relative bg-white rounded lg:w-5/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
-        <div class="w-11/12 mx-auto py-8">
-            <p class="py-6 px-2 border">MAKE DEPOSIT</p>
+        <h1 class="flex items-start gap-8 mb-6 bg-red-50 py-6 px-2 rounded">
+            <i class="far mt-3 text-red-500 fa-dot-circle"></i>
+            <p class="w-ful">Make your deposit of 1BTC to the wallet address or barcode issued below</p>
+        </h1>
     
-            <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
-
-
-            <label>Select Currenncy</label>
-                    <select id="currencyType" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
-                        <option value="Select">Select</option>
-                        <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
-                        <option class="text-yellow-600" value="Ethereum">Ethereum</option>
-                        <option class="text-yellow-600" value="Binance">Binance</option>
-                    </select>
-
-                <input type="text" class=" focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
-
-                
-            <input class="JPA_open JPB_open mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="CONTINUE" class="submit-btn"/>
-            <input type="button" class="JPO_close focus:outline-none absolute top-3 right-6 text-black text-sm px-2 py-1" value="X"/>
-        </div>
-
-      
-
-    <!---endof JPO-->
- </div>
-
-<!-- 
- <div id="JPB" class=" w-11/12 mx-auto py-8">
-    <p class="py-6 px-2 border">Ethereum</p>
-
-    <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
-
-
-    <label >Select Currenncy</label>
-            <select id="" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
-                <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
-                <option class="text-yellow-600" value="Ethereum">Ethereum</option>
-                <option class="text-yellow-600" value="Binance">Binance</option>
-            </select>
-
-        <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
-
-        
-</div>
-
-
-<div id="JPA" class=" w-11/12 mx-auto py-8">
-    <p class="py-6 px-2 border">BITCOIN</p>
-
-    <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
-
-
-    <label >Select Currenncy</label>
-            <select id="" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
-                <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
-                <option class="text-yellow-600" value="Ethereum">Ethereum</option>
-                <option class="text-yellow-600" value="Binance">Binance</option>
-            </select>
-
-        <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
-
-        
-</div>
-
- --->
-
- <div class="relative w-6/12 mx-auto">
-    <p class="w-11/12">Make a deposit of 1BTC to the wallet address or barcode issued below</p>
-
-    <div class="flex justify-between">
         <div class="">
-            <img class="w-40" src="https://lh3.googleusercontent.com/proxy/eG379T1etEIBmJj-p3DIs9BFSIn1-YTc2G9uM7Hp4ZMUqmW5qg7odTjklm-QfOn1PQQJCcew8SNUwQWmegkAvHPYRCeyemK_UGamuIry2Z7BVXOZkWwzeJt7">
+           
+            <form class="">
+                <div id="copied" class="hidden w-4/12 mx-auto text-center text-lg h-8 rounded border border-blue-100 text-blue-600">
+                    <p>Copied!</p>
+                </div>
+    
+                <label class="text-lg">Copy Address</label>
+                <div class="flex text-blue-500 text-xl items-center text-black border border-blue-100 ">
+                    <i class="fas fa-link pr-3"></i>
+                    <input id="kolo" type="text"class="w-full py-2 px-2" value="xxxxxxxxxx00BTC00xxxxxxxxxx" disabled>
+                    <i onclick="copyToClipboard()" class="cursor-pointer far text-3xl fa-copy"></i>
+                </div>
+            </form>
+    
+            <div class="my-4">
+                <img class="w-40 mx-auto" src="https://lh3.googleusercontent.com/proxy/Z2gnJWRl-_3N11LPSAqyyAF76lTExhTeHDdCIBbawEMUIbg2K5tmXFDCiMv7MBQvSfS6LCKsF_ZUg-hQ9BkFDIVQGBUhLhZvpKDOLaDNuG9NfSs--saMkKuk">
+            </div>
+    
         </div>
+    
+            <div class="flex gap-8 bg-blue-50 px-3 rounded pt-3">
+                <p class="pt-3 pb-8">&#8505;</p> <p>On transaction completed to the wallet address above, upload your proof of payment for confirmation</p>
+            </div>
+    
+            <h1 class="text-lg mt-6 mb-3">Upload Proof Of Payment</h1>
 
-        <form class="flex absolute top-0 right-0">
-            <input id="kolo" type="text"class="w-full text-black border-2 border-black py-2" value="igufdsrxtyiuojk76545oi;uy" disabled>
-            <i onclick="copyToClipboard()" class="far -mr-20 text-3xl fa-copy"></i>
-        </form>
+            <div class="mx-auto">
+                <div class="flex justify-center mb-12">
+                        <input type="file" name="" id="photo">
+                        <img class="w-32 border-none" id="image">
+                </div>
+                <button onclick="uploadImage()" class="w-full py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">DEPOSIT COMPLETED</button>
+            </div>
 
+            <div id="depo-suc" class="hidden animate__faster animate__animated animate__slideInDown absolute top-0 w-full mx-auto text-center text-lg h-20 bg-white rounded border border-blue-100 text-blue-600">
+                <p class="mt-5">Success! Deposit Awaiting confirmation</p>
+            </div>
+
+            <p id="removey" class="absolute top-3 right-5 hover:text-red-500 bg-gray-100 cursor-pointer">X</p>
     </div>
 
-   
- </div>
 
 
 
- 
+</body>
+
+
+
+
+
+
+
+
 <script>
     function copyToClipboard(text) {
-    var inputc = document.body.appendChild(document.createElement("input"));
-    const kolo = document.getElementById('kolo');
-    inputc.value = kolo.value;
-    inputc.focus();
-    inputc.select();
-    document.execCommand('copy');
-    inputc.parentNode.removeChild(inputc);
-    alert("URL Copied.");
-    }
-    </script>
-    
+        var inputc = document.body.appendChild(document.createElement("input"));
+        const kolo = document.getElementById('kolo');
+        inputc.value = kolo.value;
+        inputc.focus();
+        inputc.select();
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
 
- <script>
-    document.getElementById('currencyType').addEventListener('click', changeCurr);
-    function changeCurr() {
-        if(document.getElementById('currencyType').value === "Bitcoin"){
-            console.log('btc')
-            document.getElementById('bit').display = "none";
-         
-            
-        }
-        if(document.getElementById('currencyType').value === "Ethereum"){
-            console.log('eth')
-            document.getElementById('eth').display = "none";
-        }
+        document.getElementById('copied').style.display = "block";
+        setTimeout(function() {
+            document.getElementById('copied').style.display = "none";
+        }, 2000)
     }
+
+        document.getElementById('removey').addEventListener('click', function(){
+        document.getElementById('pay-sheet').remove();
+        })
 </script>
-</body>
+
+
+
+
+    <script>
+
+        // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
+    authDomain: "form-a2fa1.firebaseapp.com",
+    projectId: "form-a2fa1",
+    storageBucket: "form-a2fa1.appspot.com",
+    messagingSenderId: "195902252855",
+    appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+   function uploadImage() {
+       const ref = firebase.storage().ref()
+
+       const file = document.querySelector('#photo').files[0]
+
+       const name = new Date() + '-' + file.name
+
+       const metadata = {
+           contentType:file.type
+       }
+
+       const task = ref.child(name).put(file,metadata)
+
+       task
+       .then(snapshot => snapshot.ref.getDownloadURL())
+       .then(url => {
+           console.log(url)
+
+           document.getElementById('depo-suc').style.display = "block";
+            setTimeout(function() {
+                document.getElementById('depo-suc').style.display = "none";
+            }, 2000)
+
+           const image = document.querySelector('#image')
+           image.src = url
+       })
+   }
+    </script>
+
+
 </html>
