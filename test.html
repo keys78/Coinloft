@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="JP" class="relative bg-white rounded lg:w-5/12 sm:w-7/12 w-11/12 mx-auto shadow animate__animated animate__zoomIn animate__faster">
+        <div class="w-11/12 mx-auto py-8">
+            <p class="py-6 px-2 border">MAKE DEPOSIT</p>
+    
+            <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+
+
+            <label>Select Currenncy</label>
+                    <select id="currencyType" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                        <option value="Select">Select</option>
+                        <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                        <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                        <option class="text-yellow-600" value="Binance">Binance</option>
+                    </select>
+
+                <input type="text" class=" focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+
+                
+            <input class="JPA_open JPB_open mt-4 rounded focus:outline-none py-2 w-full sm:text-lg text-base bg-blue-900 hover:bg-blue-600 text-white" type="submit" value="CONTINUE" class="submit-btn"/>
+            <input type="button" class="JPO_close focus:outline-none absolute top-3 right-6 text-black text-sm px-2 py-1" value="X"/>
+        </div>
+
+      
+
+    <!---endof JPO-->
+ </div>
+
+<!-- 
+ <div id="JPB" class=" w-11/12 mx-auto py-8">
+    <p class="py-6 px-2 border">Ethereum</p>
+
+    <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+
+
+    <label >Select Currenncy</label>
+            <select id="" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                <option class="text-yellow-600" value="Binance">Binance</option>
+            </select>
+
+        <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+
+        
+</div>
+
+
+<div id="JPA" class=" w-11/12 mx-auto py-8">
+    <p class="py-6 px-2 border">BITCOIN</p>
+
+    <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+
+
+    <label >Select Currenncy</label>
+            <select id="" class="rounded w-full border border-blue-200 py-2" name="coins" id="coins">
+                <option class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                <option class="text-yellow-600" value="Ethereum">Ethereum</option>
+                <option class="text-yellow-600" value="Binance">Binance</option>
+            </select>
+
+        <input type="text" class="focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+
+        
+</div>
+
+ --->
+
+ <div class="relative w-6/12 mx-auto">
+    <p class="w-11/12">Make a deposit of 1BTC to the wallet address or barcode issued below</p>
+
+    <div class="flex justify-between">
+        <div class="">
+            <img class="w-40" src="https://lh3.googleusercontent.com/proxy/eG379T1etEIBmJj-p3DIs9BFSIn1-YTc2G9uM7Hp4ZMUqmW5qg7odTjklm-QfOn1PQQJCcew8SNUwQWmegkAvHPYRCeyemK_UGamuIry2Z7BVXOZkWwzeJt7">
+        </div>
+
+        <form class="flex absolute top-0 right-0">
+            <input id="kolo" type="text"class="w-full text-black border-2 border-black py-2" value="igufdsrxtyiuojk76545oi;uy" disabled>
+            <i onclick="copyToClipboard()" class="far -mr-20 text-3xl fa-copy"></i>
+        </form>
+
+    </div>
+
+   
+ </div>
+
+
+
+ 
+<script>
+    function copyToClipboard(text) {
+    var inputc = document.body.appendChild(document.createElement("input"));
+    const kolo = document.getElementById('kolo');
+    inputc.value = kolo.value;
+    inputc.focus();
+    inputc.select();
+    document.execCommand('copy');
+    inputc.parentNode.removeChild(inputc);
+    alert("URL Copied.");
+    }
+    </script>
+    
+
+ <script>
+    document.getElementById('currencyType').addEventListener('click', changeCurr);
+    function changeCurr() {
+        if(document.getElementById('currencyType').value === "Bitcoin"){
+            console.log('btc')
+            document.getElementById('bit').display = "none";
+         
+            
+        }
+        if(document.getElementById('currencyType').value === "Ethereum"){
+            console.log('eth')
+            document.getElementById('eth').display = "none";
+        }
+    }
+</script>
+</body>
+</html>
