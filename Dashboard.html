@@ -19,8 +19,27 @@
     <!-- <link rel="stylesheet" href="loft.css"> -->
     <link rel="stylesheet" href="Dashcss.css">
   </head>
+  <style>
+      /* Loader */
+.mgrow{
+    position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	box-sizing:border-box;
+    overflow-y: hidden;
+	}
+
+#dashloader{
+    z-index:999999999999999999999;
+}
+  </style>
 <body>
 
+    <!-----Loader--------->
+    <div id="dashloader" class="animate__animated animate__slideOutUp animate__delay-4s animate__faster out fixed top-0 h-screen w-full bg-gray-50">
+        <img class="mgrow w-60" src="/images/dashloader.gif">
+    </div>
 
       <!-------topnav-------->
       <section class="">
@@ -393,9 +412,33 @@
  
           $.fn.popup.defaults.pagecontainer = '#page';
         });
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const dashloader = document.getElementById('dashloader');
+    const mgrow = document.querySelector('.mgrow');
+
+    setTimeout(function(){
+        mgrow.remove();
+       }, 6000);
+    setTimeout(function(){
+        dashloader.remove();
+       }, 8000);
+   });
     </script>
 
    
+
+
+
+
+
+
+
+
+
 <script>
     document.getElementById('JPS').addEventListener('submit', resFormio);
 
@@ -424,23 +467,6 @@ setTimeout(function(){
         this.classList.toggle('fa-eye-slash');
     });
 </script>
-
-
-<!-- 
-    <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
-    authDomain: "form-a2fa1.firebaseapp.com",
-    projectId: "form-a2fa1",
-    storageBucket: "form-a2fa1.appspot.com",
-    messagingSenderId: "195902252855",
-    appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
-  };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig); -->
-
-
 
 
 

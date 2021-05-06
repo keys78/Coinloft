@@ -221,7 +221,7 @@
                 <h1 class="lg:text-base text-xs text-blue-700 ubuntu">what we can do for you~</h1>
                 <h1 class="lg:text-3xl text-2xl mb-1 publicsans font-bold">Investment Solutions</h1>
 
-                <h1 class="text-gray-800">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus soluta et laudantium quo eos iure totam corporis culpa veritatis, 
+                <h1 class="text-gray-800"><h2><span id="ityped" class="ityped text-blue-700"></span></h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus soluta et laudantium quo eos iure totam corporis culpa veritatis, 
                     veniam, minus cum eius minima a officiis id reiciendis rem quam!
                 </h1>
             </div>
@@ -919,8 +919,22 @@
 
 
 
+
+
+
+
+
+
+    <script src='https://unpkg.com/ityped@0.0.8'></script>
     <script>
+
+ityped.init('#ityped', {
+    strings:['Sweet & Easy.', 'Optimal Gain Utility.', 'Exponential Growth and Poise.', 'No Hidden Charges!'],
+    startDelay: 200,
+    loop: true,
+  });
         
+
   function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
