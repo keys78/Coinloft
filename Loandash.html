@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
 
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
@@ -376,9 +377,20 @@
 
                     </div>
                 
+                    <div id="government" class="hidden">
+                        <h1 class="text-base mt-6 mb-3">Upload Government issued ID</h1>
+                        <div class="mx-auto">
+                            <div class="flex justify-center mb-12">
+                                    <input type="file" name="" id="photo">
+                                    <img class="w-32 border-none" id="image">
+                            </div>
+                           
+                        </div>
+                    </div>
 
+                    <button onclick="uploadImage()" class="w-full mt-6 py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">REQUEST LOAN</button>
 
-                <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
+                <!-- <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit"> -->
 
                 <div id="formiload" class="fifi hidden">
                     <img class="w-40 mx-auto" src="https://28r0ml3w463qs2tkk26kwd5e-wpengine.netdna-ssl.com/wp-content/themes/RouRealty/assets/images/ajax-loader.gif">
@@ -404,19 +416,6 @@
         </section>
     </section>
    
-
-           
-   
-   
-
-
-    <script>
-        // document.getElementById('sub-loan').addEventListener('submit', comeUp)
-
-        // function comeUp() {
-          
-       
-    </script>
 
 
 
@@ -451,14 +450,17 @@
             if(document.getElementById('loantype').value === "Loan-Invest"){
                 document.getElementById('loanAmount-2').style.display = "none";
                 document.getElementById('loanAmount').style.display = "block";
+                document.getElementById('government').style.display = "none";
             } 
             if (document.getElementById('loantype').value === "Loan-Out"){
                 document.getElementById('loanAmount').style.display = "none";
                 document.getElementById('loanAmount-2').style.display = "block";
+                document.getElementById('government').style.display = "block";
             } 
             if (document.getElementById('loantype').value === "Select"){
                 document.getElementById('loanAmount').style.display = "none";
                 document.getElementById('loanAmount-2').style.display = "none";
+                document.getElementById('government').style.display = "none";
             } 
         }
     </script>
@@ -479,6 +481,35 @@
     const auth = firebase.auth();
   
     const loaneeDetails = firebase.database().ref("Loan-Form");
+
+
+    function uploadImage() {
+       const ref = firebase.storage().ref()
+
+       const file = document.querySelector('#photo').files[0]
+
+       const name = new Date() + '-' + file.name
+
+       const metadata = {
+           contentType:file.type
+       }
+
+       const task = ref.child(name).put(file,metadata)
+
+       task
+       .then(snapshot => snapshot.ref.getDownloadURL())
+       .then(url => {
+           console.log(url)
+
+           document.getElementById('depo-suc').style.display = "block";
+            setTimeout(function() {
+                document.getElementById('depo-suc').style.display = "none";
+            }, 4000)
+
+           const image = document.querySelector('#image')
+           image.src = url
+       })
+   }
 
 
      
