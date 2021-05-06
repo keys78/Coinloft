@@ -168,7 +168,83 @@
 
         <h1 class="sm:text-4xl text-3xl my-6">Investments</h1>
 
-        <h1 class="sm:text-xl text-base mt-6 mb-2">Your Investments Cards</h1>
+        <div class="flex justify-between mt-6 mb-2">
+            <h1 class="sm:text-xl text-base ">Your Investments Cards</h1>
+            <div class="INV_open flex gap-1 text-gray-300 py-2 px-3 text-lg cursor-pointer buttn rounded">
+                <i class="text-xl text-white fas fa-file-invoice-dollar"></i>
+                <p class="text-gray-300 ">Invest Option</p>                                    
+            </div>
+        </div>
+
+
+        <form id="INV" class="bg-white lg:px-2 px-3 transition-all duration-500 ease-in-out  relative lg:w-4/12 md:w-7/12 sm:w-9/12 w-full sm:mt-0 mx-auto p-3 keke border animate__faster animate__animated animate__zoomIn">
+
+            <h1 class="flex items-center gap-6 mb-6 bg-yellow-50 py-6 px-2 rounded">
+                <i class="far text-yellow-500 fa-dot-circle"></i>
+                <p class="w-full">Minimum investment range for all currencies & plans is 0.01</p>
+            </h1>
+    
+            <p class="pt-3 pb-8 text-center">&#8505; Select currency, plan & enter amount to Invest</p>
+
+
+            <div class="my-3">
+                <label>Select Currency</label>
+                <select id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                    <option id="loan-S" class="text-yellow-600" value="Select">Select...</option>
+                    <option id="loan-I" class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                    <option id="loan-O" class="text-yellow-600" value="Ethereum">Ethereum</option>
+                    <option id="loan-B" class="text-yellow-600" value="Binance">Binance</option>
+                </select>
+            </div>
+
+            <div class="my-3">
+                <label>Available Plans</label>
+                <select id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="plans" required>
+                    <option class="text-yellow-600" value="Select">Select...</option>
+                    <option class="text-yellow-600" value="Basic">Basic</option>
+                    <option class="text-yellow-600" value="Master">Master</option>
+                    <option class="text-yellow-600" value="Veteran">Veteran</option>
+                    <option class="text-yellow-600" value="Premium">Premium</option>
+                </select>
+            </div>
+
+
+
+
+            <label>Amount</label>
+            <input type="text" class="px-2 focus:outline-none mt-3 rounded w-full border border-blue-200 py-2" placeholder="eg:0.01" required>
+        <input id="sub-loan" class="N-INV_open py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
+        <!--endof form-->
+    </form>
+
+
+    <form id="N-INV" class="bg-white lg:px-2 px-3 transition-all duration-500 ease-in-out  relative lg:w-4/12 md:w-7/12 sm:w-9/12 w-full sm:mt-0 mx-auto p-3 keke border animate__faster animate__animated animate__zoomIn">
+
+        <h1 class="flex items-center gap-6 mb-6 bg-yellow-50 py-6 px-2 rounded">
+            <i class="far text-yellow-500 fa-dot-circle"></i>
+            <p class="w-full">Complete New Investment</p>
+        </h1>
+
+        <p class="pt-3 pb-8 text-center">&#8505; Enter your password</p>
+
+        <label>Confirm password</label>
+        <input type="password" class="px-2 focus:outline-none mt-3 rounded w-full border-2 border-red-300 py-2" required>
+
+    <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="COMPLETE INVESTMENT" type="submit">
+    <!--endof form-->
+</form>
+
+
+
+<div style="z-index: 9999999999999;" class="invalert animate__animated animate__backInDown animate__faster border border-gray-300 absolute mx-auto lg:w-4/12 sm:w-8/12 w-full right-0 top-28 h-auto py-3 bg-white rounded text-black hidden">
+    <h1 class=" md:text-lg text-base px-3 ">
+        Congrats! Your Investment Has Been Registered Successfully   
+    </h1>
+  </div>
+
+
+
+
 
         <!---ONE -->
         <div class="relative sm:text-left text-center fokpu lg:w-11/12 w-full md:text-lg text-base mx-auto rounded products-center border py-6 px-2">
@@ -294,21 +370,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="hidden notif absolute top-1 md:right-60 right-16 bg-white w-68 py-6 px-3 rounded border text-black">
             You have no unread notifications   
         </div>
@@ -324,10 +385,26 @@
 
 
 
-    <script>
-       
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
 
+
+
+
+    <script>
+        document.getElementById('N-INV').addEventListener('submit', resFormi);
+
+function resFormi(e){
+e.preventDefault();
+    document.querySelector('.invalert').style.display = 'block';
+
+    setTimeout(function(){
+        document.querySelector('.invalert').style.display = 'none';
+    },4000);
+
+
+}
+    </script>
 
     <script>
   // Your web app's Firebase configuration
@@ -360,6 +437,25 @@ auth.signOut();
 alert("Signed out");
 window.location = "Login.html";
 }
+
+
+
+
+
+     
+        $(document).ready(function() {
+
+          $('#INV').popup();
+ 
+          $.fn.popup.defaults.pagecontainer = '#page';
+        });
+        $(document).ready(function() {
+
+          $('#N-INV').popup();
+ 
+          $.fn.popup.defaults.pagecontainer = '#page';
+        });
+
 </script>
 
 

