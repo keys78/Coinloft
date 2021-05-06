@@ -370,3 +370,32 @@ html {
     align-items: center;
 
   }
+
+
+  .burron{
+    background-image:linear-gradient(to right, #775704 25%,  #000029  50%, #bd8906 40%);
+    transition: all linear 0.4s;
+     background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.burron:hover{
+    transform: scale(0.96);    
+    background-position: left bottom;
+}
+
+.texto{
+    background: -webkit-linear-gradient(#775704, #000 #DAA520, );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.textohov{
+    color:#fff;
+    transition: 0.2s linear all;
+}
+
+ .textohov:hover{
+    color:#DAA520;
+    transition: all linear 0.2s;
+ }

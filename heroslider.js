@@ -5,7 +5,7 @@
 		 arrows = document.querySelectorAll('.lnr'),
 		 carouselCount = 0,
 		 scrollInterval,
-		 interval = 5000;
+		 interval = 10000;
 
 	arrows[0].addEventListener('click', function (e) {
 		e = e || window.event;
