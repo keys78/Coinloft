@@ -190,7 +190,7 @@
                          <p class="text-gray-300 ">Deposit</p>                  
                     </div>
 
-                    <div class="flex gap-2  py-2 px-4 text-lg cursor-pointer buttn rounded">
+                    <div class="withdrawal-form_open flex gap-2  py-2 px-4 text-lg cursor-pointer buttn rounded">
                         <i class="text-xl text-gray-300  fas fa-university"></i>
                          <p class="text-gray-300 ">Withdraw</p>                  
                     </div>
@@ -290,33 +290,52 @@
 
 
 
-            <div id="JPO"class=" lg:w-5/12 md:w-7/12 sm:w-9/12 w-full sm:p-0 p-1 bg-white">
+            <a id="JPO" href="Deposits.html"><button class="cursor-pointer rounded bg-white py-3 px-6 hover:bg-blue-100 animate__delay-1s animate__faster animate__animated animate__zoomIn">           
+                Make A Deposit
+            </button></a>
 
-                <form id="loner" class="transition-all duration-500 ease-in-out mt-12 overflow-hidden relative sm:mt-0 mx-auto p-3 keke border">
 
-                    <p class="py-6 px-2 border">MAKE DEPOSIT</p>
-            
-                    <p class="pt-3 pb-8">&#8505; Select currency and enter amonut to make a deposit</p>
+            <form id="withdrawal-form" class="bg-white lg:px-2 px-3 transition-all duration-500 ease-in-out  relative lg:w-4/12 md:w-7/12 sm:w-9/12 w-full sm:mt-0 mx-auto p-3 keke border animate__faster animate__animated animate__zoomIn">
 
+                <h1 class="flex items-center gap-6 mb-6 bg-yellow-50 py-6 px-2 rounded">
+                    <i class="far text-yellow-500 fa-dot-circle"></i>
+                    <p class="w-full">Ensure you have updated your wallet address on the settings section!</p>
+                </h1>
         
-                    <div class="my-3">
-                        <label>Select Currency</label>
-                        <select required id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
-                            <option id="loan-S" class="text-yellow-600" value="Select">Select...</option>
-                            <option id="loan-I" class="text-yellow-600" value="Bitcoin">Bitcoin</option>
-                            <option id="loan-O" class="text-yellow-600" value="Ethereum">Ethereum</option>
-                        </select>
-                    </div>
-
-                    <input id="coinNumb" type="text" class="px-2 focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
-                    <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="CONTINUE" type="submit">
-                    <!--endof form-->
-                </form>
-                
-            </div>
+                <p class="pt-3 pb-8 text-center">&#8505; Select currency and enter amount to Withdraw</p>
 
 
+                <div class="my-3">
+                    <label>Select Currency</label>
+                    <select required id="loantype" class=" focus:outline-none rounded w-full border border-blue-200 py-2" name="types" required>
+                        <option id="loan-S" class="text-yellow-600" value="Select">Select...</option>
+                        <option id="loan-I" class="text-yellow-600" value="Bitcoin">Bitcoin</option>
+                        <option id="loan-O" class="text-yellow-600" value="Ethereum">Ethereum</option>
+                        <option id="loan-B" class="text-yellow-600" value="Binance">Binance</option>
+                    </select>
+                </div>
 
+                <input id="coinNumb" type="text" class="px-2 focus:outline-none mt-3 rounded w-full border border-blue-200 py-2">
+            <input id="sub-loan" class="JPS_open py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="COMPLETE WITHDRAWAL" type="submit">
+            <!--endof form-->
+        </form>
+
+
+            <form id="JPS" class="bg-white lg:px-2 px-3 transition-all duration-500 ease-in-out  relative lg:w-4/12 md:w-7/12 sm:w-9/12 w-full sm:mt-0 mx-auto p-3 keke border animate__faster animate__animated animate__zoomIn">
+
+                <h1 class="flex items-center gap-6 mb-6 bg-yellow-50 py-6 px-2 rounded">
+                    <i class="far text-yellow-500 fa-dot-circle"></i>
+                    <p class="w-full">You are making a withdrawal of <span id="w-nam"> </span> <span id="w-numb"> </span> from your
+                        Coinloft's Account
+                   </p>
+                </h1>
+        
+                <p class="pt-3 pb-8 text-center">&#8505; Select currency and enter amount to Withdraw</p>
+
+
+            <input id="sub-loan" class="py-2 px-10 mt-5 w-full bg-blue-600 text-white hover:bg-blue-900" value="COMPLETE WITHDRAWAL" type="submit">
+            <!--endof form-->
+        </form>
 
 
 
@@ -350,6 +369,20 @@
         $(document).ready(function() {
 
           $('#JPO').popup();
+ 
+          $.fn.popup.defaults.pagecontainer = '#page';
+        });
+   
+        $(document).ready(function() {
+
+          $('#withdrawal-form').popup();
+ 
+          $.fn.popup.defaults.pagecontainer = '#page';
+        });
+    
+        $(document).ready(function() {
+
+          $('#JPS').popup();
  
           $.fn.popup.defaults.pagecontainer = '#page';
         });
@@ -391,68 +424,6 @@
 
 
 
-    <script>
-        document.getElementById('loner').addEventListener('submit', showieHide);
-        function showieHide(e) {
-
-            
-            const innieN = document.getElementById('coinNumb').value;
-            document.getElementById('numA').innerHTML = innieN;
-
-            const innieL = document.getElementById('loantype').value;
-            document.getElementById('letA').innerHTML = innieL;
-
-
-
-            if(document.getElementById('loantype').value === "Bitcoin"){
-                document.getElementById('loanAmount-2').style.display = "none";
-                document.getElementById('loanAmount').style.display = "block";
-                document.getElementById('loner').remove();
-            } 
-            if (document.getElementById('loantype').value === "Ethereum"){
-                document.getElementById('loanAmount').style.display = "none";
-                document.getElementById('loanAmount-2').style.display = "block";
-                document.getElementById('loner').remove();
-            } 
-            if (document.getElementById('loantype').value === "Select"){
-                document.getElementById('loanAmount').style.display = "none";
-                document.getElementById('loanAmount-2').style.display = "none";
-            } 
-
-
-
-
-
-
-            e.preventDefault();
-        }
-    </script>
-
-
-
-    
-
-<script>
-    function copyToClipboard(text) {
-        var inputc = document.body.appendChild(document.createElement("input"));
-        const kolo = document.getElementById('kolo');
-        inputc.value = kolo.value;
-        inputc.focus();
-        inputc.select();
-        document.execCommand('copy');
-        inputc.parentNode.removeChild(inputc);
-
-        document.getElementById('copied').style.display = "block";
-        setTimeout(function() {
-            document.getElementById('copied').style.display = "none";
-        }, 2000)
-    }
-
-        document.getElementById('removey').addEventListener('click', function(){
-        document.getElementById('loanAmount').remove();
-        })
-</script>
-
 
 
 
@@ -470,73 +441,10 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-   function uploadImage() {
-       const ref = firebase.storage().ref()
-
-       const file = document.querySelector('#photo').files[0]
-
-       const name = new Date() + '-' + file.name
-
-       const metadata = {
-           contentType:file.type
-       }
-
-       const task = ref.child(name).put(file,metadata)
-
-       task
-       .then(snapshot => snapshot.ref.getDownloadURL())
-       .then(url => {
-           console.log(url)
-
-           document.getElementById('depo-suc').style.display = "block";
-            setTimeout(function() {
-                document.getElementById('depo-suc').style.display = "none";
-            }, 4000)
-
-           const image = document.querySelector('#image')
-           image.src = url
-       })
-   }
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-
     const auth = firebase.auth();
+   
+
+
     auth.onAuthStateChanged(function(user) {
        if(user) {
          var email = user.email;
@@ -551,9 +459,9 @@
 
   function signOut() {
 
-auth.signOut();
-alert("Signed out");
-window.location = "Login.html";
+    auth.signOut();
+    alert("Signed out");
+    window.location = "Login.html";
 }
 </script>
 
