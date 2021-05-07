@@ -298,7 +298,7 @@ html {
 }
 
 .fa-bell{
-    animation: jingle 2s linear infinite;
+    animation: jingle 10s linear infinite;
 }
 
 @keyframes jingle{

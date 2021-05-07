@@ -187,7 +187,7 @@
                                 <input type="file" name="" id="photo">
                                 <img class="w-32 border-none" id="image">
                         </div>
-                        <button onclick="uploadImage()" class="w-full py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">DEPOSIT COMPLETED</button>
+                        <button id="omeEi" onclick="uploadImage()" class="w-full py-2 bg-blue-600 hover:bg-blue-900 text-white px-3">DEPOSIT COMPLETED</button>
                     </div>
         
                     <div id="depo-suc" class="hidden animate__faster animate__animated animate__slideInDown absolute top-0 w-full mx-auto text-center text-lg h-20 bg-white rounded border border-blue-100 text-blue-600">
@@ -511,6 +511,8 @@
            const image = document.querySelector('#imag')
            image.src = url
        })
+
+       document.getElementById('omoEi').value = "Deposit Awaiting confirmation"
    }
 
 

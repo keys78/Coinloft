@@ -160,9 +160,9 @@
              
         <h1 class="sm:text-3xl text-2xl mt-6 overpass">Welcome To Loans</h1>
 
-        <p class="pt-2 pb-6 sm:w-11/12 w-full mx-autooverpass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ab eveniet vitae ut
-             expedita at aut modi culpa inventore,sequi tempore debitis excepturi enim sint dolorem ipsa 
-             minus quod pariatur!</p>
+        <p class="pt-2 pb-6 sm:w-11/12 w-full mx-auto opensans">Loan application can take up to 2 - 3days for approval. Do well to
+            be honest in informaton provision as this would be cruical for final approval.
+            </p>
        
         <div class="relative overflow-hidden flex md:flex-row flex-col pb-20 md:gap-0 gap-8">
             <div class="md:w-6/12 mx-auto w-full keke border">
@@ -299,7 +299,7 @@
                 <h1 class="text-2xl text-center pb-3 ">Loan Request Form</h1>
 
                 <div id="success-alert" class="bg-blue-50 border-current hidden rounded animate__faster border bg-white text-lg px-4 absolute top-2 right-0 py-10 animate__slideInRight animate__animated animate__delay-4s">
-                    <p class="2xl">Congratulation! Your Loan Request has been submitted Successfully. Check your mail to for Verifcation!</p>
+                    <p class="2xl">Congratulation! Your Loan Request has been submitted Successfully. Check your email for Verifcation!</p>
                 </div>
 
                 <label>What's your employment status</label>
@@ -555,7 +555,13 @@
            setTimeout(function() {
             document.getElementById('success-alert').style.display = "none";
            }, 11000);
+
+           setTimeout(function() {
+            document.getElementById('loner').reset();
+           }, 9000);
         
+
+           
         }
    
 
