@@ -344,6 +344,13 @@
 
             <form id="JPS" class="bg-white lg:px-2 px-3 transition-all duration-500 ease-in-out  relative lg:w-4/12 md:w-7/12 sm:w-9/12 w-full sm:mt-0 mx-auto p-3 keke border animate__faster animate__animated animate__zoomIn">
 
+                <div style="z-index: 9999999999999;" class="withalert animate__animated animate__backInDown animate__faster animate__delay-1s border border-gray-300 absolute mx-auto sm:w-8/12 w-full right-0 top-28 h-auto py-3 bg-white rounded text-black hidden">
+                    <h1 class=" md:text-lg text-base px-3 py-4 text-center">
+                        Success! Your wallet has been funded 
+                    </h1>
+                  </div>
+
+
                 <h1 class="flex items-center gap-6 mb-6 bg-yellow-50 py-6 px-2 rounded">
                     <i class="far text-yellow-500 fa-dot-circle"></i>
                     <p class="w-full">Complete withdrawal from your
@@ -360,11 +367,7 @@
             <!--endof form-->
         </form>
 
-        <div style="z-index: 9999999999999;" class="withalert animate__animated animate__backInDown animate__faster animate__delay-1s border border-gray-300 absolute mx-auto lg:w-4/12 sm:w-8/12 w-full right-0 top-28 h-auto py-3 bg-white rounded text-black hidden">
-            <h1 class=" md:text-lg text-base px-3 py-4 text-center">
-                Success! Your wallet has been funded 
-            </h1>
-          </div>
+        
         
 
 
@@ -451,6 +454,12 @@ document.querySelector('.withalert').style.display = 'block';
 setTimeout(function(){
     document.querySelector('.withalert').style.display = 'none';
 },4000);
+
+setTimeout(function(){
+    document.getElementById('JPS').reset();
+},4000);
+
+
 
 
 }
