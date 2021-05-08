@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
-
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Public+Sans:wght@200&display=swap" rel="stylesheet">
@@ -19,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cabin:wdth@89.7&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wdth@89.7&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loft.css">
@@ -125,7 +120,8 @@
     
     <div class="banner lg:h-28 md:h-0 pt-20"></div>
 
-        <h1 class="text-2xl opensans mx-auto font-medium w-9/12 pt-16 pb-8 font-medium text-blue-700">Terms Of Use</h1>
+        <h1 class="text-2xl opensans mx-auto font-medium w-9/12 pt-16 pb-2 font-medium text-blue-700">Terms Of Use</h1>
+        <h1 class="text-base opensans mx-auto font-medium w-9/12 pb-8 font-medium text-blue-700">2 minuites read >>></h1>
 
         <div class="w-9/12 pb-20 mx-auto">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis cupiditate odit velit sunt molestiae 
@@ -240,88 +236,6 @@
           </script>
           <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           
-    
-    <script>
-    
-        // Your web app's Firebase configuration
- var firebaseConfig = {
-   apiKey: "AIzaSyAglyyyqzM0Mji52iKwAGBrAZiAUz2QX-s",
-   authDomain: "form-a2fa1.firebaseapp.com",
-   projectId: "form-a2fa1",
-   storageBucket: "form-a2fa1.appspot.com",
-   messagingSenderId: "195902252855",
-   appId: "1:195902252855:web:13a5e6a3815250d9f55cb2"
- };
- // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
-
-   //refrence messages
-   
-   var messagesRef = firebase.database().ref("messages");
-
-
-
-   //Listen for form submit
-   document.getElementById('contactForm').addEventListener('submit', submitForm);
-
-   function submitForm(e){
-       e.preventDefault();
-       
-       let name = getInputVal('name');
-       let company = getInputVal('company');
-       let email = getInputVal('email');
-       let phone = getInputVal('phone');
-       let message = getInputVal('message');
-
-       //save message
-       saveMessage(name, company, email, phone, message);
-
-        //show Alert
-       document.querySelector('.alert').style.display = 'block';
-
-       //set timer to hide
-
-       setTimeout(function(){
-           document.querySelector('.alert').style.display = 'none';
-       },3000);
-
-     
-         //Clear Form
-       document.getElementById('contactForm').reset();
-       
-
-
-   }
-
-    
-
-   //function to get form values
-   function getInputVal(id){
-       return document.getElementById(id).value;
-   }
-
-
-   
-   
-   //save to firebase
-   function saveMessage(name, company, email, phone, message){
-       var newMessageRef = messagesRef.push();
-       newMessageRef.set({
-           name:name,
-           company: company,
-           email:email,
-           phone:phone,
-           message:message,
-
-       });
-   }
-
-
-
-   </script>
-
-
-    
     <script src="loft.js"></script>
     <script src="heroslider.js"></script>
 </body>
